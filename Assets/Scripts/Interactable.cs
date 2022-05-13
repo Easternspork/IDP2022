@@ -16,8 +16,7 @@ public class Interactable : MonoBehaviour
 
     private DialogueManager dialogueManager;
 
-    [SerializeField]
-    private string giveItem;
+
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +27,7 @@ public class Interactable : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && inRange && !dialogueManager.inDialogue)
         {
@@ -54,12 +53,6 @@ public class Interactable : MonoBehaviour
     protected virtual void OnInteract()
     {
         dialogueManager.StartDialogue(inkJSON, interactableName);
-
-        if (giveItem != "" && !GameManager.GetInstance().items.Contains(giveItem))
-        {
-            GameManager.GetInstance().items.Add(giveItem);
-            Debug.Log("gave item");
-        }
         
     }
 }

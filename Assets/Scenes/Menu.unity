@@ -685,7 +685,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Setting
+  m_text: Settings
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -795,7 +795,7 @@ RectTransform:
   m_Children:
   - {fileID: 865717762}
   m_Father: {fileID: 2068573116}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1396,7 +1396,7 @@ RectTransform:
   m_Children:
   - {fileID: 732315486}
   m_Father: {fileID: 2068573116}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2024,6 +2024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24e9cf94980e4fd41b9487bc1332875a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  items: []
 --- !u!114 &1842952758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2611,8 +2612,8 @@ RectTransform:
   - {fileID: 463878955}
   - {fileID: 857396284}
   - {fileID: 2034665754}
-  - {fileID: 1542551424}
   - {fileID: 850242098}
+  - {fileID: 1542551424}
   - {fileID: 1685232301}
   m_Father: {fileID: 0}
   m_RootOrder: 1

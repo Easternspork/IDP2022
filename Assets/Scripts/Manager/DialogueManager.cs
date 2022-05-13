@@ -6,6 +6,7 @@ using Ink.Runtime;
 
 public class DialogueManager : MonoBehaviour
 {
+    public bool disableDialogue = false;
     public bool inDialogue;
     private static DialogueManager instance = null;
 
@@ -50,19 +51,24 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(TextAsset inkJSON, string name)
     {
-        dialogueName.text = name;
-
-        currentStory = new Story(inkJSON.text);
-        inDialogue = true;
-        ShowCanvas();
-
-        if (currentStory.canContinue)
+        Debug.Log(disableDialogue);
+        if (disableDialogue == false)
         {
-            dialogueContent.text = currentStory.Continue();
-        } else
-        {
-            ExitDialogue();
-        }
+            dialogueName.text = name;
+
+            currentStory = new Story(inkJSON.text);
+            inDialogue = true;
+            ShowCanvas();
+
+            if (currentStory.canContinue)
+            {
+                dialogueContent.text = currentStory.Continue();
+            }
+            else
+            {
+                ExitDialogue();
+            }
+        } 
     }
     public void NextDialogue()
     {

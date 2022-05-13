@@ -68,6 +68,7 @@ public class TimeManager : MonoBehaviour
         timerGO.SetActive(false);
     }
 
+    ///<param name = "penaltyTime" > Penalty time in seconds. </param>
     public void AddPenalty(int penaltyTime)
     {
         // TODO: add noise and visual cue (?)
