@@ -9,6 +9,8 @@ public class TimeManager : MonoBehaviour
 
     // Start is called before the first frame update
     [SerializeField]
+    private GameObject timerGO;
+
     private TextMeshProUGUI timerText;
 
     private float timer = 1800.0f;
@@ -23,6 +25,9 @@ public class TimeManager : MonoBehaviour
         }
         instance = this;
 
+        timerText = timerGO.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+
+        timerGO.SetActive(false);
     }
 
     // Update is called once per frame
@@ -53,10 +58,13 @@ public class TimeManager : MonoBehaviour
     public void StartTimer()
     {
         isTimer = true;
+        timerGO.SetActive(true);
+
     }
 
     public void StopTimer()
     {
         isTimer = false;
+        timerGO.SetActive(false);
     }
 }
