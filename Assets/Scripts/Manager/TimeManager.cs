@@ -21,7 +21,7 @@ public class TimeManager : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.Log("Two instances of dialogueManger");
+            Debug.LogWarning("Two instances of TimeManager");
         }
         instance = this;
 
@@ -66,5 +66,11 @@ public class TimeManager : MonoBehaviour
     {
         isTimer = false;
         timerGO.SetActive(false);
+    }
+
+    public void AddPenalty(int penaltyTime)
+    {
+        // TODO: add noise and visual cue (?)
+        timer -= penaltyTime;
     }
 }

@@ -54,5 +54,12 @@ public class Interactable : MonoBehaviour
     protected virtual void OnInteract()
     {
         dialogueManager.StartDialogue(inkJSON, interactableName);
+
+        if (giveItem != "" && !GameManager.GetInstance().items.Contains(giveItem))
+        {
+            GameManager.GetInstance().items.Add(giveItem);
+            Debug.Log("gave item");
+        }
+        
     }
 }

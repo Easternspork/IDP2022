@@ -833,5 +833,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interactable Object
       objectReference: {fileID: 0}
+    - target: {fileID: 3180017551271806086, guid: 5dbe2c027834aeb49b03e0fab09fce73, type: 3}
+      propertyPath: giveItem
+      value: Breh
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5dbe2c027834aeb49b03e0fab09fce73, type: 3}

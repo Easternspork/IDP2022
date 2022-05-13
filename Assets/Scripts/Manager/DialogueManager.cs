@@ -26,7 +26,7 @@ public class DialogueManager : MonoBehaviour
         inDialogue = false;
         if (instance != null)
         {
-            Debug.Log("Two instances of dialogueManger");
+            Debug.LogWarning("Two instances of dialogueManger");
         }
         instance = this;
         HideCanvas();
