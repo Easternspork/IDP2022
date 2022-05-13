@@ -8,7 +8,7 @@ public class Interactable : MonoBehaviour
     [SerializeField]
     private GameObject notifier;
     [SerializeField]
-    private List<string> dialogue;
+    private TextAsset inkJSON;
     [SerializeField]
     private string interactableName;
 
@@ -16,14 +16,13 @@ public class Interactable : MonoBehaviour
 
     private DialogueManager dialogueManager;
 
+
     // Start is called before the first frame update
     void Start()
     {
         notifier.SetActive(false);
         inRange = false;
         dialogueManager = DialogueManager.GetInstance();
-        dialogueManager.ShowCanvas();
-        dialogueManager.inDialogue = false;
     }
 
     // Update is called once per frame
@@ -31,7 +30,7 @@ public class Interactable : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && inRange && !dialogueManager.inDialogue)
         {
-            dialogueManager.StartDialogue(interactableName, dialogue);
+            dialogueManager.StartDialogue(inkJSON, interactableName);
         }
     }
 

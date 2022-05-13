@@ -661,9 +661,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notifier: {fileID: 873055688}
-  dialogue:
-  - dwadsa
-  - dwads231231dw
+  inkJSON: {fileID: 4900000, guid: 558bb8f59b05dfb4e93638f4c829bdc5, type: 3}
   interactableName: hello
 --- !u!1 &1460886498
 GameObject:
@@ -700,7 +698,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -372, y: -114}
+  m_AnchoredPosition: {x: -331, y: -92}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1460886500
@@ -723,7 +721,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Content
+  m_text: 'Name
 
 '
   m_isRightToLeft: 0
@@ -837,7 +835,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -372, y: -42}
+  m_AnchoredPosition: {x: -331, y: -142}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1934785912
@@ -860,7 +858,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Name
+  m_text: 'Content
 
 '
   m_isRightToLeft: 0
@@ -889,8 +887,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

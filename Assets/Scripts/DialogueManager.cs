@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using Ink.Runtime;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -15,11 +16,14 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI dialogueContent;
 
+    private Story currentStory;
+
     // Start is called before the first frame update
     protected DialogueManager() {}
 
     private void Start()
     {
+        inDialogue = false;
         if (instance != null)
         {
             Debug.Log("Two instances of dialogueManger");
@@ -41,29 +45,56 @@ public class DialogueManager : MonoBehaviour
 
     public void HideCanvas()
     {
-        dialogueCanvas.SetActive(true);
+        dialogueCanvas.SetActive(false);
     }
 
-    public void StartDialogue(string name, List<string> dialogueList)
+    public void StartDialogue(TextAsset inkJSON, string name)
     {
-        Debug.Log("dialogue has started");
+        dialogueName.text = name;
+
+        currentStory = new Story(inkJSON.text);
         inDialogue = true;
         ShowCanvas();
 
-        //change 
-
-        dialogueName.text = name;
-        dialogueContent.text = dialogueList[0];
-        NextDialogue(dialogueList);
+        if (currentStory.canContinue)
+        {
+            dialogueContent.text = currentStory.Continue();
+        } else
+        {
+            ExitDialogue();
+        }
+    }
+    public void NextDialogue()
+    {
+        if (currentStory.canContinue)
+        {
+            dialogueContent.text = currentStory.Continue();
+        }
+        else
+        {
+            StartCoroutine(ExitDialogue());
+        }
     }
 
-    public void NextDialogue(List<string> dialogueList)
+    private IEnumerator ExitDialogue()
     {
+        yield return new WaitForSeconds(0.2f);
+        inDialogue = false;
+        HideCanvas();
+        dialogueContent.text = "";
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (!inDialogue)
+        {
+            return;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            NextDialogue();
+        }
     }
 }

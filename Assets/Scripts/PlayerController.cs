@@ -17,29 +17,36 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 dir = Vector2.zero;
-        if (Input.GetKey(KeyCode.A))
+        if (!DialogueManager.GetInstance().inDialogue)
         {
-            dir.x = -1;
-            //animator.SetInteger("Direction", 3);
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            dir.x = 1;
-            //animator.SetInteger("Direction", 2);
-        }
+            Vector2 dir = Vector2.zero;
+            if (Input.GetKey(KeyCode.A))
+            {
+                dir.x = -1;
+                //animator.SetInteger("Direction", 3);
+            }
+            else if (Input.GetKey(KeyCode.D))
+            {
+                dir.x = 1;
+                //animator.SetInteger("Direction", 2);
+            }
 
-        if (Input.GetKey(KeyCode.W))
-        {
-            dir.y = 1;
-            //animator.SetInteger("Direction", 1);
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            dir.y = -1;
-            //animator.SetInteger("Direction", 0);
-        }
+            if (Input.GetKey(KeyCode.W))
+            {
+                dir.y = 1;
+                //animator.SetInteger("Direction", 1);
+            }
+            else if (Input.GetKey(KeyCode.S))
+            {
+                dir.y = -1;
+                //animator.SetInteger("Direction", 0);
+            }
 
-        rb.velocity = dir.normalized * speed;
+            rb.velocity = dir.normalized * speed;
+        } else
+        {
+            rb.velocity = Vector2.zero;
+        }
+        
     }
 }
