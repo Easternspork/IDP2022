@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Interactable : MonoBehaviour
 {
@@ -13,23 +14,24 @@ public class Interactable : MonoBehaviour
 
     private bool inRange;
 
-    public bool inDialogue;
-    
+    private DialogueManager dialogueManager;
+
     // Start is called before the first frame update
     void Start()
     {
         notifier.SetActive(false);
         inRange = false;
-        inDialogue = false;
+        dialogueManager = DialogueManager.GetInstance();
+        dialogueManager.ShowCanvas();
+        dialogueManager.inDialogue = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && inRange && !inDialogue)
+        if (Input.GetKeyDown(KeyCode.Space) && inRange && !dialogueManager.inDialogue)
         {
-            Debug.Log("dialogue has started");
-            inDialogue = true;
+            dialogueManager.StartDialogue(interactableName, dialogue);
         }
     }
 
@@ -47,5 +49,4 @@ public class Interactable : MonoBehaviour
         inRange = false;
         notifier.SetActive(false);
     }
-
 }
