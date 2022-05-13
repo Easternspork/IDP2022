@@ -16,6 +16,8 @@ public class Interactable : MonoBehaviour
 
     private DialogueManager dialogueManager;
 
+    [SerializeField]
+    private string giveItem;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +32,7 @@ public class Interactable : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && inRange && !dialogueManager.inDialogue)
         {
-            dialogueManager.StartDialogue(inkJSON, interactableName);
+            OnInteract();
         }
     }
 
@@ -47,5 +49,10 @@ public class Interactable : MonoBehaviour
     {
         inRange = false;
         notifier.SetActive(false);
+    }
+
+    protected virtual void OnInteract()
+    {
+        dialogueManager.StartDialogue(inkJSON, interactableName);
     }
 }
