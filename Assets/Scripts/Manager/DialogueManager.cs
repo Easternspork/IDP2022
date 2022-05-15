@@ -11,13 +11,15 @@ public class DialogueManager : MonoBehaviour
     private static DialogueManager instance = null;
 
     [SerializeField]
-    public GameObject dialogueCanvas;
+    protected GameObject dialogueCanvas;
     [SerializeField]
-    private TextMeshProUGUI dialogueName;
+    protected TextMeshProUGUI dialogueName;
     [SerializeField]
-    private TextMeshProUGUI dialogueContent;
+    protected TextMeshProUGUI dialogueContent;
 
     private Story currentStory;
+
+    protected Interactable interactableInstance;
 
     // Start is called before the first frame update
     protected DialogueManager() {}
@@ -49,14 +51,15 @@ public class DialogueManager : MonoBehaviour
         dialogueCanvas.SetActive(false);
     }
 
-    public void StartDialogue(TextAsset inkJSON, string name)
+    public void StartDialogue(Interactable interactableInstance)
     {
-        Debug.Log(disableDialogue);
+        this.interactableInstance = interactableInstance;
+
         if (disableDialogue == false)
         {
-            dialogueName.text = name;
+            dialogueName.text = this.interactableInstance.interactableName;
 
-            currentStory = new Story(inkJSON.text);
+            currentStory = new Story(this.interactableInstance.inkJSON.text);
             inDialogue = true;
             ShowCanvas();
 
@@ -66,9 +69,11 @@ public class DialogueManager : MonoBehaviour
             }
             else
             {
-                ExitDialogue();
+                StartCoroutine(ExitDialogue());
             }
-        } 
+        }
+
+        this.interactableInstance.OnDialogueStart();
     }
     public void NextDialogue()
     {
@@ -88,6 +93,8 @@ public class DialogueManager : MonoBehaviour
         inDialogue = false;
         HideCanvas();
         dialogueContent.text = "";
+
+        this.interactableInstance.OnDialogueEnd();
     }
 
     // Update is called once per frame

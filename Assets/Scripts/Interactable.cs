@@ -7,10 +7,9 @@ public class Interactable : MonoBehaviour
 {
     [SerializeField]
     private GameObject notifier;
-    [SerializeField]
-    private TextAsset inkJSON;
-    [SerializeField]
-    private string interactableName;
+
+    public TextAsset inkJSON;
+    public string interactableName;
 
     private bool inRange;
 
@@ -52,7 +51,16 @@ public class Interactable : MonoBehaviour
 
     protected virtual void OnInteract()
     {
-        dialogueManager.StartDialogue(inkJSON, interactableName);
-        
+        dialogueManager.StartDialogue(this);
+    }
+
+    public virtual void OnDialogueStart()
+    {
+
+    }
+
+    public virtual void OnDialogueEnd()
+    {
+
     }
 }
