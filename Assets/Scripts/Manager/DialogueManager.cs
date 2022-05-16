@@ -162,7 +162,6 @@ public class DialogueManager : MonoBehaviour
 
     private void DisplayChoices()
     {
-        Debug.Log("nrs");
 
         List<Choice> currentChoices = currentStory.currentChoices;
 
