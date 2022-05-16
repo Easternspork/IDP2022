@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class KeypadInteractable : Interactable
 {
-    public override void OnDialogueStart()
+    protected override void OnInteract()
     {
-        base.OnDialogueStart();
+        base.OnInteract();
+    }
+
+    
+
+    public override void OnDialogueEnd()
+    {
+        base.OnDialogueEnd();
         Numpad.GetInstance().ShowCanvas();
         DialogueManager.GetInstance().disableDialogue = true;
+        DialogueManager.GetInstance().inDialogue = true;
+
     }
 }

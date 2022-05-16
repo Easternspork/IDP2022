@@ -19,7 +19,11 @@ public class DialogueManager : MonoBehaviour
 
     private Story currentStory;
 
-    protected Interactable interactableInstance;
+    protected Interactable interactableInstance = null;
+
+    [SerializeField] private GameObject[] choices;
+
+    private TextMeshProUGUI[] choicesText;
 
     // Start is called before the first frame update
     protected DialogueManager() {}
@@ -33,6 +37,12 @@ public class DialogueManager : MonoBehaviour
         }
         instance = this;
         HideCanvas();
+
+        choicesText = new TextMeshProUGUI[choices.Length];
+        for (int i = 0; i<choices.Length; i++)
+        {
+            choicesText[i] = choices[i].GetComponentInChildren<TextMeshProUGUI>();
+        }
     }
 
     public static DialogueManager GetInstance()
@@ -74,12 +84,40 @@ public class DialogueManager : MonoBehaviour
         }
 
         this.interactableInstance.OnDialogueStart();
+        DisplayChoices();
+
     }
+
+    public void StartDialogue(TextAsset inkJSON, string name)
+    {
+        if (disableDialogue == false)
+        {
+            dialogueName.text = name;
+
+            currentStory = new Story(inkJSON.text);
+            inDialogue = true;
+            ShowCanvas();
+
+            if (currentStory.canContinue)
+            {
+                dialogueContent.text = currentStory.Continue();
+
+            }
+            else
+            {
+                StartCoroutine(ExitDialogue());
+            }
+        }
+        DisplayChoices();
+
+    }
+
     public void NextDialogue()
     {
         if (currentStory.canContinue)
         {
             dialogueContent.text = currentStory.Continue();
+            DisplayChoices();
         }
         else
         {
@@ -94,7 +132,12 @@ public class DialogueManager : MonoBehaviour
         HideCanvas();
         dialogueContent.text = "";
 
-        this.interactableInstance.OnDialogueEnd();
+        if (this.interactableInstance != null)
+        {
+            this.interactableInstance.OnDialogueEnd();
+        }
+
+        this.interactableInstance = null;
     }
 
     // Update is called once per frame
@@ -105,9 +148,48 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        // make sure that you can't continue when there is dialogue selection
+
+        if (currentStory.currentChoices.Count == 0)
         {
-            NextDialogue();
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                NextDialogue();
+            }
         }
+
+    }
+
+    private void DisplayChoices()
+    {
+        Debug.Log("nrs");
+
+        List<Choice> currentChoices = currentStory.currentChoices;
+
+        if (currentChoices.Count > choices.Length)
+        {
+            Debug.LogError("More choices than buttons");
+        }
+
+        int index = 0;
+
+        foreach (Choice choice in currentChoices)
+        {
+            choices[index].gameObject.SetActive(true);
+            choicesText[index].text = choice.text;
+            index++;
+        }
+
+        for (int i = index; i < choices.Length; i++)
+        {
+            choices[i].gameObject.SetActive(false);
+
+        }
+    }
+
+    public void MakeChoice(int choiceIndex)
+    {
+        currentStory.ChooseChoiceIndex(choiceIndex);
+        NextDialogue();
     }
 }

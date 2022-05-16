@@ -3250,7 +3250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notifier: {fileID: 873055688}
-  inkJSON: {fileID: 4900000, guid: 558bb8f59b05dfb4e93638f4c829bdc5, type: 3}
+  inkJSON: {fileID: 4900000, guid: 766ecf42d994aad46b420295c51291a1, type: 3}
   interactableName: hello
 --- !u!1 &1454660511
 GameObject:

@@ -155,5 +155,7 @@ public class Numpad : MonoBehaviour
         input = "";
         UpdateText();
         DialogueManager.GetInstance().disableDialogue = false;
+        DialogueManager.GetInstance().inDialogue = false;
+
     }
 }
