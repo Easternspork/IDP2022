@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float speed;
     private Rigidbody2D rb;
+    float lockPos = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -47,6 +48,7 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = Vector2.zero;
         }
-        
+
+        transform.rotation = Quaternion.Euler(lockPos, lockPos, lockPos);
     }
 }
