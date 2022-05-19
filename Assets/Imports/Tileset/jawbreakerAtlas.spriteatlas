@@ -1,0 +1,192 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: jawbreakerAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 83850969, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: -1615744859, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: -568447030, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: 1413192318, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: -1798277895, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: 971258156, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: -1594403265, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: -588467404, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: -1359621177, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: -1795606711, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: 1413935601, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: 683444336, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: 917565766, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: -654851082, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: -823385412, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: -830981686, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: -1959394932, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: 81855063, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: 1983095959, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: 548355119, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: -118554146, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: -180662704, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: -900715025, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: 1917878770, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: -989673257, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: 688619931, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: -539256852, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: 500678921, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: -114756321, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: 1513207223, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: 908780225, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: -850838042, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: -826009175, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: 72926943, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: -518162736, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: 1516271130, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: -1636548517, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: -337355323, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: 47795012, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: 525891311, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: 249392985, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: -1670289057, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: 2026541600, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: 1081916711, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: -705904033, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: -92598556, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: 199743264, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: -811211482, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: -940585468, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: 107544005, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: 957294027, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: 829259200, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: 1053775294, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: 585281479, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: 1426085807, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: -2124206933, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: 1970944194, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: 312267047, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: 1555880903, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: -559887389, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: 1176167001, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: -1837385027, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: -2026612039, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: -1122727964, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: 2126686804, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: 1668694911, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: -1487698261, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  - {fileID: 2066395686, guid: 5c07a1452d59a234ab44586d475b8a3c, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - jawbreaker_tiles_11
+  - jawbreaker_tiles_10
+  - jawbreaker_tiles_13
+  - jawbreaker_tiles_12
+  - jawbreaker_tiles_15
+  - jawbreaker_tiles_14
+  - jawbreaker_tiles_17
+  - jawbreaker_tiles_16
+  - jawbreaker_tiles_19
+  - jawbreaker_tiles_18
+  - jawbreaker_tiles_39
+  - jawbreaker_tiles_38
+  - jawbreaker_tiles_33
+  - jawbreaker_tiles_32
+  - jawbreaker_tiles_31
+  - jawbreaker_tiles_30
+  - jawbreaker_tiles_37
+  - jawbreaker_tiles_36
+  - jawbreaker_tiles_35
+  - jawbreaker_tiles_34
+  - jawbreaker_tiles_8
+  - jawbreaker_tiles_9
+  - jawbreaker_tiles_2
+  - jawbreaker_tiles_3
+  - jawbreaker_tiles_0
+  - jawbreaker_tiles_1
+  - jawbreaker_tiles_6
+  - jawbreaker_tiles_7
+  - jawbreaker_tiles_4
+  - jawbreaker_tiles_5
+  - jawbreaker_tiles_64
+  - jawbreaker_tiles_65
+  - jawbreaker_tiles_66
+  - jawbreaker_tiles_67
+  - jawbreaker_tiles_28
+  - jawbreaker_tiles_60
+  - jawbreaker_tiles_29
+  - jawbreaker_tiles_61
+  - jawbreaker_tiles_62
+  - jawbreaker_tiles_63
+  - jawbreaker_tiles_48
+  - jawbreaker_tiles_49
+  - jawbreaker_tiles_20
+  - jawbreaker_tiles_21
+  - jawbreaker_tiles_59
+  - jawbreaker_tiles_22
+  - jawbreaker_tiles_42
+  - jawbreaker_tiles_58
+  - jawbreaker_tiles_23
+  - jawbreaker_tiles_43
+  - jawbreaker_tiles_24
+  - jawbreaker_tiles_40
+  - jawbreaker_tiles_25
+  - jawbreaker_tiles_41
+  - jawbreaker_tiles_55
+  - jawbreaker_tiles_26
+  - jawbreaker_tiles_46
+  - jawbreaker_tiles_54
+  - jawbreaker_tiles_27
+  - jawbreaker_tiles_47
+  - jawbreaker_tiles_57
+  - jawbreaker_tiles_44
+  - jawbreaker_tiles_56
+  - jawbreaker_tiles_45
+  - jawbreaker_tiles_51
+  - jawbreaker_tiles_50
+  - jawbreaker_tiles_53
+  - jawbreaker_tiles_52
+  m_RenderDataMap: {}
+  m_Tag: jawbreakerAtlas
+  m_IsVariant: 0
