@@ -7,7 +7,7 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
-	"last_search.8040E7BB" = "tile pal"
+	"last_search.8040E7BB" = "animation"
 	"OpenInspectorPreview.8040E7BB" = "0"
 	"currentGroup.8040E7BB" = "all"
 }
@@ -54,6 +54,7 @@ providers = {
 	}
 }
 recentSearches = [
+	"a"
 	"t"
 	"fon"
 	"f"
