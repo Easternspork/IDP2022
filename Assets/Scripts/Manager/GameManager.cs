@@ -26,4 +26,9 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Cell");
         TimeManager.GetInstance().StartTimer();
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
