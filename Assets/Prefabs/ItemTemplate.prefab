@@ -301,9 +301,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   descriptionContainer: {fileID: 7128327664770991189}
-  description: wdawwe3213e1ede123dd1d1d1
+  description: A key to open a door to a room inside the prison.
   descriptionUI: {fileID: 1996036253901667483}
-  itemName: wdasdawada
+  itemName: Key
   nameUI: {fileID: 3993998225205199173}
 --- !u!1 &1583597208596151504
 GameObject:
@@ -456,7 +456,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -42.6, y: -9.3}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8671497744870569106
