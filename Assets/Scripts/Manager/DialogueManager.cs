@@ -41,7 +41,15 @@ public class DialogueManager : MonoBehaviour
         {
             Debug.LogWarning("Two instances of dialogueManger");
         }
+
         instance = this;
+
+
+
+        Debug.Log("bruh");
+        Debug.Log(this);
+        Debug.Log(instance);
+
         HideCanvas();
 
         choicesText = new TextMeshProUGUI[choices.Length];
@@ -165,6 +173,10 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("breh");
+
+        Debug.Log(this);
+
         if (!inDialogue)
         {
             return;

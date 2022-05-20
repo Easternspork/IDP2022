@@ -15,7 +15,7 @@ public class Interactable : MonoBehaviour
 
     private DialogueManager dialogueManager;
 
-
+    
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +28,8 @@ public class Interactable : MonoBehaviour
     // Update is called once per frame
     protected virtual void Update()
     {
+        Debug.Log(dialogueManager);
+
         if (Input.GetKeyDown(KeyCode.Space) && inRange && !dialogueManager.inDialogue)
         {
             OnInteract();
@@ -51,6 +53,8 @@ public class Interactable : MonoBehaviour
 
     protected virtual void OnInteract()
     {
+        Debug.Log(dialogueManager);
+
         dialogueManager.StartDialogue(this);
     }
 

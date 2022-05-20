@@ -6,18 +6,31 @@ public class NotebookInteractable : Interactable
 {
     [SerializeField]
     private GameObject notebook;
-
-    // Start is called before the first frame update
-    void Start()
+    public override void OnDialogueEnd()
     {
-        notebook.SetActive(false);
+        base.OnDialogueEnd();
+        Numpad.GetInstance().ShowCanvas();
+        DialogueManager.GetInstance().disableDialogue = true;
+        GameManager.GetInstance().disableMovement = true;
     }
 
     protected override void OnInteract()
     {
         base.OnInteract();
-        DialogueManager.GetInstance().disableDialogue = true;
-        GameManager.GetInstance().disableMovement = true;
+        ShowPuzzle();
     }
 
+    public void ShowPuzzle()
+    {
+        notebook.SetActive(true);
+    }
+    public void HidePuzzle()
+    {
+        notebook.SetActive(false);
+    }
+
+    private void Start()
+    {
+        HidePuzzle();
+    }
 }
