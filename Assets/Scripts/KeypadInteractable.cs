@@ -14,7 +14,7 @@ public class KeypadInteractable : Interactable
         base.OnDialogueEnd();
         Numpad.GetInstance().ShowCanvas();
         DialogueManager.GetInstance().disableDialogue = true;
-        DialogueManager.GetInstance().inDialogue = true;
+        GameManager.GetInstance().disableMovement = true;
 
     }
 }

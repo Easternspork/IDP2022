@@ -2189,6 +2189,7 @@ MonoBehaviour:
   inkJSON: {fileID: 4900000, guid: 71ef1ce0fc17c584f99e078db9f138a3, type: 3}
   interactableName: You
   changeScene: Office
+  unlocked: 1
 --- !u!1 &452997683
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
-    public List<string> items;
     private static GameManager instance;
 
+    public bool disableMovement = false;
     private void Start()
     {
         if (instance != null)
@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
         }
         instance = this;
     }
+
     public static GameManager GetInstance()
     {
         // fix this cuz im not allowed to use new keyword here
