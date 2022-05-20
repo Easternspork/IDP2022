@@ -9,8 +9,6 @@ public class KeypadInteractable : Interactable
         base.OnInteract();
     }
 
-    
-
     public override void OnDialogueEnd()
     {
         base.OnDialogueEnd();
