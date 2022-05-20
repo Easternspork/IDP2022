@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
+    public Inventory inventory;
 
     public bool disableMovement = false;
     private void Start()
