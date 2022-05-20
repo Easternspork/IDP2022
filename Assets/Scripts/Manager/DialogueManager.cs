@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using Ink.Runtime;
+using Ink.UnityIntegration;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -25,6 +26,11 @@ public class DialogueManager : MonoBehaviour
 
     private TextMeshProUGUI[] choicesText;
 
+    private DialogueVariables dialogueVariables;
+
+    [SerializeField]
+    private InkFile globalInkFile;
+
     // Start is called before the first frame update
     protected DialogueManager() {}
 
@@ -43,6 +49,8 @@ public class DialogueManager : MonoBehaviour
         {
             choicesText[i] = choices[i].GetComponentInChildren<TextMeshProUGUI>();
         }
+
+        dialogueVariables = new DialogueVariables(globalInkFile.filePath);
     }
 
     public static DialogueManager GetInstance()
@@ -63,6 +71,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Interactable interactableInstance)
     {
+
         this.interactableInstance = interactableInstance;
 
         if (disableDialogue == false)
@@ -72,6 +81,9 @@ public class DialogueManager : MonoBehaviour
             currentStory = new Story(this.interactableInstance.inkJSON.text);
             inDialogue = true;
             ShowCanvas();
+            SetInkVariables();
+
+            //dialogueVariables.StartListening(currentStory);
 
             if (currentStory.canContinue)
             {
@@ -82,6 +94,7 @@ public class DialogueManager : MonoBehaviour
                 StartCoroutine(ExitDialogue());
             }
         }
+
 
         this.interactableInstance.OnDialogueStart();
         DisplayChoices();
@@ -90,6 +103,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(TextAsset inkJSON, string name)
     {
+
         if (disableDialogue == false)
         {
             dialogueName.text = name;
@@ -97,6 +111,9 @@ public class DialogueManager : MonoBehaviour
             currentStory = new Story(inkJSON.text);
             inDialogue = true;
             ShowCanvas();
+
+            //dialogueVariables.StartListening(currentStory);
+            SetInkVariables();
 
             if (currentStory.canContinue)
             {
@@ -108,6 +125,7 @@ public class DialogueManager : MonoBehaviour
                 StartCoroutine(ExitDialogue());
             }
         }
+
         DisplayChoices();
 
     }
@@ -128,6 +146,9 @@ public class DialogueManager : MonoBehaviour
     private IEnumerator ExitDialogue()
     {
         yield return new WaitForSeconds(0.2f);
+
+        //dialogueVariables.StopListening(currentStory);
+
         inDialogue = false;
         GameManager.GetInstance().disableMovement = false;
         HideCanvas();
@@ -191,5 +212,12 @@ public class DialogueManager : MonoBehaviour
     {
         currentStory.ChooseChoiceIndex(choiceIndex);
         NextDialogue();
+    }
+
+    public void SetInkVariables()
+    {
+        currentStory.variablesState["hasShrimp"] = Inventory.GetInstance().GetItemList().Contains("Shrimp");
+        currentStory.variablesState["officeOpen"] = Inventory.GetInstance().GetItemList().Contains("Key");
+
     }
 }

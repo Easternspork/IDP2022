@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Ink.Runtime;
 
 public class DoorInteractable : Interactable
 {
@@ -12,7 +13,7 @@ public class DoorInteractable : Interactable
 
     public override void OnDialogueEnd()
     {
-        if (unlocked)
+        if (Inventory.GetInstance().GetItemList().Contains("Key"))
         {
             SceneManager.LoadScene(changeScene);
         }

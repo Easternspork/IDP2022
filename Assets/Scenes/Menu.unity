@@ -909,6 +909,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 2088708209}
   itemTemplate: {fileID: 1583597208596151504, guid: 4e7bd9337d2465e42a12f66cf4724402, type: 3}
+  keySprite: {fileID: 21300000, guid: 79635a93bf49b77409a1b0364fc0abb1, type: 3}
 --- !u!1 &655980690
 GameObject:
   m_ObjectHideFlags: 0
@@ -2940,6 +2941,20 @@ MonoBehaviour:
   - {fileID: 752352164}
   - {fileID: 1340406087}
   - {fileID: 605663081}
+  globalInkFile:
+    compileAutomatically: 0
+    inkAsset: {fileID: 102900000, guid: 4f03be16ba321e147978eb3d8b1f7a3d, type: 3}
+    jsonAssetDirectory: {fileID: 0}
+    jsonAsset: {fileID: 0}
+    unhandledCompileErrors: []
+    errors: []
+    warnings: []
+    todos: []
+    parents: []
+    masterInkAssets: []
+    masterInkAsset: {fileID: 0}
+    includePaths: []
+    includes: []
 --- !u!1 &1892509493
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,4 +1,4 @@
-VAR hasShrimp = false
+INCLUDE Global.ink
 
 {hasShrimp:
     -> yesShrimp

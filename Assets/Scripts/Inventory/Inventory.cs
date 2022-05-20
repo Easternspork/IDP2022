@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class Inventory : MonoBehaviour
 
     private bool showingInventory = false;
 
+    [SerializeField]
+    private Sprite keySprite;
+
     private void Start()
     {
 
@@ -27,9 +31,7 @@ public class Inventory : MonoBehaviour
 
         items = new List<string>();
 
-        items.Add("djwaiodsa");
-        items.Add("djwaiodsa");
-        items.Add("djwaiodsa");
+        items.Add("Key");
 
         Debug.Log(items);
     }
@@ -43,6 +45,11 @@ public class Inventory : MonoBehaviour
     public void AddItem(string item)
     {
         items.Add(item);
+    }
+
+    public void RemoveItem(string item)
+    {
+        items.Remove(item);
     }
 
     public List<string> GetItemList()
@@ -87,12 +94,22 @@ public class Inventory : MonoBehaviour
             itemSlotRectTransform.gameObject.SetActive(true);
             itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, y * itemSlotCellSize);
             x++;
-            if (x > 4)
+            if (x > 5)
             {
                 x = 0;
                 y++;
             }
-            
+
+            switch (item)
+            {
+                case "Key":
+                   itemSlotRectTransform.GetChild(1).GetComponent<Image>().overrideSprite = keySprite;
+                    break;
+                default:
+                    Debug.Log("default");
+                    break;
+            }
+
         }
     }
 
