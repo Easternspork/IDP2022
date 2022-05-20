@@ -10,9 +10,9 @@ public class ItemDialogueInteract : Interactable
     protected override void OnInteract()
     {
         base.OnInteract();
-        if (!GameManager.GetInstance().items.Contains(giveItem))
+        if (!Inventory.GetInstance().GetItemList().Contains(giveItem))
         {
-            GameManager.GetInstance().items.Add(giveItem);
+            Inventory.GetInstance().AddItem(giveItem);
             Debug.Log("gave item");
         }
     }

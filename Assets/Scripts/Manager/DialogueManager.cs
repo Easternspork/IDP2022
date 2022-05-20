@@ -129,6 +129,7 @@ public class DialogueManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0.2f);
         inDialogue = false;
+        GameManager.GetInstance().disableMovement = false;
         HideCanvas();
         dialogueContent.text = "";
 

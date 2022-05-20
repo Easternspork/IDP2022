@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!DialogueManager.GetInstance().inDialogue)
+        if (!DialogueManager.GetInstance().inDialogue && !GameManager.GetInstance().disableMovement)
         {
             animator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
             animator.SetFloat("Vertical", Input.GetAxis("Vertical"));

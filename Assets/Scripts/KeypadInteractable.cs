@@ -9,14 +9,12 @@ public class KeypadInteractable : Interactable
         base.OnInteract();
     }
 
-    
-
     public override void OnDialogueEnd()
     {
         base.OnDialogueEnd();
         Numpad.GetInstance().ShowCanvas();
         DialogueManager.GetInstance().disableDialogue = true;
-        DialogueManager.GetInstance().inDialogue = true;
+        GameManager.GetInstance().disableMovement = true;
 
     }
 }
