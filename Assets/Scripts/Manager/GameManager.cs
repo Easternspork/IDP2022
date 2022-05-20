@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
-    public List<string> items;
     private static GameManager instance;
+    public Inventory inventory;
 
     private void Start()
     {
