@@ -7,9 +7,9 @@ INCLUDE Global.ink
 }
 
 === yesShrimp ===
-u alr have shrimp go away
+Thanks for rattin that slippery fellow out
 ->DONE
 === noShrimp === 
-here is ur shrimp sir
-Obtained 1 Shrimp
+Seen any crustacean criminals around here?
+Peter won't stop making passive-agressive remarks on the lack of shrimp. I think he thinks I'm pocketing it.
 ->DONE
