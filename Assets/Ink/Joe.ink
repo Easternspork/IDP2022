@@ -1,3 +1,5 @@
+INCLUDE Global.ink
+
 Things weren't the same after the Chicken Coup O’ 43.
     * [What happened?]
         All them human leaders got overthrown and the Barnyard Age started.

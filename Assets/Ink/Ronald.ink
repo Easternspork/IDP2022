@@ -10,7 +10,7 @@ Things weren't the same after the Chicken Coup O’ 43.
     * [Chicken coup?]
         Some of those cluckers had enough of humans tellin em' what to do and decided to put matters into their own feathers.
         Thing is, they didn't expect those darn bovines to take advantage of the situation.
-            * * [The same ones that put us in here?]
+            * * [A cowpocalypse?]
                 That's right. Poor chickens got crushed.
                 Both figuratively and figuratively.
                  -> fin
