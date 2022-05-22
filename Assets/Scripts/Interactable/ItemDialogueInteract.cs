@@ -7,6 +7,9 @@ public class ItemDialogueInteract : Interactable
     [SerializeField]
     private string giveItem;
 
+    [SerializeField]
+    private bool destoryAfter = false;
+
     protected override void OnInteract()
     {
         base.OnInteract();
@@ -14,6 +17,15 @@ public class ItemDialogueInteract : Interactable
         {
             Inventory.GetInstance().AddItem(giveItem);
             Debug.Log("gave item");
+        }
+    }
+
+    public override void OnDialogueEnd()
+    {
+        base.OnDialogueEnd();
+        if (destoryAfter)
+        {
+            Destroy(gameObject);
         }
     }
 }
