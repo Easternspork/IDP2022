@@ -27,7 +27,7 @@ public class DialogueManager : MonoBehaviour
 
     private TextMeshProUGUI[] choicesText;
 
-    private DialogueVariables dialogueVariables;
+    public DialogueVariables dialogueVariables;
 
     [SerializeField]
     private InkFile globalInkFile;
@@ -77,7 +77,6 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Interactable interactableInstance)
     {
-
         this.interactableInstance = interactableInstance;
 
         if (disableDialogue == false)
@@ -87,9 +86,9 @@ public class DialogueManager : MonoBehaviour
             currentStory = new Story(this.interactableInstance.inkJSON.text);
             inDialogue = true;
             ShowCanvas();
-            SetInkVariables();
 
-            //dialogueVariables.StartListening(currentStory);
+            dialogueVariables.StartListening(currentStory);
+            SetInkVariables();
 
             if (currentStory.canContinue)
             {
@@ -118,7 +117,7 @@ public class DialogueManager : MonoBehaviour
             inDialogue = true;
             ShowCanvas();
 
-            //dialogueVariables.StartListening(currentStory);
+            dialogueVariables.StartListening(currentStory);
             SetInkVariables();
 
             if (currentStory.canContinue)
@@ -153,7 +152,7 @@ public class DialogueManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0.2f);
 
-        //dialogueVariables.StopListening(currentStory);
+        dialogueVariables.StopListening(currentStory);
 
         inDialogue = false;
         GameManager.GetInstance().disableMovement = false;
@@ -166,6 +165,12 @@ public class DialogueManager : MonoBehaviour
         }
 
         this.interactableInstance = null;
+
+        // scuffed way to start the fight 
+        if ((bool)currentStory.variablesState["shrimpBeating"] && (bool)currentStory.variablesState["peterShrimpSus"])
+        {
+            Debug.Log("start fighting scene");
+        }
     }
 
     // Update is called once per frame
@@ -226,6 +231,11 @@ public class DialogueManager : MonoBehaviour
     {
         currentStory.variablesState["hasShrimp"] = Inventory.GetInstance().GetItemList().Contains("Shrimp");
         currentStory.variablesState["officeOpen"] = Inventory.GetInstance().GetItemList().Contains("Key");
+        
+    }
 
+    public Story GetCurrentStory()
+    {
+        return currentStory;
     }
 }
