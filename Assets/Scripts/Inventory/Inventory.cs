@@ -59,10 +59,13 @@ public class Inventory : MonoBehaviour
 
     public void ShowInventory()
     {
-        canvas.SetActive(true);
-        showingInventory = true;
-        GameManager.GetInstance().disableMovement = true;
-        RefreshInventory();
+        if (!DialogueManager.GetInstance().inDialogue)
+        {
+            canvas.SetActive(true);
+            showingInventory = true;
+            GameManager.GetInstance().disableMovement = true;
+            RefreshInventory();
+        }
     }
 
     public void HideInventory()
