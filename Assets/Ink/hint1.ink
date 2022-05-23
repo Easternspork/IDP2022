@@ -13,6 +13,7 @@ You have no more hints to reveal
 === askHint ===
 Revealing each hint will invoke a 1 minute penalty on the timer. Would you  like to reveal a hint anyways?
     * [Yes]
+        
         ~hint1 += 1 
         { hint1 == 1: -> one}
         { hint1 == 2: -> two}
