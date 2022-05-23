@@ -75,7 +75,6 @@ public class Inventory : MonoBehaviour
     public void RefreshInventory()
     {
         int x = 0;
-        int y = 0;
 
         float itemSlotCellSize = 100f;
 
@@ -92,13 +91,10 @@ public class Inventory : MonoBehaviour
         {
             RectTransform itemSlotRectTransform = Instantiate(itemTemplate, canvas.transform).GetComponent<RectTransform>();
             itemSlotRectTransform.gameObject.SetActive(true);
-            itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, y * itemSlotCellSize);
+            itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, 0);
             x++;
-            if (x > 5)
-            {
-                x = 0;
-                y++;
-            }
+
+            itemSlotRectTransform.SetSiblingIndex(items.Count - items.IndexOf(item));
 
             switch (item)
             {
