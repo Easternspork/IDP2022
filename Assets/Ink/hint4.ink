@@ -1,9 +1,32 @@
 INCLUDE Global.ink
 
-{ hint4 == 1: one}
-{ hint4 == 2: two}
-{ hint4 == 3: three}
-{ hint4 == 4: four}
+{ hint4 < 4: -> askHint}
+{ hint4 == 4: -> noHintsToReveal}
+
+=== noHintsToReveal ===
+You have no more hints to reveal
+* [Display my current hints]
+    -> four
+* [Cancel]
+    ->END
+
+=== askHint ===
+Revealing each hint will invoke a 1 minute penalty on the timer. Would you  like to reveal a hint anyways?
+    * [Yes]
+        
+        ~hint4 += 1 
+        { hint4 == 1: -> one}
+        { hint4 == 2: -> two}
+        { hint4 == 3: ->three}
+        { hint4 == 4: ->four}
+    * [No, display my current hints]
+        { hint4 == 1: ->one}
+        { hint4 == 2: ->two}
+        { hint4 == 3: ->three}
+        { hint4 == 4: ->four}
+        { hint4 == 0: ->noHints }
+    * [Cancel]
+        ->END
 
 === one ===
 E = 16

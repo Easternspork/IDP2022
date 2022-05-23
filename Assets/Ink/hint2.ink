@@ -1,9 +1,32 @@
 INCLUDE Global.ink
 
-{ hint2 == 1: one}
-{ hint2 == 2: two}
-{ hint2 == 3: three}
-{ hint2 == 4: four}
+{ hint2 < 4: -> askHint}
+{ hint2 == 4: -> noHintsToReveal}
+
+=== noHintsToReveal ===
+You have no more hints to reveal
+* [Display my current hints]
+    -> four
+* [Cancel]
+    ->END
+
+=== askHint ===
+Revealing each hint will invoke a 1 minute penalty on the timer. Would you  like to reveal a hint anyways?
+    * [Yes]
+        
+        ~hint2 += 1 
+        { hint2 == 1: -> one}
+        { hint2 == 2: -> two}
+        { hint2 == 3: ->three}
+        { hint2 == 4: ->four}
+    * [No, display my current hints]
+        { hint2 == 1: ->one}
+        { hint2 == 2: ->two}
+        { hint2 == 3: ->three}
+        { hint2 == 4: ->four}
+        { hint2 == 0: ->noHints }
+    * [Cancel]
+        ->END
 
 === one ===
 Those cow guards seem to be talking about something interesting
