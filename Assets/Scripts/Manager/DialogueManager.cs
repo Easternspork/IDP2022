@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using Ink.Runtime;
 using Ink.UnityIntegration;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -31,8 +32,11 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     private InkFile globalInkFile;
 
-    // Start is called before the first frame update
-    protected DialogueManager() {}
+    private void Awake()
+    {
+        //DontDestroyOnLoad(this);
+
+    }
 
     private void Start()
     {
@@ -41,14 +45,8 @@ public class DialogueManager : MonoBehaviour
         {
             Debug.LogWarning("Two instances of dialogueManger");
         }
-
-        instance = this;
-
-
-
-        Debug.Log("bruh");
         Debug.Log(this);
-        Debug.Log(instance);
+        instance = this;
 
         HideCanvas();
 
@@ -173,9 +171,7 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("breh");
 
-        Debug.Log(this);
 
         if (!inDialogue)
         {

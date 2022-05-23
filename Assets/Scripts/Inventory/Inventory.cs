@@ -33,7 +33,6 @@ public class Inventory : MonoBehaviour
 
         items.Add("Key");
 
-        Debug.Log(items);
     }
 
     public static Inventory GetInstance()

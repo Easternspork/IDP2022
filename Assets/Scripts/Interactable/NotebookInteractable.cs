@@ -8,8 +8,8 @@ public class NotebookInteractable : Interactable
     private GameObject notebook;
     public override void OnDialogueEnd()
     {
+        ShowPuzzle();
         base.OnDialogueEnd();
-        Numpad.GetInstance().ShowCanvas();
         DialogueManager.GetInstance().disableDialogue = true;
         GameManager.GetInstance().disableMovement = true;
     }
@@ -17,7 +17,6 @@ public class NotebookInteractable : Interactable
     protected override void OnInteract()
     {
         base.OnInteract();
-        ShowPuzzle();
     }
 
     public void ShowPuzzle()
@@ -27,10 +26,14 @@ public class NotebookInteractable : Interactable
     public void HidePuzzle()
     {
         notebook.SetActive(false);
+        GameManager.GetInstance().disableMovement = false;
+        DialogueManager.GetInstance().disableDialogue = false;
+
     }
 
     private void Start()
     {
         HidePuzzle();
     }
+
 }

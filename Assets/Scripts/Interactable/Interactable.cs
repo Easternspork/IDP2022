@@ -13,7 +13,6 @@ public class Interactable : MonoBehaviour
 
     private bool inRange;
 
-    private DialogueManager dialogueManager;
 
     
 
@@ -22,15 +21,12 @@ public class Interactable : MonoBehaviour
     {
         notifier.SetActive(false);
         inRange = false;
-        dialogueManager = DialogueManager.GetInstance();
     }
 
     // Update is called once per frame
     protected virtual void Update()
     {
-        Debug.Log(dialogueManager);
-
-        if (Input.GetKeyDown(KeyCode.Space) && inRange && !dialogueManager.inDialogue)
+        if (Input.GetKeyDown(KeyCode.Space) && inRange && !DialogueManager.GetInstance().inDialogue)
         {
             OnInteract();
         }
@@ -53,9 +49,8 @@ public class Interactable : MonoBehaviour
 
     protected virtual void OnInteract()
     {
-        Debug.Log(dialogueManager);
 
-        dialogueManager.StartDialogue(this);
+        DialogueManager.GetInstance().StartDialogue(this);
     }
 
     public virtual void OnDialogueStart()
