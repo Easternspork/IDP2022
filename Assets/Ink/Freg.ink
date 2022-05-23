@@ -17,6 +17,7 @@ He’lo, name's Freg.
  * [What's going on?]
     If ya finna ask me why we’re in this dump, ask another one of these belly floppers.
     (He smells fishy)
+        -> END
  * [Nice to know.]
     Hm.
     -> END
@@ -31,6 +32,7 @@ He’lo, name's Freg.
             ...
             Why don't you mind your own business.
             ~ shrimpBeating = true
+                -> END
     * * [Smells like shrimp.]
         W-what's a shrimp??
             * * * [Seriously?]
