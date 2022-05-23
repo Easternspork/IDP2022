@@ -1,26 +1,27 @@
 INCLUDE Global.ink
 
-{ hint5 == 1: 1}
-{ hint5 == 2: 2}
-{ hint5 == 3: 3}
-{ hint5 == 4: 4}
+{ hint5 == 1: -> a}
+{ hint5 == 2: -> b}
+{ hint5 == 3: -> c}
+{ hint5 == 4: -> d}
 
-=== 1 ===
+
+=== a ===
 Find the fuse box to unlock the door.
 
 ->END
 
-=== 2 ===
+=== b ===
 Match the wires to the correct place.
 
 ->END
 
-=== 3 ===
+=== c ===
 The answer to the hangman has 7 vowels.
 
 ->END
 
-=== 4 ===
+=== d ===
 Answer to hangman Puzzle: “We only ask for rain.” 
 
 ->END
