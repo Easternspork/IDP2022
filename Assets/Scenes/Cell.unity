@@ -68760,6 +68760,10 @@ PrefabInstance:
       propertyPath: m_AngularDrag
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5501165128894593949, guid: c245b1962251e504092fbe11ddf9a044, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5501165128894593951, guid: c245b1962251e504092fbe11ddf9a044, type: 3}
       propertyPath: m_Name
       value: Player
