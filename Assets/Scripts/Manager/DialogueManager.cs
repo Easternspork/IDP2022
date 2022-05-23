@@ -167,10 +167,13 @@ public class DialogueManager : MonoBehaviour
         this.interactableInstance = null;
 
         // scuffed way to start the fight 
-        if ((bool)currentStory.variablesState["shrimpBeating"] && (bool)currentStory.variablesState["peterShrimpSus"])
+        // if ((bool)currentStory.variablesState["shrimpBeating"] && (bool)currentStory.variablesState["peterShrimpSus"])
+
+        if ((bool)currentStory.variablesState["postShrimp"])
         {
             Debug.Log("start fighting scene");
         }
+
     }
 
     // Update is called once per frame
