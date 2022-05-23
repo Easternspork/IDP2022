@@ -1,23 +1,23 @@
 INCLUDE Global.ink
 
-{ hint2 == 1: 1}
-{ hint2 == 2: 2}
-{ hint2 == 3: 3}
-{ hint2 == 4: 4}
+{ hint2 == 1: one}
+{ hint2 == 2: two}
+{ hint2 == 3: three}
+{ hint2 == 4: four}
 
-=== 1 ===
+=== one ===
 Those cow guards seem to be talking about something interesting
 ->END
 
-=== 2 ===
+=== two ===
 Take a look around
 ->END
 
-=== 3 ===
+=== three ===
 The field might have something useful
 ->END
 
-=== 4 ===
+=== four ===
 Check under those benches for the paperclip
 ->END
 
