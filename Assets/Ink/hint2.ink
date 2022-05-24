@@ -44,3 +44,6 @@ The field might have something useful
 Check under those benches for the paperclip
 ->END
 
+=== noHints ===
+You have no hints you've unlocked for this puzzle.
+->END

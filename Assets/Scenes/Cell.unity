@@ -69626,7 +69626,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 607f94f93d607ba48bd4cbfa7ac90f95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hintInks: []
+  hintInks:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   currentPuzzle: 0
 --- !u!1 &1998627396
 GameObject:
