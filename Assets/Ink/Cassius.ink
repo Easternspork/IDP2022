@@ -22,6 +22,7 @@ Thou shouldst not int'rf're with the business yond doest not incl….udeth thee.
         I requesteth a delicacy yond hast been absent from these halls f'r a month.
         'mongst us th're is a hoard'r of shrimp.  I'll consid'r helping if 't be true thee can findeth and secureth his bounty.
         Haply someone else h're couldst holp thee with yond.
+        peter seemeth to has't similar int'rests to thee
         ~ cassShrimpSus = true 
         ->DONE
     * [They serve alchohol here?]

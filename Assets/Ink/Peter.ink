@@ -48,15 +48,15 @@ As part of my end of the deal:
 
 -> END
 === noShrimp ===
-What's your pro'lem you little runt?
-    * [I'm sorry?]
-        The first thing you'll learn here is to mind your own buisness.
-        Scram.
-        Unless you have any food for me. Some flipper has been stashing 
-        it somehwere. Let me know if you got anything on em.
+'sup kiddo?
+    * [What is this place?]
+        A prison, duh.
+        If you want something to do, you can ask that weirdo in the cafeteria with the wild hair, his name's Cassius.
         ~ peterShrimpSus = true
         -> END
-    * [You wanna fight?]
-        I̸͍̔ ̴̢͒w̴͚̎o̵̤͌u̵̻͑ĺ̴̢d̵̼̋n̶̗̓'̸̮̇t̴͔͊ ̷̨͠t̵̼̏r̴͕̅ẏ̸̮.̴̬͊
+    * [How do you get out of here?]
+        Has'nt even been a day since you've got here, slow down.
+        Hmm, If I were to escape I would probably ask someone smarter than me, say Cassius, that fellow with the wack haircut. 
+        Though, haha, good luck understanding him.
     -> END
 
