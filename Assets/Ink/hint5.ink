@@ -48,3 +48,7 @@ Answer to hangman Puzzle: “We only ask for rain.”
 
 ->END
 
+
+=== noHints ===
+You have no hints you've unlocked for this puzzle.
+->END

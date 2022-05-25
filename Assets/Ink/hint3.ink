@@ -48,3 +48,7 @@ When the well is dry, we know the worth of water
 
 ->END
 
+
+=== noHints ===
+You have no hints you've unlocked for this puzzle.
+->END
