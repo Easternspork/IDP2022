@@ -6,7 +6,7 @@ using TMPro;
 public class Interactable : MonoBehaviour
 {
     [SerializeField]
-    private GameObject notifier;
+    protected GameObject notifier;
 
     public TextAsset inkJSON;
     public string interactableName;

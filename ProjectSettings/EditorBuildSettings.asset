@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Office.unity
     guid: 0c454faf5daa58e498d90b88922ba3d9
+  - enabled: 1
+    path: Assets/Scenes/FightScene.unity
+    guid: bbfad9219b85a3c479691d4e13e1192c
   m_configObjects: {}
