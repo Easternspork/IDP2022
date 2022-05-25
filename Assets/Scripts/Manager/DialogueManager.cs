@@ -172,6 +172,7 @@ public class DialogueManager : MonoBehaviour
         if ((bool)currentStory.variablesState["postShrimp"])
         {
             Debug.Log("start fighting scene");
+            SceneManager.LoadScene("FightScene");
         }
 
     }
