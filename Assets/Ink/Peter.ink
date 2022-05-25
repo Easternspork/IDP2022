@@ -14,6 +14,8 @@ INCLUDE Global.ink
     {peterShrimpSus:
     ->yesShrimp
     }
+    
+    -else: 
     ->noShrimp
 }
 
