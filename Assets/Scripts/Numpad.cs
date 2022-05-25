@@ -56,6 +56,7 @@ public class Numpad : MonoBehaviour
         canvas.SetActive(false);
         DialogueManager.GetInstance().disableDialogue = false;
         DialogueManager.GetInstance().inDialogue = false;
+        GameManager.GetInstance().disableMovement = false; 
     }
 
     public void UpdateText()
@@ -156,5 +157,7 @@ public class Numpad : MonoBehaviour
         input = "";
         UpdateText();
 
+        GameManager.GetInstance().disableMovement = false;
+        DialogueManager.GetInstance().disableDialogue = false; 
     }
 }
