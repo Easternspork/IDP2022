@@ -5,6 +5,8 @@ VAR shrimpBeating = false
 VAR hasShrimp = false
 VAR postShrimp = false
 VAR officeOpen = false  
+VAR hairpin = false
+VAR nightCellOpen = false
 
 VAR hint1 = 0
 VAR hint2 = 0

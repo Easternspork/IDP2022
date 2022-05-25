@@ -27,6 +27,9 @@ Revealing each hint will invoke a 1 minute penalty on the timer. Would you  like
         { hint2 == 0: ->noHints }
     * [Cancel]
         ->END
+        
+=== cancel ===
+->END
 
 === one ===
 Those cow guards seem to be talking about something interesting

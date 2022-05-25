@@ -27,6 +27,9 @@ Revealing each hint will invoke a 1 minute penalty on the timer. Would you  like
         { hint3 == 0: ->noHints }
     * [Cancel]
         ->END
+        
+=== cancel ===
+->END
 
 === one ===
 Yen, tie, bell, and ski are the first words the emojis are referring to.

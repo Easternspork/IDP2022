@@ -27,6 +27,9 @@ Revealing each hint will invoke a 1 minute penalty on the timer. Would you  like
         { hint5 == 0: ->noHints }
     * [Cancel]
         ->END
+        
+=== cancel ===
+->END
 
 === one ===
 Find the fuse box to unlock the door.

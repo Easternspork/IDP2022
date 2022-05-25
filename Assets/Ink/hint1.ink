@@ -26,8 +26,10 @@ Revealing each hint will invoke a 1 minute penalty on the timer. Would you  like
         { hint1 == 4: ->four}
         { hint1 == 0: ->noHints }
     * [Cancel]
-        among us.
         ->END
+        
+=== cancel ===
+->END
 
 === one ===
 Cassius (that one with the funky hair) seems to have something to say.
