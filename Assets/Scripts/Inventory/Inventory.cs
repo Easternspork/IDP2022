@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Inventory : MonoBehaviour
 {
@@ -18,6 +19,12 @@ public class Inventory : MonoBehaviour
 
     [SerializeField]
     private Sprite keySprite;
+
+    [SerializeField]
+    private Sprite hairpinSprite;
+
+    [SerializeField]
+    private Sprite shrimpSprite;
 
     private void Start()
     {
@@ -102,7 +109,13 @@ public class Inventory : MonoBehaviour
             switch (item)
             {
                 case "Key":
-                   itemSlotRectTransform.GetChild(1).GetComponent<Image>().overrideSprite = keySprite;
+                    SetItem(itemSlotRectTransform, keySprite, "Key", "A key used to access a special room in the office.");
+                    break;
+                case "Hairpin":
+                    SetItem(itemSlotRectTransform, hairpinSprite, "Hairpin", "Looks old and dirty. Might be able to be used as a lock pick.");
+                    break;
+                case "Shrimp":
+                    SetItem(itemSlotRectTransform, shrimpSprite, "Tasty shrimp", "A delicacy in the PRF. Cassius might be interested in it.");
                     break;
                 default:
                     Debug.Log("default");
@@ -110,6 +123,14 @@ public class Inventory : MonoBehaviour
             }
 
         }
+    }
+
+    private void SetItem(RectTransform rectTransform, Sprite itemSprite, string itemName, string itemDecription)
+    {
+
+        rectTransform.GetChild(1).GetComponent<Image>().overrideSprite = itemSprite;
+        rectTransform.GetChild(2).GetChild(1).GetComponent<TextMeshProUGUI>().text = itemName;
+        rectTransform.GetChild(2).GetChild(2).GetComponent<TextMeshProUGUI>().text = itemDecription;
     }
 
     private void Update()

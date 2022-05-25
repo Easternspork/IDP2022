@@ -21,8 +21,6 @@ public class ItemDesc : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     private void Start()
     {
-        descriptionUI.text = description;
-        nameUI.text = itemName;
         descriptionContainer.SetActive(false);
 
     }
