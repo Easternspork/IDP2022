@@ -7,7 +7,7 @@ INCLUDE Global.ink
 }
 
 === yesShrimp ===
-Thanks for rattin that slippery fellow out
+Hello, thanks for rattin that slippery fellow out
 ->DONE
 === noShrimp === 
 Seen any crustacean criminals around here?
