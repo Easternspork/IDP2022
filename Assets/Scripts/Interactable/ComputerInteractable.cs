@@ -20,7 +20,7 @@ public class ComputerInteractable : Interactable
     private TMP_InputField inputField;
 
     [SerializeField]
-    private string password = "breh";
+    private string password = "when the well is dry, we know the worth of water";
 
     [SerializeField]
     private GameObject passwordWrong;
@@ -73,7 +73,7 @@ public class ComputerInteractable : Interactable
 
     public void CheckPassword()
     {
-        if (inputField.text == password)
+        if (inputField.text.ToLower() == password)
         {
             HidePasswordScreen();
             ShowDesktop();
@@ -86,6 +86,7 @@ public class ComputerInteractable : Interactable
             passwordWrong.SetActive(true);
 
             // add "wrong" sound
+
         }
     }
 
