@@ -28,4 +28,14 @@ public class ItemDialogueInteract : Interactable
             Destroy(gameObject);
         }
     }
+
+    protected override void Update()
+    {
+        if (Inventory.GetInstance().GetItemList().Contains(giveItem))
+        {
+            Destroy(gameObject);
+        }
+        base.Update();
+
+    }
 }
