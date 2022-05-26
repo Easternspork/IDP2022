@@ -22,6 +22,8 @@ public class ComputerInteractable : Interactable
     [SerializeField]
     private string password = "breh";
 
+    [SerializeField]
+    private GameObject passwordWrong;
 
     protected override void Update()
     {
@@ -68,15 +70,22 @@ public class ComputerInteractable : Interactable
         passwordTab.SetActive(true);
     }
 
+
     public void CheckPassword()
     {
         if (inputField.text == password)
         {
             HidePasswordScreen();
             ShowDesktop();
+            passwordWrong.SetActive(false);
+
         } else
         {
             TimeManager.GetInstance().AddPenalty(60 * 2);
+
+            passwordWrong.SetActive(true);
+
+            // add "wrong" sound
         }
     }
 
