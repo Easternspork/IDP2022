@@ -19,6 +19,9 @@ public class Numpad : MonoBehaviour
 
     private static Numpad instance;
 
+    [SerializeField]
+    private AudioClip numpadSound;
+    
     private void Start()
     {
         if (instance != null)
@@ -62,6 +65,9 @@ public class Numpad : MonoBehaviour
     public void UpdateText()
     {
         inputText.text = input;
+        // bad practice but like whatever
+        GameObject.Find("Sound").GetComponent<AudioSource>().PlayOneShot(numpadSound);
+
     }
 
     public void Zero()

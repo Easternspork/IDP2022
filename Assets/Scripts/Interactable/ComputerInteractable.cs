@@ -8,6 +8,8 @@ using TMPro;
 public class ComputerInteractable : Interactable
 {
     [SerializeField]
+    private AudioClip passwordErrorSound;
+    [SerializeField]
     private GameObject computerScreen;
     [SerializeField]
     private GameObject passwordScreen;
@@ -86,7 +88,7 @@ public class ComputerInteractable : Interactable
             passwordWrong.SetActive(true);
 
             // add "wrong" sound
-
+            GameObject.Find("Sound").GetComponent<AudioSource>().PlayOneShot(passwordErrorSound);
         }
     }
 

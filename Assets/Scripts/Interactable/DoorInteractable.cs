@@ -11,10 +11,14 @@ public class DoorInteractable : Interactable
 
     public bool unlocked = false;
 
+    [SerializeField]
+    private AudioClip doorOpenSound;
+
     public override void OnDialogueEnd()
     {
         if (Inventory.GetInstance().GetItemList().Contains("Key"))
         {
+            GameObject.Find("Sound").GetComponent<AudioSource>().PlayOneShot(doorOpenSound);
             SceneManager.LoadScene(changeScene);
         }
 

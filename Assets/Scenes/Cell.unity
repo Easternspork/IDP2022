@@ -1744,6 +1744,7 @@ MonoBehaviour:
   inputText: {fileID: 1880206866}
   canvas: {fileID: 452997683}
   penaltyTime: 30
+  numpadSound: {fileID: 0}
 --- !u!114 &452997685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100046,6 +100047,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6904925480047435904, guid: 8accaa5d7aa40c3499644b9d62482c8c, type: 3}
+      propertyPath: doorOpenSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 9d4121b7ab0d8184dacea4b54e48474e, type: 3}
     - target: {fileID: 6904925480047435905, guid: 8accaa5d7aa40c3499644b9d62482c8c, type: 3}
       propertyPath: m_RootOrder
       value: 2

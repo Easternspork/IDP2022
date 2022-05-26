@@ -15259,6 +15259,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimpleDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 3611577704900624175, guid: c19a19ab5aa4448478be42a1f3433f99, type: 3}
+      propertyPath: doorOpenSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 9d4121b7ab0d8184dacea4b54e48474e, type: 3}
     - target: {fileID: 3611577704900624209, guid: c19a19ab5aa4448478be42a1f3433f99, type: 3}
       propertyPath: m_Size.x
       value: 3.3653746
@@ -16051,6 +16055,7 @@ MonoBehaviour:
   notifier: {fileID: 1917135600}
   inkJSON: {fileID: 0}
   interactableName: 
+  passwordErrorSound: {fileID: 8300000, guid: 62664f7459b7b6840a79da3f7a876787, type: 3}
   computerScreen: {fileID: 607556173}
   passwordScreen: {fileID: 1577325831}
   desktopCanvas: {fileID: 1925208374}

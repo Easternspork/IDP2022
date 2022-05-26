@@ -43,7 +43,11 @@ public class GameManager : MonoBehaviour
 
     public void ChangeSceneStartingPos(Scene scene, LoadSceneMode mode)
     {
-        GameObject.Find("Player").transform.position = new Vector3(10.6f, 28, 0);
+        if (scene.name == "Cell")
+        {
+            GameObject.Find("Player").transform.position = new Vector3(10.6f, 28, 0);
+
+        }
         GetComponent<Objectives>().NextObjective();
         SceneManager.sceneLoaded -= ChangeSceneStartingPos;
 

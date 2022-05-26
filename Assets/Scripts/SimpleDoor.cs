@@ -9,10 +9,14 @@ public class SimpleDoor : Interactable
     private string changeScene = "Cell";
     private float coordinateX = 10.6f;
     private float coordinateY = 28f;
+    [SerializeField]
+    private AudioClip doorOpenSound;
 
     protected override void OnInteract()
     {
         GameManager.GetInstance().HandleSceneChange();
+        GameObject.Find("Sound").GetComponent<AudioSource>().PlayOneShot(doorOpenSound);
+
         SceneManager.LoadScene("Cell");
     }
 
