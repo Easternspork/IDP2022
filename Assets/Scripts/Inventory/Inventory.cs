@@ -86,7 +86,7 @@ public class Inventory : MonoBehaviour
     {
         int x = 0;
 
-        float itemSlotCellSize = 100f;
+        int itemSlotCellSize = 150;
 
         // destroy prev items on screen
 
@@ -109,7 +109,7 @@ public class Inventory : MonoBehaviour
             switch (item)
             {
                 case "Key":
-                    SetItem(itemSlotRectTransform, keySprite, "Key", "A key used to access a special room in the office.");
+                    SetItem(itemSlotRectTransform, keySprite, "Key", "A key used to access a special room in the prison.");
                     break;
                 case "Hairpin":
                     SetItem(itemSlotRectTransform, hairpinSprite, "Hairpin", "Looks old and dirty. Might be able to be used as a lock pick.");
@@ -128,9 +128,9 @@ public class Inventory : MonoBehaviour
     private void SetItem(RectTransform rectTransform, Sprite itemSprite, string itemName, string itemDecription)
     {
 
-        rectTransform.GetChild(1).GetComponent<Image>().overrideSprite = itemSprite;
-        rectTransform.GetChild(2).GetChild(1).GetComponent<TextMeshProUGUI>().text = itemName;
-        rectTransform.GetChild(2).GetChild(2).GetComponent<TextMeshProUGUI>().text = itemDecription;
+        rectTransform.GetChild(0).GetComponent<Image>().overrideSprite = itemSprite;
+        rectTransform.GetChild(1).GetChild(1).GetComponent<TextMeshProUGUI>().text = itemName;
+        rectTransform.GetChild(1).GetChild(2).GetComponent<TextMeshProUGUI>().text = itemDecription;
     }
 
     private void Update()
