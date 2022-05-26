@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
     public Inventory inventory;
+    public GameObject dayCycle;
 
     public bool disableMovement = false;
     private void Start()
@@ -27,6 +28,7 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("Cell");
         TimeManager.GetInstance().StartTimer();
+
     }
 
     public void QuitGame()
@@ -42,7 +44,10 @@ public class GameManager : MonoBehaviour
     public void ChangeSceneStartingPos(Scene scene, LoadSceneMode mode)
     {
         GameObject.Find("Player").transform.position = new Vector3(10.6f, 28, 0);
+        GetComponent<Objectives>().NextObjective();
         SceneManager.sceneLoaded -= ChangeSceneStartingPos;
+
+
 
     }
 }

@@ -38,7 +38,6 @@ public class Objectives : MonoBehaviour
 
         instance = this;
 
-        NextObjective();
     }
 
     public static Objectives GetInstance()
