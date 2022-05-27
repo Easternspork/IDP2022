@@ -1,65 +1,63 @@
 INCLUDE Global.ink
 
+...
+...
 
-He’lo, name's Freg.
-{shrimpQuest: -> alibi}
-{shrimpQuest == false:
-    {shrimpBeating:
-        -> scared
-        - else:
-        {shrimpSolved:
-            -> yesShrimp
-        }
+
+{breakFast: -> breakFast}
+{breakFast == false:
+
+    {shrimpQuest: -> alibi}
+    {shrimpQuest == false:
+        {shrimpSolved: -> BEATING_TIME}
+        {beaten: -> shrimpGive}
     }
+       
 }
 
-
-=== alibi === 
- * [Notice anything about the inmates?]
-    Whaddya mean, notice anything?
-    * *[Like when they left the cafeteria?]
-        Hmm. 
-        My memory's a bit fuzzy, but I do remember that between Joe and this one penguin who was exersizing after, one was first to come out of the cafeteria, and one was third.
-        ~ clue3 = true
-        I also know that Ronald wasn't in the bathoom, and also wasn't second to leave.
-        ~ clue4 = true
-        (Pretty specific for a fuzzy memory)
+=== breakFast ===
+Oh, haven't seen you around here. Ya new or something?
+    * [Yeah]
+        Welp, enjoy your stay.
         ->END
-=== scared ===
-Stop bothering me, newbie.
+
+=== alibi ===
+ * [Did you see anything lately?]
+    What?
+    * * [About the other inmates?]
+        Uhh, if I remember,
+        This one penguin I remember was exersizing, and right after they came out of the cafeteria, this other penguin rushed out to use the bathroom. 
+        ~ clue4 = true
+        Kind of a weird thing to ask though, if you ask me, but don't ask me, cause you've done enough of asking me.
+        (...)
+        ->END
+
+=== shrimpGive ===
+I gotta admit, that was a little fun.
+Here, take some of the shrimp he had.
+    ~ hasShrimp = true
 -> END
 
-=== noShrimp === 
- * [What's going on?]
-    If ya gonna ask me why we in this dump, ask another one of these belly floppers.
-    (He smells fishy.)
-    (Maybe someone would like to know that.)
+=== BEATING_TIME ===
+What's cracking?
+    * [Heard you exersize a lot.]
+        Oh,  well it's kind of a hobby of mine. Not much else to do in prison. 
+            * * [Do you mind beating someone for me?]
+                Who?
+                    * * * [Freg. He took the shrimp for himself.]
+                        So that's who was the theif. Oh, well it's time for him to get the shrimp beat out of him. Let me handle this.
+                        ~ beaten = true
+
+=== noShrimp ===
+'sup kiddo?
+    * [What is this place?]
+        A prison, duh.
+        If you want something to do, you can ask that weirdo in the cafeteria with the wild hair, his name's Cassius.
+
         -> END
- * [Nice to know.]
-    Hm.
-    (He looks nervous)
+    * [How do you get out of here?]
+        Has'nt even been a day since you've got here, slow down.
+        Hmm, If I were to escape I would probably ask someone smarter than me, say Cassius, that fellow with the wack haircut. 
+        Though, haha, good luck understanding him.
     -> END
-    
-=== yesShrimp ===
- * [What's that smell?]
-    Smell, what smell?
-    * * [That's why I'm asking.]
-        I'm not smuggling anything!
-        * * * [Who said anything about smuggling?]
-            Shoot. 
-            ...
-            Why don't you mind your own business.
-            (You should report this back to Peter)
-            ~ shrimpBeating = true
-                -> END
-    * * [Smells like shrimp.]
-        W-what's a shrimp??
-            * * * [Seriously?]
-                I-i-
-                ...
-                ...
-                Stop being so nosy.
-                (You see a crustacean drop from his pocket)
-                (You should report this back to Peter)
-                ~ shrimpBeating = true
-    -> END
+
