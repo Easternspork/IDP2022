@@ -1,12 +1,12 @@
 INCLUDE Global.ink
 
-{breakFast: -> breakFast}
+{breakFast: -> BF}
 {breakFast == false:
     {shrimpQuest: -> alibi}
     {shrimpQuest == false: -> normal}
 }
 
-=== breakFast===
+=== BF ===
 ...
 ...
 (he seems very interested in his sardines)
