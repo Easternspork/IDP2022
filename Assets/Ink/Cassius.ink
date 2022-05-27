@@ -43,6 +43,7 @@ Thou shouldst not int'rf're with the business yond doest not incl….udeth thee.
         tryeth talking to thy fellow inmates to gath'r some data
         The lasteth p'rson to leaveth the cafet'ria hadst some shrimp in their pocket
         That gent seemeth to be'est the theif
+        H'res a noteth pap'r yond shall help thee
         ~ shrimpQuest = true 
         ~ clue9 = true
         ->DONE
