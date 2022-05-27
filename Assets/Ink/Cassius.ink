@@ -1,13 +1,24 @@
 INCLUDE Global.ink
 
+
+{breakFast: -> BF}
+{breakFast == false:
 {shrimpQuest: -> alibi}
-{shrimpQuest == false: 
-    {hasShrimp:
-        -> yesShrimp
-        - else:
-        -> noShrimp
+    {shrimpQuest == false: 
+        {hasShrimp:
+            -> yesShrimp
+            - else:
+            -> noShrimp
+        }
     }
 }
+
+=== BF === 
+valorous m'rning
+    * [What?]
+        Or as thee ingraft'rs wouldst sayeth, "Good morning".
+        (What an interesting character)
+        ->DONE
 
 === alibi ===
 what art thee waiting f'r? wend findeth yond theif
