@@ -28,8 +28,8 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Cell");
-        TimeManager.GetInstance().StartTimer();
+        SceneManager.LoadScene("Intro");
+
 
     }
 
@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
         SceneManager.sceneLoaded += ChangeSceneStartingPos;
     }
 
+    //scuffed 
     public void ChangeSceneStartingPos(Scene scene, LoadSceneMode mode)
     {
         if (scene.name == "Cell")
@@ -56,4 +57,5 @@ public class GameManager : MonoBehaviour
 
 
     }
+
 }
