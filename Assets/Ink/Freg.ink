@@ -2,17 +2,27 @@ INCLUDE Global.ink
 
 
 He’lo, name's Freg.
-{shrimpQuest: -> alibi}
-{shrimpQuest == false:
-    {shrimpBeating:
-        -> scared
-        - else:
-        {shrimpSolved:
-            -> yesShrimp
+
+{breakFast: -> breakFast}
+{breakFast == false:
+    {shrimpQuest: -> alibi}
+    {shrimpQuest == false:
+        {shrimpBeating:
+            -> scared
+            - else:
+            {shrimpSolved:
+                -> yesShrimp
+            }
         }
     }
 }
 
+=== breakFast ===
+Woah. You scared me there. 
+Hello, newbie. 
+    * [Hi.]
+        Hmmf.
+        ->END
 
 === alibi === 
  * [Notice anything about the inmates?]

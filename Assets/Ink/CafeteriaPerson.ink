@@ -1,13 +1,22 @@
 INCLUDE Global.ink
 
-{shrimpQuest: -> alibi}
-{shrimpQuest == false:
-    {hasShrimp:
-        -> yesShrimp
-        - else:
-        -> noShrimp
+
+{breakFast: -> breakFast}
+{breakFast == false:
+    {shrimpQuest: -> alibi}
+    {shrimpQuest == false:
+        {hasShrimp:
+            -> yesShrimp
+            - else:
+            -> noShrimp
+        }
     }
 }
+
+=== breakFast ===
+A little late, aren't you. 
+No food left, now get mooving!
+->END
 
 === alibi ===
 *[Noticed anything just now?]

@@ -1,6 +1,15 @@
 INCLUDE Global.ink
-{shrimpQuest: -> alibi}
-{shrimpQuest == false: -> default}
+
+{breakFast: -> breakFast}
+{breakFast == false:
+    {shrimpQuest: -> alibi}
+    {shrimpQuest == false: -> default}
+}
+
+=== breakFast ===
+Mor'n. Name's Joe.
+Youngin, ya better hurry up and get some food, might run out if you're too slow.
+->END
 
 === alibi ===
 How could I help you?
