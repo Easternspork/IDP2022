@@ -46,10 +46,12 @@ Things haven't been the same since the Chicken Coup O’ 43.
 
 
 === fin === 
-Those cows are pumping methane into the air like it's nothing. 
+Those cows are pumping methane from their contratpions into the air like it's nothing. 
     * [Why?]
         Heck if I know. Maybe they wanted to force us off of our lands, the ice caps, or keep us busy fighting civil wars over food. Darn scumbag cows, usin their farts to warm the planet like that.
+        If only there was a way to shut that methane machine down...
         -> END
     * [What?]
         Them farts are no joke. Its sad to think that this prison is favorable to fighting over our melting territory. The air's heatin up cause of that gas.
+        If only there was a way to shut that methane machine down...
         -> END

@@ -32,6 +32,7 @@ Wow, didn't expecteth f'r thee to actually receiveth me some shrimp. I am truly 
             * * [I want to escape]
             Heh. Believe it or not, I was once a rebel like you, until that is, I lost one of my flippers to a raging cow.
                 I'm a f'rm'r memb'r of "la organización" some of us in h're wanteth to putteth an endeth to the cows. Cows dudgeon not the heateth well.  If 't be true thee can somehow maketh the furnace did shut down, then thee shouldst beest able to receiveth lev'rage on some of the guards to tryeth and setteth something up. Haply then thee can escapeth. 
+                Joe knoweth about the hist'ry of the cows.  Asketh that gent and that gent shall bid thee
                 ~ officeOpen = true
                 
                 
