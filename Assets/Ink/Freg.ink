@@ -18,6 +18,7 @@ Woah. You scared me there.
 Hello, newbie. 
     * [Hi.]
         Hmmf.
+        ~ b2 = true
         ->END
 
 === alibi === 

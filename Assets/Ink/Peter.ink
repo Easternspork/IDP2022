@@ -19,6 +19,7 @@ INCLUDE Global.ink
 Oh, haven't seen you around here. Ya new or something?
     * [Yeah]
         Welp, enjoy your stay.
+        ~ b4 = true
         ->END
 
 === alibi ===
