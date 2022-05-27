@@ -40,6 +40,12 @@ public class DialogueVariables
             variables.Remove(name);
             variables.Add(name, value);
         }
+        
+        if (name == "hint1" || name == "hint2" || name == "hint3" || name == "hint4" || name == "hint5")
+        {
+            TimeManager.GetInstance().AddPenalty(60);
+        }
+
     }
 
     private void VariablesToStory(Story story)
