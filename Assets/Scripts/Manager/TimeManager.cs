@@ -13,8 +13,13 @@ public class TimeManager : MonoBehaviour
 
     private TextMeshProUGUI timerText;
 
-    private float timer = 1800.0f;
+    public float timer = 1800.0f;
     private bool isTimer = false;
+
+    public float puzzle1Time;
+    public float puzzle2Time;
+    public float puzzle3Time;
+    public float puzzle4Time;
 
     // Start is called before the first frame update
     void Start()

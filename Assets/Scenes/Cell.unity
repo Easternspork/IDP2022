@@ -1603,7 +1603,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 348365879}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.5, y: -19.5, z: 1.6901886}
+  m_LocalPosition: {x: 0, y: 0, z: 1.6901886}
   m_LocalScale: {x: 4.446238, y: 4.6613927, z: 2.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2355,7 +2355,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 630579367}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 38.69, y: -23.05, z: 1.6901886}
+  m_LocalPosition: {x: -0.06, y: 0.96, z: 1.6901886}
   m_LocalScale: {x: 3.68, y: 3.68, z: 3.68}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2393,7 +2393,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.19061291, y: -0.039236784}
+  m_Offset: {x: 0.070185065, y: 0.081190825}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2404,7 +2404,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3, y: 3}
+  m_Size: {x: 2.8197358, y: 3.6142974}
   m_EdgeRadius: 0
 --- !u!114 &689529395
 MonoBehaviour:
@@ -2429,7 +2429,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 689529393}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9, y: 23, z: -1.6901886}
+  m_LocalPosition: {x: -7.41, y: 11.56, z: -1.6901886}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2720,7 +2720,7 @@ GameObject:
   m_Component:
   - component: {fileID: 824797902}
   - component: {fileID: 824797901}
-  - component: {fileID: 824797900}
+  - component: {fileID: 824797903}
   m_Layer: 0
   m_Name: CookCow
   m_TagString: Untagged
@@ -2728,23 +2728,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &824797900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 824797899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2869f3f6dc209641b313299c8e50cfa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  notifier: {fileID: 991431654}
-  inkJSON: {fileID: 4900000, guid: ac4534db5ec808b45b0919876d34971f, type: 3}
-  interactableName: Cafeteria Person
-  giveItem: 
-  destoryAfter: 0
 --- !u!61 &824797901
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2788,6 +2771,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &824797903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824797899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6e14b977ba125744bb5b7a3031c6d6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notifier: {fileID: 991431654}
+  inkJSON: {fileID: 4900000, guid: ac4534db5ec808b45b0919876d34971f, type: 3}
+  interactableName: Cafeteria Person
 --- !u!1 &857853233
 GameObject:
   m_ObjectHideFlags: 0
@@ -2865,7 +2863,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 857853233}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.45, y: -18.55, z: 1.6901886}
+  m_LocalPosition: {x: 0, y: 0.96, z: 1.6901886}
   m_LocalScale: {x: 3.68, y: 3.68, z: 3.68}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -88678,7 +88676,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1163059762}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 31.7, y: -8.2, z: 1.6901886}
+  m_LocalPosition: {x: 0, y: 1, z: 1.6901886}
   m_LocalScale: {x: 3.68, y: 3.68, z: 3.68}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -88829,7 +88827,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1204459639}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 38.72, y: -23.96, z: 1.6901886}
+  m_LocalPosition: {x: 0, y: 0, z: 1.6901886}
   m_LocalScale: {x: 4.4328938, y: 4.6, z: 1.7506356}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -100152,7 +100150,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1579041869}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: 17, z: -1.6901886}
+  m_LocalPosition: {x: -1.6, y: 19.56, z: -1.6901886}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -100842,7 +100840,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1782428681}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.7, y: -9, z: 1.6901886}
+  m_LocalPosition: {x: 0, y: 0, z: 1.6901886}
   m_LocalScale: {x: 4.217588, y: 4.6000004, z: 1.7506357}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -101285,7 +101283,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1883407660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.6, y: 12, z: -1.6901886}
+  m_LocalPosition: {x: 1.5, y: 22.43, z: -1.6901886}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

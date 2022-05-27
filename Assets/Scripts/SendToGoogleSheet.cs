@@ -8,9 +8,6 @@ public class SendToGoogleSheet : MonoBehaviour
 {
     //STILL NEEDSTO BE SET SOMEHOW
     //MAYBE IN THE INTRO CUTSCENE OR END OF THE GAME
-    public GameObject Username;
-    public GameObject Time;
-    public GameObject Score;
     public GameObject Feedback;
 
     private string a;
@@ -21,7 +18,7 @@ public class SendToGoogleSheet : MonoBehaviour
     [SerializeField]
     private string BASE_URL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeol-4SlnZACGtPetc_LBuxyoql8hzfCg0sIjco69URB-dRvw/formResponse";
 
-
+    
     IEnumerator Post(string username, string time, string score, string feedback)
     {
         WWWForm form = new WWWForm();
@@ -37,14 +34,18 @@ public class SendToGoogleSheet : MonoBehaviour
     public void Send()
     {
 
-        a = Username.GetComponent<TMP_InputField>().text;
-        b = Time.GetComponent<TMP_InputField>().text;
-        c = Score.GetComponent<TMP_InputField>().text;
+        a = GameManager.GetInstance().playerName;
+        b = string.Format("{0:N2}", TimeManager.GetInstance().timer);
+        c = string.Format("{0:N2}", TimeManager.GetInstance().timer * 10 * Mathf.PI);
         d = Feedback.GetComponent<TMP_InputField>().text;
 
         StartCoroutine(Post(a, b, c, d));
     }
 
+    private void Start()
+    {
+        Send();
+    }
 
     /*   UNUSED FOR NOW
        // Start is called before the first frame update

@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     public Inventory inventory;
     public GameObject dayCycle;
 
+    public string playerName; 
+
     public bool disableMovement = false;
     private void Start()
     {
