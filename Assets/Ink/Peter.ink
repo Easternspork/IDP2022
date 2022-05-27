@@ -1,59 +1,65 @@
 INCLUDE Global.ink
 
-...
-...
 
-
+He’lo, name's Freg.
 {shrimpQuest: -> alibi}
 {shrimpQuest == false:
-    {postShrimp:
-    -> shrimpGive
-    }
-
     {shrimpBeating:
-   -> BEATING_TIME
+        -> scared
+        - else:
+        {shrimpSolved:
+            -> yesShrimp
+        }
     }
 }
 
-=== alibi ===
- * [Did you see anything lately?]
-    What?
-    * * [About the other inmates?]
-        Uhh, if I remember,
-        This one penguin I remember was exersizing, and right after they came out of the cafeteria, this other penguin rushed out to use the bathroom. 
+
+=== alibi === 
+ * [Notice anything about the inmates?]
+    Whaddya mean, notice anything?
+    * *[Like when they left the cafeteria?]
+        Hmm. 
+        My memory's a bit fuzzy, but I do remember that between Joe and this one penguin who was exersizing after, one was first to come out of the cafeteria, and one was third.
+        ~ clue3 = true
+        I also know that Ronald wasn't in the bathoom, and also wasn't second to leave.
         ~ clue4 = true
-        Kind of a weird thing to ask though, if you ask me, but don't ask me, cause you've done enough of asking me.
-        (...)
+        (Pretty specific for a fuzzy memory)
         ->END
-
-=== shrimpGive ===
-That was fun. 
-As part of my end of the deal:
-(Peter gives you some shrimp)
-~ hasShrimp = true
-->END
-
-
-=== BEATING_TIME ===
-* [Freg's the culprit]
-    I knew it was you, Freg.
-    Get ready.
-    ỵ̵͋ó̵̹ṵ̴͊'̶̯̅r̷̯̐e̶͕͂ ̵̘̏ả̶̳b̸̼͂o̷̹̊u̸͕̽t̵̲̋ ̵̲̂t̸̬͘ö̴͍ ̴̗̃h̴̺̕â̶̯v̵͍͝e̴͖͑ ̷͔̿ť̶͔h̸͉̀e̶͓͝ ̶̩͂š̵̳h̶̦̋r̴̺͠i̷̗̽m̵̧͂p̵̻͘t̴̢̓ ̴̗̈́b̵̗̍e̴͍̔a̷͖͋t̶̹͂ ̶̢̌o̴͎̐u̸̗͊t̸̰̎ ̴̘̍o̸̧͝f̸̫̿ ̷̲͗y̶̫͆ỏ̴̖u̸̩̎
-
-    ~ postShrimp = true
+=== scared ===
+Stop bothering me, newbie.
 -> END
 
-
-=== noShrimp ===
-'sup kiddo?
-    * [What is this place?]
-        A prison, duh.
-        If you want something to do, you can ask that weirdo in the cafeteria with the wild hair, his name's Cassius.
-        ~ peterShrimpSus = true
+=== noShrimp === 
+ * [What's going on?]
+    If ya gonna ask me why we in this dump, ask another one of these belly floppers.
+    (He smells fishy.)
+    (Maybe someone would like to know that.)
         -> END
-    * [How do you get out of here?]
-        Has'nt even been a day since you've got here, slow down.
-        Hmm, If I were to escape I would probably ask someone smarter than me, say Cassius, that fellow with the wack haircut. 
-        Though, haha, good luck understanding him.
+ * [Nice to know.]
+    Hm.
+    (He looks nervous)
     -> END
-
+    
+=== yesShrimp ===
+ * [What's that smell?]
+    Smell, what smell?
+    * * [That's why I'm asking.]
+        I'm not smuggling anything!
+        * * * [Who said anything about smuggling?]
+            Shoot. 
+            ...
+            Why don't you mind your own business.
+            (You should report this back to Peter)
+            ~ shrimpBeating = true
+                -> END
+    * * [Smells like shrimp.]
+        W-what's a shrimp??
+            * * * [Seriously?]
+                I-i-
+                ...
+                ...
+                Stop being so nosy.
+                (You see a crustacean drop from his pocket)
+                (You should report this back to Peter)
+                ~ shrimpBeating = true
+    -> END
