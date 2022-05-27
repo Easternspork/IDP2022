@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class SendToGoogleSheet : MonoBehaviour
 {
@@ -39,9 +40,9 @@ public class SendToGoogleSheet : MonoBehaviour
         Debug.Log(b);
         Debug.Log(c);
 
-        a = Username.GetComponent<InputField>().text;
-        b = Time.GetComponent<InputField>().text;
-        c = Score.GetComponent<InputField>().text;
+        a = Username.GetComponent<TMP_InputField>().text;
+        b = Time.GetComponent<TMP_InputField>().text;
+        c = Score.GetComponent<TMP_InputField>().text;
 
         StartCoroutine(Post(a, b, c));
     }
