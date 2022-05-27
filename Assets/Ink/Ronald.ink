@@ -1,6 +1,16 @@
 INCLUDE Global.ink
-{shrimpQuest: -> alibi}
-{shrimpQuest == false: -> normal}
+
+{breakFast: -> BF}
+{breakFast == false:
+    {shrimpQuest: -> alibi}
+    {shrimpQuest == false: -> normal}
+}
+
+=== BF ===
+...
+...
+(he seems very interested in his sardines)
+->END
 
 === alibi ===
 * [Remember what happened after breakfast?]
