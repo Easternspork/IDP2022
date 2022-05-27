@@ -1,21 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SendToGoogleSheet : MonoBehaviour
 {
-    //STILL NEED TO BE SET SOMEHOW
+    //STILL NEEDSTO BE SET SOMEHOW
     //MAYBE IN THE INTRO CUTSCENE OR END OF THE GAME
-    public GameObject username;
-    public GameObject time;
-    public GameObject score;
+    public GameObject Username;
+    public GameObject Time;
+    public GameObject Score;
 
-    private string Username;
-    private string Time;
-    private string Score;
+    private string a;
+    private string b;
+    private string c;
 
     [SerializeField]
     private string BASE_URL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeol-4SlnZACGtPetc_LBuxyoql8hzfCg0sIjco69URB-dRvw/formResponse";
+
 
     IEnumerator Post(string username, string time, string score)
     {
@@ -30,11 +32,18 @@ public class SendToGoogleSheet : MonoBehaviour
 
     public void Send()
     {
-        Username = username.GetComponent<UnityEngine.UI.InputField>().text;
-        Time = time.GetComponent<UnityEngine.UI.InputField>().text;
-        Score = score.GetComponent<UnityEngine.UI.InputField>().text;
+        Debug.Log(Username);
+        Debug.Log(Time);
+        Debug.Log(Score);
+        Debug.Log(a);
+        Debug.Log(b);
+        Debug.Log(c);
 
-        StartCoroutine(Post(Username, Time, Score));
+        a = Username.GetComponent<InputField>().text;
+        b = Time.GetComponent<InputField>().text;
+        c = Score.GetComponent<InputField>().text;
+
+        StartCoroutine(Post(a, b, c));
     }
 
 
