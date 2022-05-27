@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 
 public class Interactable : MonoBehaviour
 {
@@ -10,6 +12,9 @@ public class Interactable : MonoBehaviour
 
     public TextAsset inkJSON;
     public string interactableName;
+
+    [SerializeField]
+    protected string scene;
 
     private bool inRange;
 
@@ -51,6 +56,7 @@ public class Interactable : MonoBehaviour
     {
 
         DialogueManager.GetInstance().StartDialogue(this);
+        SceneManager.LoadScene(scene);
     }
 
     public virtual void OnDialogueStart()
