@@ -1,10 +1,17 @@
 INCLUDE Global.ink
 
-{hasShrimp:
-    -> yesShrimp
-    - else:
-    -> noShrimp
+{shrimpQuest: -> alibi}
+{shrimpQuest == false: 
+    {hasShrimp:
+        -> yesShrimp
+        - else:
+        -> noShrimp
+    }
 }
+
+=== alibi ===
+what art thee waiting f'r? wend findeth yond theif
+->DONE
 
 === yesShrimp ===
 Wow, didn't expecteth f'r thee to actually receiveth me some shrimp. I am truly indebted. Here, take this trinket I found as a reward. 
@@ -19,11 +26,9 @@ Wow, didn't expecteth f'r thee to actually receiveth me some shrimp. I am truly 
 === noShrimp === 
 Thou shouldst not int'rf're with the business yond doest not incl….udeth thee.  If thou truly insist, thee'll has't to payeth a price.
     * [What price?]
-        I requesteth a delicacy yond hast been absent from these halls f'r a month.
         'mongst us th're is a hoard'r of shrimp.  I'll consid'r helping if 't be true thee can findeth and secureth his bounty.
-        Haply someone else h're couldst holp thee with yond.
-        peter seemeth to has't similar int'rests to thee
-        ~ cassShrimpSus = true 
+        tryeth talking to thy fellow inmates to gath'r some data
+        ~ shrimpQuest = true 
         ->DONE
     * [They serve alchohol here?]
         Bah.  This is simply how i speaketh.  I am sob'r, thee troglodyte

@@ -2,23 +2,29 @@ INCLUDE Global.ink
 
 ...
 ...
-{postShrimp:
+
+
+{shrimpQuest: -> alibi}
+{shrimpQuest == false:
+    {postShrimp:
     -> shrimpGive
-}
-
-{shrimpBeating:
-   -> BEATING_TIME
-}
-
-{cassShrimpSus:
-    {peterShrimpSus:
-    ->yesShrimp
     }
-    
-    -else: 
-    ->noShrimp
+
+    {shrimpBeating:
+   -> BEATING_TIME
+    }
 }
 
+=== alibi ===
+ * [Did you see anything lately?]
+    What?
+    * * [About the other inmates?]
+        Uhh, if I remember,
+        This one penguin I remember was exersizing, and right after they came out of the cafeteria, this other penguin rushed out to use the bathroom. 
+        ~ clue4 = true
+        Kind of a weird thing to ask though, if you ask me, but don't ask me, cause you've done enough of asking me.
+        (...)
+        ->END
 
 === shrimpGive ===
 That was fun. 
@@ -37,18 +43,7 @@ As part of my end of the deal:
     ~ postShrimp = true
 -> END
 
-=== yesShrimp ===
-* [I can help.]
-    How?
-        * *[I can figure out who is the theif.]
-    Let's strike a deal. If you can find out who this hoarding theif is, I'll beat the blubber out of 'em, then I'll share you the shrimp.
-    deal?
-        * * * [Deal.]
-            Alrighty.
-            ~ peterShrimpSus2 = true
-            
 
--> END
 === noShrimp ===
 'sup kiddo?
     * [What is this place?]

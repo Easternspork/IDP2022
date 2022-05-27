@@ -1,11 +1,25 @@
 INCLUDE Global.ink
 
-{hasShrimp:
-    -> yesShrimp
-    - else:
-    -> noShrimp
+{shrimpQuest: -> alibi}
+{shrimpQuest == false:
+    {hasShrimp:
+        -> yesShrimp
+        - else:
+        -> noShrimp
+    }
 }
 
+=== alibi ===
+*[Noticed anything just now?]
+    About the inmates, you mean?
+    Well, one funny fact I remembered was that:
+    The first person who left the cafeteria, their first name started with the same letter as their job!
+    ~ clue1 = true
+    (What kinda weird fact was that?)
+    * * [Anything else?]
+        Well the guy on janitor duty this week seemed to have left the cafeteria right after the dude on waste disposal.
+        ~ clue2 = true
+->DONE
 === yesShrimp ===
 Hello, thanks for rattin that slippery fellow out
 ->DONE

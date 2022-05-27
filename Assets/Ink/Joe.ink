@@ -1,6 +1,22 @@
 INCLUDE Global.ink
+{shrimpQuest: -> alibi}
+{shrimpQuest == false: -> default}
 
-Things weren't the same after the Chicken Coup O’ 43.
+=== alibi ===
+How could I help you?
+    * [Any info on Peter?]
+        Peter?
+        Hmm, he's a chill guy, if a bit scary at times.
+        Though, he doesnt like to meditate.
+        ~ clue8 = true
+        * * [Any info on Freg?]
+            Freg?
+            Freg wasn't on waste disposal duty this week, for some reason. I guess he decided to mix things up this time.
+            ~ clue7 = true
+        -> fin
+=== default ===
+Oh, hello there. Man, they really got another one of us.
+Things haven't been the same since the Chicken Coup O’ 43.
     * [What happened?]
         All them human leaders got overthrown and the Barnyard Age started.
         Things were goin fine till that darn Bos empire took over.

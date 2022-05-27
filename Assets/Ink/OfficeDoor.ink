@@ -7,9 +7,9 @@ INCLUDE Global.ink
 }
 
 === open ===
-Door is open
+(creak)
 -> END
 
 === close ===
-Door is locked
+You can't seem to get this door open.
 -> END

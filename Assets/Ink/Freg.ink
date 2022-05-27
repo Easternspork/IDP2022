@@ -2,20 +2,29 @@ INCLUDE Global.ink
 
 
 He’lo, name's Freg.
-{shrimpBeating:
-    -> scared
-    - else:
-    {cassShrimpSus:
-        {peterShrimpSus:
-            -> yesShrimp
-            - else: 
-            -> noShrimp
-        }
+{shrimpQuest: -> alibi}
+{shrimpQuest == false:
+    {shrimpBeating:
+        -> scared
         - else:
-        -> noShrimp
+        {shrimpSolved:
+            -> yesShrimp
+        }
     }
 }
 
+
+=== alibi === 
+ * [Notice anything about the inmates?]
+    Whaddya mean, notice anything?
+    * *[Like when they left the cafeteria?]
+        Hmm. 
+        My memory's a bit fuzzy, but I do remember that between Joe and this one penguin who was exersizing after, one was first to come out of the cafeteria, and one was third.
+        ~ clue3 = true
+        I also know that Ronald wasn't in the bathoom, and also wasn't second to leave.
+        ~ clue4 = true
+        (Pretty specific for a fuzzy memory)
+        ->END
 === scared ===
 Stop bothering me, newbie.
 -> END

@@ -36,15 +36,14 @@ Cassius (that one with the funky hair) seems to have something to say.
 ->END
 
 === two ===
-Peter (that bandana penguin) looks grumpy and Freg (that flower penguin) looks kinda suspicious
+Each penguin seems to have an alibi.
 ->one
 
 === three ===
-Try talking to Cassius, then talking to Peter, then talking to freg.
+
 ->two
 
 === four ===
-Talk to Cassius, talk to Peter, talk to Freg, talk to Peter, talk to Freg, then talk to Peter. Talk to peter again to gain your prize, and give it to Cassius
 ->three
 
 === noHints ===
