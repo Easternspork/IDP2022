@@ -2330,6 +2330,7 @@ MonoBehaviour:
   inputText: {fileID: 1880206866}
   canvas: {fileID: 452997683}
   penaltyTime: 30
+  numpadSound: {fileID: 0}
 --- !u!114 &452997685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3920,6 +3921,8 @@ PlayableDirector:
     value: {fileID: 348365884}
   - key: {fileID: -3208167013573270564, guid: 52fda460933877d4cbcddd78ed63e6a8, type: 2}
     value: {fileID: 689529397}
+  - key: {fileID: -6429162430941707059, guid: 52fda460933877d4cbcddd78ed63e6a8, type: 2}
+    value: {fileID: 1883407664}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &943455148
@@ -91995,6 +91998,7 @@ GameObject:
   - component: {fileID: 1883407663}
   - component: {fileID: 1883407662}
   - component: {fileID: 1883407661}
+  - component: {fileID: 1883407664}
   m_Layer: 0
   m_Name: Freg
   m_TagString: Untagged
@@ -92059,6 +92063,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1883407664
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883407660}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 89e89a086f6b9e342b8cac52776d2d43, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1921650916
 GameObject:
   m_ObjectHideFlags: 0
