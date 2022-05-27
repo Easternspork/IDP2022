@@ -4087,6 +4087,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 0}
   dayCycle: {fileID: 0}
+  playerName: 
   disableMovement: 0
 --- !u!114 &1842952758
 MonoBehaviour:
@@ -4101,6 +4102,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerGO: {fileID: 1698195469}
+  timer: 1800
+  puzzle1Time: 0
+  puzzle2Time: 0
+  puzzle3Time: 0
+  puzzle4Time: 0
 --- !u!1 &1877662319
 GameObject:
   m_ObjectHideFlags: 0
