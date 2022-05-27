@@ -1,3 +1,10 @@
+VAR b1 = false
+VAR b2 = false
+VAR b3 = false
+VAR b4 = false
+VAR b5 = false
+VAR b6 = false
+
 VAR clue1 = false
 VAR clue2 = false
 VAR clue3 = false
@@ -15,7 +22,6 @@ VAR beaten = false
 VAR hasShrimp = false
 VAR officeOpen = false  
 VAR hairpin = false
-VAR nightCellOpen = false
 
 VAR hint1 = 0
 VAR hint2 = 0

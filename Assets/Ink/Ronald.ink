@@ -10,6 +10,7 @@ INCLUDE Global.ink
 ...
 ...
 (he seems very interested in his sardines)
+~ b5 = true
 ->END
 
 === alibi ===

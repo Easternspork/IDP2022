@@ -16,6 +16,7 @@ INCLUDE Global.ink
 === breakFast ===
 A little late, aren't you. 
 No food left, now get mooving!
+~ b6 = true
 ->END
 
 === alibi ===
@@ -29,9 +30,11 @@ No food left, now get mooving!
         Well the guy on janitor duty this week seemed to have left the cafeteria right after the dude on waste disposal.
         ~ clue2 = true
 ->DONE
+
 === yesShrimp ===
 Hello, thanks for rattin that slippery fellow out
 ->DONE
+
 === noShrimp === 
 Seen any crustacean criminals around here?
 Peter won't stop making passive-agressive remarks on the lack of shrimp. I think he thinks I'm pocketing it.

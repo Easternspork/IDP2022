@@ -9,6 +9,7 @@ INCLUDE Global.ink
 === BF ===
 Mor'n. Name's Joe.
 Youngin, ya better hurry up and get some food, might run out if you're too slow.
+~ b1 = true
 ->END
 
 === alibi ===
