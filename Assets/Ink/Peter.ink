@@ -48,6 +48,7 @@ What's cracking?
                     * * * [Freg. He took the shrimp for himself.]
                         So that's who was the theif. Oh, well it's time for him to get the shrimp beat out of him. Let me handle this.
                         ~ beaten = true
+                        ->END
 
 === noShrimp ===
 'sup kiddo?
