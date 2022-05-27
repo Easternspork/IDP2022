@@ -1,7 +1,7 @@
 INCLUDE Global.ink
 
 
-{breakFast: -> breakFast}
+{breakFast: -> BF}
 {breakFast == false:
     {shrimpQuest: -> alibi}
     {shrimpQuest == false:
@@ -13,7 +13,7 @@ INCLUDE Global.ink
     }
 }
 
-=== breakFast ===
+=== BF ===
 A little late, aren't you. 
 No food left, now get mooving!
 ~ b6 = true
