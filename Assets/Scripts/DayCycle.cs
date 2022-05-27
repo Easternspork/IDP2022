@@ -15,6 +15,12 @@ public class DayCycle : MonoBehaviour
     [SerializeField]
     private Sprite nightSprite;
 
+    [SerializeField]
+    private GameObject nightTimeTilemap;
+
+    [SerializeField]
+    private GameObject nightTimeDoor;
+
     private void Start()
     {
         Morning();
@@ -34,6 +40,8 @@ public class DayCycle : MonoBehaviour
     public void Night()
     {
         dayCycleImage.overrideSprite = nightSprite;
+        GameObject.Find("NightTime").SetActive(true);
+        GameObject.Find("CellDoor").SetActive(true);
 
     }
 }

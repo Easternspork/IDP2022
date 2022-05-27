@@ -13,8 +13,6 @@ public class Interactable : MonoBehaviour
     public TextAsset inkJSON;
     public string interactableName;
 
-    [SerializeField]
-    protected string scene;
 
     private bool inRange;
 
@@ -56,7 +54,6 @@ public class Interactable : MonoBehaviour
     {
 
         DialogueManager.GetInstance().StartDialogue(this);
-        SceneManager.LoadScene(scene);
     }
 
     public virtual void OnDialogueStart()
