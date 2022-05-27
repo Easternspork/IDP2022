@@ -100557,6 +100557,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6904925479307890284, guid: 8accaa5d7aa40c3499644b9d62482c8c, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904925479307890284, guid: 8accaa5d7aa40c3499644b9d62482c8c, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904925479307890285, guid: 8accaa5d7aa40c3499644b9d62482c8c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904925479307890285, guid: 8accaa5d7aa40c3499644b9d62482c8c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904925479307890285, guid: 8accaa5d7aa40c3499644b9d62482c8c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904925479307890285, guid: 8accaa5d7aa40c3499644b9d62482c8c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904925479307890290, guid: 8accaa5d7aa40c3499644b9d62482c8c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 28e3ca27d83b0704da598ac2aa6f19d9, type: 3}
+    - target: {fileID: 6904925479307890290, guid: 8accaa5d7aa40c3499644b9d62482c8c, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904925479307890290, guid: 8accaa5d7aa40c3499644b9d62482c8c, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904925479307890290, guid: 8accaa5d7aa40c3499644b9d62482c8c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6904925480047435904, guid: 8accaa5d7aa40c3499644b9d62482c8c, type: 3}
       propertyPath: doorOpenSound
       value: 
