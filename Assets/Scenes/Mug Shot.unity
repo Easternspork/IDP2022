@@ -537,6 +537,8 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: 1547330039971050444, guid: a4b81fc6fcdc55b44a364701339cf365, type: 2}
     value: {fileID: 1372457358}
+  - key: {fileID: 5816456006697814177, guid: a4b81fc6fcdc55b44a364701339cf365, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &152000568
@@ -593,6 +595,7 @@ RectTransform:
   - {fileID: 1372457357}
   - {fileID: 20685729}
   - {fileID: 1595938891}
+  - {fileID: 1317018097}
   m_Father: {fileID: 1565639587}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -716,6 +719,8 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: 1547330039971050444, guid: 762d855647ab14d41b52bcc6e2ae7d46, type: 2}
     value: {fileID: 38900961}
+  - key: {fileID: 3326007599473551543, guid: 762d855647ab14d41b52bcc6e2ae7d46, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &219202299
@@ -769,6 +774,8 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 1547330039971050444, guid: e2542ebe4f4a08849bfa13f79843342f, type: 2}
     value: {fileID: 2009308823}
+  - key: {fileID: -778078915318910382, guid: e2542ebe4f4a08849bfa13f79843342f, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &710476800
@@ -1014,6 +1021,8 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: 1547330039971050444, guid: f49a223505798fb41aa91d55e59ccbad, type: 2}
     value: {fileID: 20685730}
+  - key: {fileID: 7949709736880118531, guid: f49a223505798fb41aa91d55e59ccbad, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1253416293
@@ -1082,6 +1091,82 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1317018096
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1317018097}
+  - component: {fileID: 1317018099}
+  - component: {fileID: 1317018098}
+  m_Layer: 5
+  m_Name: MugshotBG
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1317018097
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317018096}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 177929213}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1317018098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317018096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1317018099
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317018096}
+  m_CullTransparentMesh: 1
 --- !u!1 &1345495840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1490,6 +1575,66 @@ RectTransform:
   m_AnchoredPosition: {x: 1686, y: -117.05998}
   m_SizeDelta: {x: 481.2142, y: 438.9445}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1785687439
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1785687441}
+  - component: {fileID: 1785687440}
+  m_Layer: 0
+  m_Name: MugshotManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1785687440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785687439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc2576b5274007c45990aefd01f197b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  names:
+  - Peter
+  - Freg
+  - Cassius
+  - Ronald
+  description:
+  - Intimidating and cold, always wears a blue bandana.
+  - 
+  - 
+  - 
+  timelines:
+  - {fileID: 710476799}
+  - {fileID: 152000567}
+  - {fileID: 1253416292}
+  - {fileID: 219202298}
+  characterName: {fileID: 0}
+--- !u!4 &1785687441
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785687439}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 615.8405, y: 567.0031, z: -8.474276}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2009308821
 GameObject:
   m_ObjectHideFlags: 0

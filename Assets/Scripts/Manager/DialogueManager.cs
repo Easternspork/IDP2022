@@ -19,7 +19,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     protected TextMeshProUGUI dialogueContent;
 
-    private Story currentStory;
+    public Story currentStory;
 
     protected Interactable interactableInstance = null;
 

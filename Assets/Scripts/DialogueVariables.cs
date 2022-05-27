@@ -46,6 +46,8 @@ public class DialogueVariables
             TimeManager.GetInstance().AddPenalty(60);
         }
 
+
+        CheckTimings();
     }
 
     private void VariablesToStory(Story story)
@@ -55,4 +57,22 @@ public class DialogueVariables
             story.variablesState.SetGlobal(variable.Key, variable.Value);
         }
     }
+
+    private void CheckTimings()
+    {
+        // example 
+
+        bool morning = (bool)DialogueManager.GetInstance().currentStory.variablesState.GetVariableWithName("hint1");
+
+        if (morning == true)
+        {
+            // indicate that a certain timing is done for coding later
+            Debug.Log("morning timing");
+            // increment to next objective
+            Objectives.GetInstance().NextObjective();
+            // increment hint 
+            HintManager.GetInstance().NextPuzzleHint();
+        }
+    }
 }
+
