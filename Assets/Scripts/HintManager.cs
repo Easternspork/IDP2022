@@ -34,12 +34,9 @@ public class HintManager : MonoBehaviour
         DialogueManager.GetInstance().StartDialogue(hintInks[currentPuzzle], "Hint");
     }
 
-    public void NextPuzzleHint()
-    { 
-        if (currentPuzzle != 4)
-        {
-            currentPuzzle++;
 
-        }
+    public void setPuzzleHint(int n)
+    { 
+        currentPuzzle = n;
     }
 }
