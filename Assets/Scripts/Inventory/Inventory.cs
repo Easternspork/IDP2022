@@ -38,7 +38,6 @@ public class Inventory : MonoBehaviour
 
         items = new List<string>();
 
-        items.Add("Key");
 
     }
 
