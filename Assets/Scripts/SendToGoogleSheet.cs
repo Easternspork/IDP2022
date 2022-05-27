@@ -33,12 +33,6 @@ public class SendToGoogleSheet : MonoBehaviour
 
     public void Send()
     {
-        Debug.Log(Username);
-        Debug.Log(Time);
-        Debug.Log(Score);
-        Debug.Log(a);
-        Debug.Log(b);
-        Debug.Log(c);
 
         a = Username.GetComponent<TMP_InputField>().text;
         b = Time.GetComponent<TMP_InputField>().text;
