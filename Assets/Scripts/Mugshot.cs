@@ -63,6 +63,7 @@ public class Mugshot : MonoBehaviour
     
     public void AskMain()
     {
+        nextButton.SetActive(false);
         mugshotCanvas.SetActive(true);
         inputField.SetActive(true);
     }

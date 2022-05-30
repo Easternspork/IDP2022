@@ -1433,7 +1433,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Intro
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &663736714
@@ -3620,7 +3620,7 @@ RectTransform:
   m_GameObject: {fileID: 1671340705}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 11.93, y: 11.93, z: 11.93}
+  m_LocalScale: {x: 12.11, y: 12.11, z: 12.11}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2068573116}
