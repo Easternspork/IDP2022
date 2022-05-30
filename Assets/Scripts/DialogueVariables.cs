@@ -72,7 +72,7 @@ public class DialogueVariables
             // indicate that a certain timing is done for coding later
             Debug.Log("shrimpQuest timing");
             // increment to next objective
-            Objectives.GetInstance().setObjective(0);
+            Objectives.GetInstance().SetObjective(0);
             // increment hint 
             HintManager.GetInstance().setPuzzleHint(0);
         }
@@ -82,7 +82,7 @@ public class DialogueVariables
             // indicate that a certain timing is done for coding later
             Debug.Log("shrimpSolved timing");
             // increment to next objective
-            Objectives.GetInstance().setObjective(1);
+            Objectives.GetInstance().SetObjective(1);
             // increment hint 
             HintManager.GetInstance().setPuzzleHint(1);
         }
@@ -92,7 +92,7 @@ public class DialogueVariables
             // indicate that a certain timing is done for coding later
             Debug.Log("beaten timing");
             // increment to next objective
-            Objectives.GetInstance().setObjective(2);
+            Objectives.GetInstance().SetObjective(2);
             // increment hint 
             HintManager.GetInstance().setPuzzleHint(2);
         }
@@ -102,7 +102,7 @@ public class DialogueVariables
             // indicate that a certain timing is done for coding later
             Debug.Log("hasShrimp timing");
             // increment to next objective
-            Objectives.GetInstance().setObjective(3);
+            Objectives.GetInstance().SetObjective(3);
             // increment hint 
             HintManager.GetInstance().setPuzzleHint(3);
         }
@@ -112,7 +112,7 @@ public class DialogueVariables
             // indicate that a certain timing is done for coding later
             Debug.Log("officeOpen timing");
             // increment to next objective
-            Objectives.GetInstance().setObjective(4);
+            Objectives.GetInstance().SetObjective(4);
             // increment hint 
             HintManager.GetInstance().setPuzzleHint(4);
         }

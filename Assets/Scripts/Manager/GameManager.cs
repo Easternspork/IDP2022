@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
             GameObject.Find("Player").transform.position = new Vector3(10.6f, 28, 0);
 
         }
-        GetComponent<Objectives>().SetObjective();
+        GetComponent<Objectives>().SetObjective(1);
         SceneManager.sceneLoaded -= ChangeSceneStartingPos;
 
 
