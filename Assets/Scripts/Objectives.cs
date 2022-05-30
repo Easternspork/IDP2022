@@ -83,9 +83,9 @@ public class Objectives : MonoBehaviour
 
     }
 
-    public void setObjective(int n)
+    public void SetObjective(int n)
     {
-        objectiveNumbe = n;
+        objectiveNumber = n;
         RenderObjectiveList();
     }
 
