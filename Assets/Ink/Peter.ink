@@ -7,14 +7,15 @@ INCLUDE Global.ink
 
 {breakFast: -> BF}
 {breakFast == false:
-
+    {beaten: -> shrimpGive}
+    {shrimpSolved: -> BEATING_TIME}
     {shrimpQuest: -> alibi}
-    {shrimpQuest == false:
-        {shrimpSolved: -> BEATING_TIME}
-        {beaten: -> shrimpGive}
+        
+        
+        
+
     }
        
-}
 
 === BF ===
 Yo, seems like we're gonna be stuck here for a while. Might as well get to know you then, what's your name?
@@ -40,6 +41,7 @@ Yo, seems like we're gonna be stuck here for a while. Might as well get to know 
 I gotta admit, that was fun.
 Here, take some of the shrimp he had.
     ~ hasShrimp = true
+    ~ shrimpQuest = false
 -> END
 
 === BEATING_TIME ===

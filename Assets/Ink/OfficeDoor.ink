@@ -1,12 +1,8 @@
 INCLUDE Global.ink
 
 ~ cha = "Door"
-{officeOpen:
-    -> open
-    - else:
-    -> close
-}
-
+{officeOpen:-> open}
+-> close
 === open ===
 (creak)
 -> END

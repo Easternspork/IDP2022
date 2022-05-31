@@ -1,12 +1,9 @@
 INCLUDE Global.ink
 
 ~ cha = "Door"
-{hairpin:
-    -> open
-    - else:
-    -> close
-}
+{hairpin: -> open}
 
+->close
 === open ===
 (clink)
 (clang)

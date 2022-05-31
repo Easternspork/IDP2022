@@ -16,8 +16,6 @@ He’lo, name's Freg.
 
 === BF ===
 ~ cha = "Freg"
-Woah. You scared me there. 
-Hello, newbie. 
     * [Hi.]
         ~ cha = "Freg"
         Hmmf.
