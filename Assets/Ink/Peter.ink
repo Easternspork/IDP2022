@@ -18,7 +18,7 @@ INCLUDE Global.ink
 
 === BF ===
 Yo, seems like we're gonna be stuck here for a while. Might as well get to know you then, what's your name?
-    * [Yeah, I'm {cha}]
+    * [Yeah, I'm {mc}]
     ~ cha = "Peter"
         Welp, enjoy your stay.
         ~ b4 = true
