@@ -38,4 +38,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Act2/Bunker.unity
     guid: 85f9a6bfe396e404ea2da869967fb9b4
+  - enabled: 1
+    path: Assets/Scenes/Act 1/Yard.unity
+    guid: 6a9fc5313f3220e45a4ecb6fac12c824
+  - enabled: 1
+    path: Assets/Scenes/Act3/Credits.unity
+    guid: 70d491e73831fec42a1be171f6570385
   m_configObjects: {}

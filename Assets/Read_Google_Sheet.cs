@@ -9,18 +9,23 @@ using System;
 
 public class Read_Google_Sheet : MonoBehaviour
 {
-    public Text outputArea;
+    public TextMeshProUGUI outputArea;
 
     //Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(ObtainSheetData());
+        RefreshLeaderboardData();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void RefreshLeaderboardData()
+    {
+        StartCoroutine(ObtainSheetData());
     }
 
     IEnumerator ObtainSheetData()

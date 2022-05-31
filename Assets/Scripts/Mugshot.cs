@@ -93,5 +93,6 @@ public class Mugshot : MonoBehaviour
         DialogueManager.GetInstance().dialogueVariables.StopListening(globalInk);
         SceneManager.LoadScene("Cell");
         Objectives.GetInstance().ShowButton();
+        TimeManager.GetInstance().StartTimer();
     }
 }

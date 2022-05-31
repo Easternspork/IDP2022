@@ -8,7 +8,8 @@ public class DialogueVariables
 {
     private Dictionary<string, Ink.Runtime.Object> variables;
 
-    public DialogueVariables(string globalFilePath)
+
+    public DialogueVariables(string globalFilePath, TextAsset yardTransitionInkJSON)
     {
         string inkFileContents = File.ReadAllText(globalFilePath);
         Ink.Compiler compiler = new Ink.Compiler(inkFileContents);
@@ -123,28 +124,7 @@ public class DialogueVariables
 
 
 
-            bool breakfastOver = 
-                (bool)DialogueManager.GetInstance().currentStory.variablesState["b1"] == true &&
-                (bool)DialogueManager.GetInstance().currentStory.variablesState["b2"] == true &&
-                (bool)DialogueManager.GetInstance().currentStory.variablesState["b3"] == true &&
-                (bool)DialogueManager.GetInstance().currentStory.variablesState["b4"] == true &&
-                (bool)DialogueManager.GetInstance().currentStory.variablesState["b5"] == true &&
-                (bool)DialogueManager.GetInstance().currentStory.variablesState["b6"] == true;
-
-            if (breakfastOver == true)
-            {
-                SceneManager.LoadScene("Yard");
-            }
-
-            Debug.Log("variable states");
-
-            Debug.Log((bool)DialogueManager.GetInstance().currentStory.variablesState["b1"]);
-            Debug.Log((bool)DialogueManager.GetInstance().currentStory.variablesState["b2"]);
-            Debug.Log((bool)DialogueManager.GetInstance().currentStory.variablesState["b3"]);
-            Debug.Log((bool)DialogueManager.GetInstance().currentStory.variablesState["b4"]);
-            Debug.Log((bool)DialogueManager.GetInstance().currentStory.variablesState["b5"]);
-            Debug.Log((bool)DialogueManager.GetInstance().currentStory.variablesState["b6"]);
-
+           
 
 
 

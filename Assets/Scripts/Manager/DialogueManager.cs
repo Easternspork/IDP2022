@@ -32,6 +32,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     public InkFile globalInkFile;
 
+    public TextAsset yardTransitionInkJSON;
+
     private void Awake()
     {
         //DontDestroyOnLoad(this);
@@ -57,7 +59,7 @@ public class DialogueManager : MonoBehaviour
             choicesText[i] = choices[i].GetComponentInChildren<TextMeshProUGUI>();
         }
 
-        dialogueVariables = new DialogueVariables(globalInkFile.filePath);
+        dialogueVariables = new DialogueVariables(globalInkFile.filePath, yardTransitionInkJSON);
 
     }
 
