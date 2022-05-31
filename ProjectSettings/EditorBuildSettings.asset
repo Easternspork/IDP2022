@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Act 1/Menu.unity
     guid: c271206444f40e0438ca776d8d3c96d3
   - enabled: 0
-    path: Assets/Scenes/Breakfast.unity
+    path: 
     guid: c4e4271d92231824a83f628f2f77380c
   - enabled: 0
     path: 
@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Act 1/Nighttime.unity
     guid: c812410b3cb15e64bb6fbc2dd59aaeaf
+  - enabled: 1
+    path: Assets/Scenes/Act2/Bunker.unity
+    guid: 85f9a6bfe396e404ea2da869967fb9b4
   m_configObjects: {}

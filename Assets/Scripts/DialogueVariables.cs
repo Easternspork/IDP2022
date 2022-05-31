@@ -67,6 +67,7 @@ public class DialogueVariables
         bool beaten = (bool)DialogueManager.GetInstance().currentStory.variablesState.GetVariableWithName("beaten");
         bool hasShrimp = (bool)DialogueManager.GetInstance().currentStory.variablesState.GetVariableWithName("hasShrimp");
         bool officeOpen = (bool)DialogueManager.GetInstance().currentStory.variablesState.GetVariableWithName("officeOpen");
+        
         if (shrimpQuest == true)
         {
             // indicate that a certain timing is done for coding later
