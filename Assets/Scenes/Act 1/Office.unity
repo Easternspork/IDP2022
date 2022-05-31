@@ -16549,14 +16549,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notifier: {fileID: 1917135600}
   inkJSON: {fileID: 0}
-  interactableName: 
   passwordErrorSound: {fileID: 8300000, guid: 62664f7459b7b6840a79da3f7a876787, type: 3}
   computerScreen: {fileID: 607556173}
   passwordScreen: {fileID: 1577325831}
   desktopCanvas: {fileID: 1925208374}
   passwordTab: {fileID: 141434682}
   inputField: {fileID: 1683634316}
-  password: breh
+  password: when the well is dry, we know the worth of water
   passwordWrong: {fileID: 1534400785}
 --- !u!4 &1969546853
 Transform:
@@ -16918,7 +16917,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notifier: {fileID: 4819930560907704641}
   inkJSON: {fileID: 4900000, guid: 0f77450a63900424b94ce6e090a2006f, type: 3}
-  interactableName: You
   notebook: {fileID: 344619825}
 --- !u!4 &4819930560907704640
 Transform:

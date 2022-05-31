@@ -114,7 +114,7 @@ public class Inventory : MonoBehaviour
                     SetItem(itemSlotRectTransform, hairpinSprite, "Hairpin", "Looks old and dirty. Might be able to be used as a lock pick.");
                     break;
                 case "Shrimp":
-                    SetItem(itemSlotRectTransform, shrimpSprite, "Tasty shrimp", "A delicacy in the PRF. Cassius might be interested in it.");
+                    SetItem(itemSlotRectTransform, shrimpSprite, "Shrimp", "A delicacy in the PRF. Cassius might be interested in it.");
                     break;
                 default:
                     Debug.Log("default");

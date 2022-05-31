@@ -86,6 +86,22 @@ public class Interactable : MonoBehaviour
             GameManager.GetInstance().fightHappened = true;
             GameObject.Find("Fade").GetComponent<Fade>().FadeScene("Fight Scene");
             GameManager.GetInstance().yardPos = GameObject.Find("Player").transform.position;
+            Inventory.GetInstance().AddItem("Shrimp");
+        }
+
+        bool hairpin = (bool)DialogueManager.GetInstance().currentStory.variablesState["hairpin"];
+        bool officeOpen = (bool)DialogueManager.GetInstance().currentStory.variablesState["officeOpen"];
+
+        if (officeOpen && !GameManager.GetInstance().gaveKey)
+        {
+            GameManager.GetInstance().gaveKey = true;
+            Inventory.GetInstance().AddItem("Key");
+        }
+
+        if (hairpin && officeOpen && !GameManager.GetInstance().nightHappened)
+        {
+            GameManager.GetInstance().nightHappened = true;
+            GameObject.Find("Fade").GetComponent<Fade>().FadeScene("Nighttime");
 
         }
     }
