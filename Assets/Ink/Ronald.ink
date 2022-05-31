@@ -27,7 +27,7 @@ INCLUDE Global.ink
             I think someone rushed into the bathroom right after another penguin went out of the cafeteria to exersize.
             Say, why are you asking, heck, who even are you?
             ~ cha = mc
-            You ignore him.
+            (You ignore him.)
             ~ clue6 = true
             ->END
                 
