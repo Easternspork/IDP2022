@@ -32,19 +32,23 @@ Revealing each hint will invoke a 1 minute penalty on the timer. Would you  like
         
 
 === one ===
-Those cow guards seem to be talking about something interesting
+Yen, tie, bell, and ski are the first words the emojis are referring to.
+
 ->END
 
 === two ===
-Take a look around
+Drop (as in water drop), ny (as in New York), egg, snow, and tie are the next words.
+
 ->END
 
+
 === three ===
-The field might have something useful
+The remaining words are wolf, dart, ox, date, and rat.
 ->END
 
 === four ===
-Check under those benches for the paperclip
+When the well is dry, we know the worth of water
+
 ->END
 
 === noHints ===

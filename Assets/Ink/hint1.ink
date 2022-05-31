@@ -36,14 +36,15 @@ Cassius (that one with the funky hair) seems to have something to say.
 ->END
 
 === two ===
-Each penguin seems to have an alibi.
+Talk to everyone in the cafeteria, then talk with everyone in the field
 ->one
 
 === three ===
-
+There might be an interesting item in the back
 ->two
 
 === four ===
+Freg is the culprit.
 ->three
 
 === noHints ===

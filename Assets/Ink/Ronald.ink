@@ -13,6 +13,8 @@ INCLUDE Global.ink
 ...
 ~ cha = mc
 (he seems very interested in his sardines)
+~ cha = "Ronald"
+Dangit, where did I lose my hairpin...
 ~ b5 = true
 ->END
 
