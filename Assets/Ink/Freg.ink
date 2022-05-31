@@ -10,6 +10,7 @@ He’lo, name's Freg.
         {shrimpSolved:
            ->scared
         }
+        -> alibi
     }
 }
 
