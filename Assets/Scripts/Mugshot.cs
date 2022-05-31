@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Playables;
 using TMPro;
 using UnityEngine.SceneManagement;
+using Ink.Runtime;
 
 public class Mugshot : MonoBehaviour
 {
@@ -46,6 +47,8 @@ public class Mugshot : MonoBehaviour
     [SerializeField]
     private GameObject nameThing;
 
+    public TextAsset randomInkJSON;
+
     private void Start()
     {
         
@@ -84,6 +87,10 @@ public class Mugshot : MonoBehaviour
     public void OnEnterPressed()
     {
         GameManager.GetInstance().playerName = inputName.text;
+        Story globalInk = new Story(randomInkJSON.text);
+        DialogueManager.GetInstance().dialogueVariables.StartListening(globalInk);
+        globalInk.variablesState["mc"] = inputName.text;
+        DialogueManager.GetInstance().dialogueVariables.StopListening(globalInk);
         SceneManager.LoadScene("Cell");
         Objectives.GetInstance().ShowButton();
     }

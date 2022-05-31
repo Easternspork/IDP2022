@@ -30,7 +30,7 @@ public class DialogueManager : MonoBehaviour
     public DialogueVariables dialogueVariables;
 
     [SerializeField]
-    private InkFile globalInkFile;
+    public InkFile globalInkFile;
 
     private void Awake()
     {
@@ -40,6 +40,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Start()
     {
+
         inDialogue = false;
         if (instance != null)
         {
@@ -76,14 +77,18 @@ public class DialogueManager : MonoBehaviour
     }
     public void StartDialogue(Interactable interactableInstance)
     {
+
         this.interactableInstance = interactableInstance;
 
         if (disableDialogue == false)
         {
-            //dialogueName.text = (string)currentStory.variablesState["cha"];
+
 
 
             currentStory = new Story(this.interactableInstance.inkJSON.text);
+            Debug.Log(currentStory.variablesState["mc"]);
+
+            dialogueName.text = (string)currentStory.variablesState["cha"];
             inDialogue = true;
             ShowCanvas();
 
@@ -111,9 +116,11 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("dialogue qed");
         if (disableDialogue == false)
         {
-            //dialogueName.text = (string)currentStory.variablesState["cha"];
+            
 
             currentStory = new Story(inkJSON.text);
+
+            dialogueName.text = (string)currentStory.variablesState["cha"];
             inDialogue = true;
             ShowCanvas();
 
@@ -139,7 +146,7 @@ public class DialogueManager : MonoBehaviour
     {
         Debug.Log("next ");
 
-        //dialogueName.text = (string)currentStory.variablesState["cha"];
+        dialogueName.text = (string)currentStory.variablesState["cha"];
 
         if (currentStory.canContinue)
         {

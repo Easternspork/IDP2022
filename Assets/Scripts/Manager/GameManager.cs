@@ -30,8 +30,7 @@ public class GameManager : MonoBehaviour
     {
 
         // change later
-        SceneManager.LoadScene("Nighttime");
-        Inventory.GetInstance().AddItem("Hairpin");
+        SceneManager.LoadScene("Intro");
 
 
     }
@@ -60,10 +59,4 @@ public class GameManager : MonoBehaviour
 
 
     }
-
-    private void Update()
-    {
-        Debug.Log(DialogueManager.GetInstance().inDialogue);
-    }
-
 }
