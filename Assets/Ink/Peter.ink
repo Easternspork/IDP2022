@@ -1,5 +1,6 @@
 INCLUDE Global.ink
 
+~ cha = "Peter"
 ...
 ...
 

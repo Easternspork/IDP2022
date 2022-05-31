@@ -1,6 +1,6 @@
 INCLUDE Global.ink
 
-
+~ cha = "Cassius"
 {breakFast: -> BF}
 {breakFast == false:
 {shrimpQuest: -> alibi}

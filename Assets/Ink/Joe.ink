@@ -1,5 +1,6 @@
 INCLUDE Global.ink
 
+~ cha = "Joe"
 {breakFast: -> BF}
 {breakFast == false:
     {shrimpQuest: -> alibi}
@@ -9,7 +10,7 @@ INCLUDE Global.ink
 === BF ===
 ~ cha = "Joe"
 Mor'n. Name's Joe.
-    * [Hi, I'm {mc}]
+    * [Hi, I'm {cha}]
     ~ cha = "Joe"
     {cha}, ya better hurry up and get some food, might run out if you're too slow.
 ~ b1 = true
