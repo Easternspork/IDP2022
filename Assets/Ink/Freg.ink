@@ -17,24 +17,20 @@ He’lo, name's Freg.
 ~ cha = "Freg"
 Woah. You scared me there. 
 Hello, newbie. 
-    ~ cha = mc
     * [Hi.]
         ~ cha = "Freg"
         Hmmf.
         What's your name?
-        ~ cha = mc
         * * [{mc}]
             ~ cha = "Freg"
-            Nice to know.
+            Nice to know
         ~ b2 = true
         ->END
 
 === alibi === 
-~ cha = mc
  * [Notice anything about the inmates?]
     ~ cha = "Freg"
     Whaddya mean, notice anything?
-    ~ cha = mc
     * *[Like when they left the cafeteria?]
         ~ cha = "Freg"
         Hmm. 
@@ -54,14 +50,10 @@ Stop bothering me, newbie.
 
 
 === noShrimp === 
-~ cha = mc
  * [What's going on?]
-    ~ cha = "Freg"
     If ya gonna ask me why we in this dump, ask another one of these belly floppers.
         -> END
-~ cha = mc
  * [Nice to know.]
-    ~ cha = "Freg"
     Hm.
     ~ cha = mc
     (He looks nervous)
