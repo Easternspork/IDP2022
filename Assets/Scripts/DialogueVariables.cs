@@ -43,7 +43,7 @@ public class DialogueVariables
         
         if (name == "hint1" || name == "hint2" || name == "hint3" || name == "hint4" || name == "hint5")
         {
-            TimeManager.GetInstance().AddPenalty(60);
+            TimeManager.GetInstance().AddPenalty(120);
         }
 
 
