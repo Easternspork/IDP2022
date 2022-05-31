@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public bool breakfastEndedOnce = false;
     public bool fightHappened;
 
+    public Vector3 yardPos;
     private void Start()
     {
         if (instance != null)

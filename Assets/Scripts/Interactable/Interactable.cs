@@ -85,7 +85,7 @@ public class Interactable : MonoBehaviour
         {
             GameManager.GetInstance().fightHappened = true;
             GameObject.Find("Fade").GetComponent<Fade>().FadeScene("Fight Scene");
-
+            GameManager.GetInstance().yardPos = GameObject.Find("Player").transform.position;
 
         }
     }
