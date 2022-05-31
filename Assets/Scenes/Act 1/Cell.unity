@@ -88192,7 +88192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notifier: {fileID: 1576163819}
   inkJSON: {fileID: 0}
-  sceneToLoad: Bunker
+  sceneToLoad: Maze
   doorPickSound: {fileID: 0}
 --- !u!1 &1204459639
 GameObject:

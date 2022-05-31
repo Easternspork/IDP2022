@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+using UnityEngine.SceneManagement;
+
 public class SendToGoogleSheet : MonoBehaviour
 {
     //STILL NEEDSTO BE SET SOMEHOW
@@ -36,17 +38,22 @@ public class SendToGoogleSheet : MonoBehaviour
     {
 
         a = GameManager.GetInstance().playerName;
-        b = string.Format("{0:N2}", TimeManager.GetInstance().timer);
-        c = string.Format("{0:N2}", TimeManager.GetInstance().timer * 10 * Mathf.PI);
+        b = string.Format("{0:N2}", TimeManager.GetInstance().puzzle1Time) + ','
+            + string.Format("{0:N2}", TimeManager.GetInstance().puzzle2Time) + ','
+            + string.Format("{0:N2}", TimeManager.GetInstance().puzzle3Time) + ','
+            + string.Format("{0:N2}", TimeManager.GetInstance().puzzle4Time);
+        c = string.Format("{0:N0}", TimeManager.GetInstance().timer * 32);
         d = Feedback.GetComponent<TMP_InputField>().text;
 
 
         StartCoroutine(Post(a, b, c, d));
+
+        SceneManager.LoadScene("Yard");
     }
 
     private void Start()
     {
-        Send();
+        Objectives.GetInstance().HideObjectivesButton();
     }
 
     /*   UNUSED FOR NOW
