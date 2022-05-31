@@ -1,14 +1,10 @@
 INCLUDE Global.ink
 
 ~ cha = "Cassius"
-{hasShrimp:
-    -> yesShrimp
-    - else:
-    {breakFast: -> BF}
-    {breakFast == false:
-    {shrimpQuest: -> alibi}
-    }
-}
+{hasShrimp: -> yesShrimp}
+{breakFast: -> BF}
+{shrimpQuest: -> alibi}
+
 
 
 === BF === 

@@ -41,6 +41,7 @@ Yo, seems like we're gonna be stuck here for a while. Might as well get to know 
 I gotta admit, that was fun.
 Here, take some of the shrimp he had.
     ~ hasShrimp = true
+    ~ shrimpQuest = false
 -> END
 
 === BEATING_TIME ===
