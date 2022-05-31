@@ -80,8 +80,11 @@ public class ComputerInteractable : Interactable
             HidePasswordScreen();
             ShowDesktop();
             passwordWrong.SetActive(false);
+            TimeManager.GetInstance().puzzle2Time = TimeManager.GetInstance().timer;
 
-        } else
+
+        }
+        else
         {
             TimeManager.GetInstance().AddPenalty(60 * 2);
 
