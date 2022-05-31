@@ -20,9 +20,14 @@ public class Objectives : MonoBehaviour
 
     public static Objectives instance = null;
 
+    [SerializeField]
+    private GameObject showObjectiveButton; 
+
     // Start is called before the first frame update
     void Start()
     {
+        showObjectiveButton.SetActive(false);
+
         objectiveList = new List<string[]>();
 
         // set objectiveList here >>
@@ -89,4 +94,8 @@ public class Objectives : MonoBehaviour
         RenderObjectiveList();
     }
 
+    public void ShowButton()
+    {
+        showObjectiveButton.SetActive(true);
+    }
 }

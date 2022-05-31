@@ -28,7 +28,9 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Intro");
+
+        // change later
+        SceneManager.LoadScene("Cell");
 
 
     }

@@ -63,6 +63,8 @@ public class Mugshot : MonoBehaviour
     
     public void AskMain()
     {
+        characterName.text = "";
+        characterDescription.text = "";
         nextButton.SetActive(false);
         mugshotCanvas.SetActive(true);
         inputField.SetActive(true);
@@ -83,5 +85,6 @@ public class Mugshot : MonoBehaviour
     {
         GameManager.GetInstance().playerName = inputName.text;
         SceneManager.LoadScene("Cell");
+        Objectives.GetInstance().ShowButton();
     }
 }
