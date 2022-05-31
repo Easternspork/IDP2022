@@ -31,7 +31,7 @@ public class HintManager : MonoBehaviour
 
     public void OnHintButtonPressed()
     {
-        DialogueManager.GetInstance().StartDialogue(hintInks[currentPuzzle], "Hint");
+        DialogueManager.GetInstance().StartDialogue(hintInks[currentPuzzle]);
     }
 
 

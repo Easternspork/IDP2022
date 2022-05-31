@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class BlockPlayer : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField]
+    private TextAsset inkJSON;
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        DialogueManager.GetInstance().StartDialogue(inkJSON);
     }
 }

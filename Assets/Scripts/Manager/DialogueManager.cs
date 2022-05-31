@@ -75,43 +75,12 @@ public class DialogueManager : MonoBehaviour
         dialogueCanvas.SetActive(false);
     }
 
-    public void StartDialogue(Interactable interactableInstance)
-    {
-        this.interactableInstance = interactableInstance;
-
-        if (disableDialogue == false)
-        {
-            dialogueName.text = this.interactableInstance.interactableName;
-
-            currentStory = new Story(this.interactableInstance.inkJSON.text);
-            inDialogue = true;
-            ShowCanvas();
-
-            dialogueVariables.StartListening(currentStory);
-            SetInkVariables();
-
-            if (currentStory.canContinue)
-            {
-                dialogueContent.text = currentStory.Continue();
-            }
-            else
-            {
-                StartCoroutine(ExitDialogue());
-            }
-        }
-
-
-        this.interactableInstance.OnDialogueStart();
-        DisplayChoices();
-
-    }
-
-    public void StartDialogue(TextAsset inkJSON, string name)
+    public void StartDialogue(TextAsset inkJSON)
     {
 
         if (disableDialogue == false)
         {
-            dialogueName.text = name;
+            //dialogueName.text = (string)currentStory.variablesState["cha"];
 
             currentStory = new Story(inkJSON.text);
             inDialogue = true;
@@ -137,6 +106,8 @@ public class DialogueManager : MonoBehaviour
 
     public void NextDialogue()
     {
+        //dialogueName.text = (string)currentStory.variablesState["cha"];
+
         if (currentStory.canContinue)
         {
             dialogueContent.text = currentStory.Continue();

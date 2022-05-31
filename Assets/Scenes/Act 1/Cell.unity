@@ -87836,7 +87836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notifier: {fileID: 1381788107}
-  inkJSON: {fileID: 4900000, guid: b713602b6e99e284c9e6eda87a49372e, type: 3}
+  inkJSON: {fileID: 4900000, guid: 460cfc46c77565f4ebd67e501c9a6884, type: 3}
   interactableName: Peter
 --- !u!4 &1044012282
 Transform:

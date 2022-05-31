@@ -11,13 +11,8 @@ public class Interactable : MonoBehaviour
     protected GameObject notifier;
 
     public TextAsset inkJSON;
-    public string interactableName;
-
 
     private bool inRange;
-
-
-    
 
     // Start is called before the first frame update
     void Start()
@@ -53,7 +48,7 @@ public class Interactable : MonoBehaviour
     protected virtual void OnInteract()
     {
 
-        DialogueManager.GetInstance().StartDialogue(this);
+        DialogueManager.GetInstance().StartDialogue(inkJSON);
     }
 
     public virtual void OnDialogueStart()
