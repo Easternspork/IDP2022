@@ -15719,6 +15719,10 @@ PrefabInstance:
       value: SimpleDoor
       objectReference: {fileID: 0}
     - target: {fileID: 3611577704900624175, guid: c19a19ab5aa4448478be42a1f3433f99, type: 3}
+      propertyPath: changeScene
+      value: Nighttime
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611577704900624175, guid: c19a19ab5aa4448478be42a1f3433f99, type: 3}
       propertyPath: doorOpenSound
       value: 
       objectReference: {fileID: 8300000, guid: 9d4121b7ab0d8184dacea4b54e48474e, type: 3}
