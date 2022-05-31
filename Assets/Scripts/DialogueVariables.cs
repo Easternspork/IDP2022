@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using Ink.Runtime;
 using System.IO;
-
+using UnityEngine.SceneManagement;
 public class DialogueVariables
 {
     private Dictionary<string, Ink.Runtime.Object> variables;
 
-    public DialogueVariables(string globalFilePath)
+
+    public DialogueVariables(string globalFilePath, TextAsset yardTransitionInkJSON)
     {
         string inkFileContents = File.ReadAllText(globalFilePath);
         Ink.Compiler compiler = new Ink.Compiler(inkFileContents);
@@ -63,65 +64,72 @@ public class DialogueVariables
     private void CheckTimings()
     {
         //// example 
-        //if (!(DialogueManager.GetInstance().currentStory == null))
-        //{
-        //    bool shrimpQuest = (bool)DialogueManager.GetInstance().currentStory.variablesState.GetVariableWithName("shrimpQuest");
-        //    bool shrimpSolved = (bool)DialogueManager.GetInstance().currentStory.variablesState.GetVariableWithName("shrimpSolved");
-        //    bool beaten = (bool)DialogueManager.GetInstance().currentStory.variablesState.GetVariableWithName("beaten");
-        //    bool hasShrimp = (bool)DialogueManager.GetInstance().currentStory.variablesState.GetVariableWithName("hasShrimp");
-        //    bool officeOpen = (bool)DialogueManager.GetInstance().currentStory.variablesState.GetVariableWithName("officeOpen");
+        if (!(DialogueManager.GetInstance().currentStory == null))
+        {
+            //bool shrimpQuest = (bool)DialogueManager.GetInstance().currentStory.variablesState.GetVariableWithName("shrimpQuest");
+            //bool shrimpSolved = (bool)DialogueManager.GetInstance().currentStory.variablesState.GetVariableWithName("shrimpSolved");
+            //bool beaten = (bool)DialogueManager.GetInstance().currentStory.variablesState.GetVariableWithName("beaten");
+            //bool hasShrimp = (bool)DialogueManager.GetInstance().currentStory.variablesState.GetVariableWithName("hasShrimp");
+            //bool officeOpen = (bool)DialogueManager.GetInstance().currentStory.variablesState.GetVariableWithName("officeOpen");
 
-        //    if (shrimpQuest == true)
-        //    {
-        //        // indicate that a certain timing is done for coding later
-        //        Debug.Log("shrimpQuest timing");
-        //        // increment to next objective
-        //        Objectives.GetInstance().SetObjective(0);
-        //        // increment hint 
-        //        HintManager.GetInstance().setPuzzleHint(0);
-        //    }
+            //if (shrimpQuest == true)
+            //{
+            //    // indicate that a certain timing is done for coding later
+            //    Debug.Log("shrimpQuest timing");
+            //    // increment to next objective
+            //    Objectives.GetInstance().SetObjective(0);
+            //    // increment hint 
+            //    HintManager.GetInstance().setPuzzleHint(0);
+            //}
 
-        //    if (shrimpSolved == true)
-        //    {
-        //        // indicate that a certain timing is done for coding later
-        //        Debug.Log("shrimpSolved timing");
-        //        // increment to next objective
-        //        Objectives.GetInstance().SetObjective(1);
-        //        // increment hint 
-        //        HintManager.GetInstance().setPuzzleHint(1);
-        //    }
+            //if (shrimpSolved == true)
+            //{
+            //    // indicate that a certain timing is done for coding later
+            //    Debug.Log("shrimpSolved timing");
+            //    // increment to next objective
+            //    Objectives.GetInstance().SetObjective(1);
+            //    // increment hint 
+            //    HintManager.GetInstance().setPuzzleHint(1);
+            //}
 
-        //    if (beaten == true)
-        //    {
-        //        // indicate that a certain timing is done for coding later
-        //        Debug.Log("beaten timing");
-        //        // increment to next objective
-        //        Objectives.GetInstance().SetObjective(2);
-        //        // increment hint 
-        //        HintManager.GetInstance().setPuzzleHint(2);
-        //    }
+            //if (beaten == true)
+            //{
+            //    // indicate that a certain timing is done for coding later
+            //    Debug.Log("beaten timing");
+            //    // increment to next objective
+            //    Objectives.GetInstance().SetObjective(2);
+            //    // increment hint 
+            //    HintManager.GetInstance().setPuzzleHint(2);
+            //}
 
-        //    if (hasShrimp == true)
-        //    {
-        //        // indicate that a certain timing is done for coding later
-        //        Debug.Log("hasShrimp timing");
-        //        // increment to next objective
-        //        Objectives.GetInstance().SetObjective(3);
-        //        // increment hint 
-        //        HintManager.GetInstance().setPuzzleHint(3);
-        //    }
+            //if (hasShrimp == true)
+            //{
+            //    // indicate that a certain timing is done for coding later
+            //    Debug.Log("hasShrimp timing");
+            //    // increment to next objective
+            //    Objectives.GetInstance().SetObjective(3);
+            //    // increment hint 
+            //    HintManager.GetInstance().setPuzzleHint(3);
+            //}
 
-        //    if (shrimpQuest == true)
-        //    {
-        //        // indicate that a certain timing is done for coding later
-        //        Debug.Log("officeOpen timing");
-        //        // increment to next objective
-        //        Objectives.GetInstance().SetObjective(4);
-        //        // increment hint 
-        //        HintManager.GetInstance().setPuzzleHint(4);
-        //    }
-        //}
-       
+            //if (shrimpQuest == true)
+            //{
+            //    // indicate that a certain timing is done for coding later
+            //    Debug.Log("officeOpen timing");
+            //    // increment to next objective
+            //    Objectives.GetInstance().SetObjective(4);
+            //    // increment hint 
+            //    HintManager.GetInstance().setPuzzleHint(4);
+            //}
+
+
+
+           
+
+
+
+        }
+
 
     }
 }

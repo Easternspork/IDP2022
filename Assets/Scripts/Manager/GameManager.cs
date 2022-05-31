@@ -11,6 +11,11 @@ public class GameManager : MonoBehaviour
     public string playerName; 
 
     public bool disableMovement = false;
+
+    public Vector3 cellPos;
+
+    public bool breakfastEndedOnce = false;
+
     private void Start()
     {
         if (instance != null)
@@ -48,11 +53,16 @@ public class GameManager : MonoBehaviour
     //scuffed 
     public void ChangeSceneStartingPos(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "Cell")
+        if (scene.name == "Nighttime")
         {
             GameObject.Find("Player").transform.position = new Vector3(10.6f, 28, 0);
-
         }
+
+        if (scene.name == "Yard")
+        {
+            GameObject.Find("Player").transform.position = cellPos;
+        }
+
         GetComponent<Objectives>().SetObjective(1);
         SceneManager.sceneLoaded -= ChangeSceneStartingPos;
 
