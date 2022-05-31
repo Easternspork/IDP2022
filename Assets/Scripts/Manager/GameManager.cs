@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
             Debug.LogWarning("Two instances of GameManager");
         }
         instance = this;
+        Objectives.GetInstance().SetObjective(0);
     }
 
     public static GameManager GetInstance()
@@ -43,7 +44,6 @@ public class GameManager : MonoBehaviour
 
         // change later
         SceneManager.LoadScene("Intro");
-
 
     }
 
@@ -64,6 +64,7 @@ public class GameManager : MonoBehaviour
 
         if (scene.name == "Nighttime" && !firstTimeNightTime)
         {
+            Debug.Log("scene pos changed");
             GameObject.Find("Player").transform.position = new Vector3(10.6f, 28, 0);
         }
 
@@ -72,12 +73,11 @@ public class GameManager : MonoBehaviour
             firstTimeNightTime = false;
         }
 
-            if (scene.name == "Yard")
+        if (scene.name == "Yard")
         {
             GameObject.Find("Player").transform.position = cellPos;
         }
 
-        GetComponent<Objectives>().SetObjective(1);
         SceneManager.sceneLoaded -= ChangeSceneStartingPos;
 
 

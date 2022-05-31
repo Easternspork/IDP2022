@@ -88336,7 +88336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notifier: {fileID: 1576163819}
-  inkJSON: {fileID: 0}
+  inkJSON: {fileID: 4900000, guid: 7e28ac33b7a221f4ba84dd4b3aa8d65b, type: 3}
   sceneToLoad: Maze
   doorPickSound: {fileID: 0}
 --- !u!1 &1204459639

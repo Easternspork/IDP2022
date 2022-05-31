@@ -14,10 +14,11 @@ public class SimpleDoor : Interactable
 
     protected override void OnInteract()
     {
-        GameManager.GetInstance().HandleSceneChange();
         GameObject.Find("Sound").GetComponent<AudioSource>().PlayOneShot(doorOpenSound);
 
-        SceneManager.LoadScene("Cell");
+        SceneManager.LoadScene(changeScene);
+        GameManager.GetInstance().HandleSceneChange();
+
     }
 
 

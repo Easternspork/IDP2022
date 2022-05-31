@@ -40,7 +40,7 @@ public class ComputerInteractable : Interactable
     public void ShowComputer()
     {
         computerScreen.SetActive(true);
-
+        Objectives.GetInstance().HideObjectivesButton();
     }
 
     public void HideComputer()
@@ -48,6 +48,7 @@ public class ComputerInteractable : Interactable
         computerScreen.SetActive(false);
         passwordTab.SetActive(false);
         passwordScreen.SetActive(true);
+        Objectives.GetInstance().HideObjectivesButton();
     }
 
     public void HidePasswordScreen()
