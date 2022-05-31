@@ -1643,8 +1643,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14.5
-  m_fontSizeBase: 14.5
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3483,9 +3483,9 @@ MonoBehaviour:
   - Ronald
   description:
   - Intimidating and cold, always wears a blue bandana.
-  - somethings
-  - hdhiudashia
-  - hdiawhduaidh
+  - Likes flowers, is antisocial.
+  - '(Penguin with crazy hair), loves shrimp. Has a funny accent (barely understandable)  '
+  - Pleads his innocence on a daily basis, is four-eyed (wears glasses)
   timelines:
   - {fileID: 710476799}
   - {fileID: 152000567}

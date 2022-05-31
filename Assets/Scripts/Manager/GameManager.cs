@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     {
 
         // change later
-        SceneManager.LoadScene("Cell");
+        SceneManager.LoadScene("Intro");
 
 
     }

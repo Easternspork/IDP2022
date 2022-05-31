@@ -57,7 +57,7 @@ public class Mugshot : MonoBehaviour
         Debug.Log("bruh");
         mugshotCanvas.SetActive(true);
         characterName.text = names[characterNumber];
-        characterDescription.text = names[characterNumber];
+        characterDescription.text = description[characterNumber];
 
     }
     
