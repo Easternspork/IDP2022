@@ -5,6 +5,7 @@ INCLUDE Global.ink
 {breakFast: -> BF}
 {shrimpQuest: -> alibi}
 
+~ hasShrimp = false
 Wow, didn't expecteth f'r thee to actually receiveth me some shrimp. I am truly indebted. Here, take this trinket I found as a reward. 
     * [I would like your help]
         With what?
