@@ -35,7 +35,7 @@ No you arent, Tatsumi. Jeez, he's not an orca, he's another innocent penguin cau
 Fine.
 ~ cha = "Brown Penguin"
 Name's James.
-~ cha = {mc}
+~ cha = mc
 Nice to meet y'all. So what is this code and how do I help?
 ~ cha = "Tatsumi"
 James? He's kind of our techy codebreaker guy.
