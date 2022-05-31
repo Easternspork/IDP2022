@@ -44,4 +44,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Act3/Credits.unity
     guid: 70d491e73831fec42a1be171f6570385
+  - enabled: 1
+    path: Assets/Scenes/Act3/Igloo Scene.unity
+    guid: 6ebfde4d09c0d3a4a9da9cf7c00ff543
+  - enabled: 1
+    path: Assets/Scenes/Act3/Maze.unity
+    guid: 84dec7259546a4b489e43780d4dc1b34
   m_configObjects: {}

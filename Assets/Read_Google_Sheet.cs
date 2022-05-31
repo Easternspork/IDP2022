@@ -59,7 +59,7 @@ public class Read_Google_Sheet : MonoBehaviour
                 }
                 catch(Exception ex)
                 {
-                    updateText += itemo[0][0] + " | " + itemo[0][1] + " | " + itemo[0][2] + " | " + itemo[0][3] + " | " + itemo[0][4] + "\n";
+                    updateText += itemo[0][0] + " | " + itemo[0][1] + " | " + itemo[0][2] + " | " + itemo[0][3]+ "\n";
                 }
 
                 //updateText += itemo[0]["gsx$ntimestamp"]["$t"] + ": " + itemo[0]["gsx$nusername"]["$t"] + ": " + itemo[0]["gsx$ntime"]["$t"] + "left | " + itemo[0]["gsx$nscore"]["$t"] + " (" + itemo[0]["gsx$nfeedback"]["$t"] + ")\n";
@@ -73,7 +73,7 @@ public class Read_Google_Sheet : MonoBehaviour
 
             foreach (var item in openWith)
             {
-                updateText += item.Value[0] + " | " + item.Value[1] + " | " + item.Value[2] + " | " + item.Value[3] + " | " + item.Value[4] + "\n";
+                updateText += item.Value[0] + " | " + item.Value[1] + " | " + item.Value[2] + " | " + item.Value[3] + "\n";
             }
         
             outputArea.text = updateText;

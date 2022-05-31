@@ -98,4 +98,10 @@ public class Objectives : MonoBehaviour
     {
         showObjectiveButton.SetActive(true);
     }
+
+    public void HideObjectivesButton()
+    {
+        showObjectiveButton.SetActive(false);
+
+    }
 }

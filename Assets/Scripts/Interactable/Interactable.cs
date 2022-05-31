@@ -78,5 +78,15 @@ public class Interactable : MonoBehaviour
             DialogueManager.GetInstance().StartDialogue(DialogueManager.GetInstance().yardTransitionInkJSON);
             DialogueManager.GetInstance().currentStory.variablesState["breakFast"] = false;
         }
+
+        bool beaten = (bool)DialogueManager.GetInstance().currentStory.variablesState["beaten"];
+
+        if (beaten == true && !GameManager.GetInstance().fightHappened)
+        {
+            GameManager.GetInstance().fightHappened = true;
+            GameObject.Find("Fade").GetComponent<Fade>().FadeScene("Fight Scene");
+
+
+        }
     }
 }

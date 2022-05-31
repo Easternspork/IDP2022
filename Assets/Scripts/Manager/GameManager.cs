@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public Vector3 cellPos;
 
     public bool breakfastEndedOnce = false;
+    public bool fightHappened;
 
     private void Start()
     {
