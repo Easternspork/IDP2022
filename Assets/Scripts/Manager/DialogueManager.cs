@@ -114,7 +114,6 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(TextAsset inkJSON)
     {
-        Debug.Log("dialogue qed");
         if (disableDialogue == false)
         {
             
@@ -145,11 +144,9 @@ public class DialogueManager : MonoBehaviour
 
     public void NextDialogue()
     {
-        Debug.Log("next ");
 
         if (currentStory.canContinue)
         {
-            Debug.Log((string)currentStory.variablesState["cha"]);
             dialogueName.text = (string)currentStory.variablesState["cha"];
             dialogueContent.text = currentStory.Continue();
             DisplayChoices();
@@ -162,7 +159,6 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator ExitDialogue()
     {
-        Debug.Log("exit ");
         yield return new WaitForSeconds(0.2f);
 
         dialogueVariables.StopListening(currentStory);
