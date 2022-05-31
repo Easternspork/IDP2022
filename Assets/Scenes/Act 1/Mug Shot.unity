@@ -3506,6 +3506,7 @@ MonoBehaviour:
   mugshotCanvas: {fileID: 1181436396}
   descriptionThing: {fileID: 405505031}
   nameThing: {fileID: 85949369}
+  randomInkJSON: {fileID: 4900000, guid: 60774a4930588094eb00e8504d1cd085, type: 3}
 --- !u!4 &1785687441
 Transform:
   m_ObjectHideFlags: 0
