@@ -966,7 +966,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notifier: {fileID: 308809768}
   inkJSON: {fileID: 4900000, guid: ede99eb339acc2846aa885acb5d4e57c, type: 3}
-  interactableName: You
   giveItem: Hairpin
   destoryAfter: 1
 --- !u!61 &277834025
@@ -1793,7 +1792,10 @@ MonoBehaviour:
   inputText: {fileID: 1880206866}
   canvas: {fileID: 452997683}
   penaltyTime: 30
-  numpadSound: {fileID: 0}
+  numpadSound: {fileID: 8300000, guid: 553e5361c9a823b4b9e4f2b09259b8d7, type: 3}
+  door: {fileID: 1403771053}
+  openedInkJSON: {fileID: 4900000, guid: 816b476b4672f1a4391dc1e92a1a4ecb, type: 3}
+  wrongPassInkJSON: {fileID: 4900000, guid: 021e7ab9c398ffa45ae5382eaf426d4b, type: 3}
 --- !u!114 &452997685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2586,7 +2588,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notifier: {fileID: 991431654}
   inkJSON: {fileID: 4900000, guid: ac4534db5ec808b45b0919876d34971f, type: 3}
-  interactableName: Cafeteria Person
 --- !u!1 &829827758
 GameObject:
   m_ObjectHideFlags: 0
@@ -2822,7 +2823,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notifier: {fileID: 3180017550186834165}
   inkJSON: {fileID: 4900000, guid: 294b304278e1dea4bb9a499a7ae3c166, type: 3}
-  interactableName: 
 --- !u!1 &897960805
 GameObject:
   m_ObjectHideFlags: 0
@@ -88336,7 +88336,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notifier: {fileID: 1576163819}
   inkJSON: {fileID: 0}
-  interactableName: You
   sceneToLoad: 
   doorPickSound: {fileID: 0}
 --- !u!1 &1204459639
@@ -99226,7 +99225,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notifier: {fileID: 0}
   inkJSON: {fileID: 4900000, guid: cf024abc540cda24e9906a0de007f111, type: 3}
-  interactableName: Ronald
 --- !u!4 &1579041872
 Transform:
   m_ObjectHideFlags: 0
@@ -100931,7 +100929,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notifier: {fileID: 2045151092}
   inkJSON: {fileID: 4900000, guid: 4b8cb2a470e736e43ae6c8c933341ec2, type: 3}
-  interactableName: You
   doorOpenSound: {fileID: 8300000, guid: 9d4121b7ab0d8184dacea4b54e48474e, type: 3}
 --- !u!1 &2043427898
 GameObject:
@@ -101558,7 +101555,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 393c384456f4b5d49856e49a2cc7b3f2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -21,7 +21,18 @@ public class Numpad : MonoBehaviour
 
     [SerializeField]
     private AudioClip numpadSound;
-    
+
+    [SerializeField]
+    private GameObject door;
+
+    [SerializeField]
+    private TextAsset openedInkJSON;
+
+    [SerializeField]
+    private TextAsset wrongPassInkJSON;
+
+    public bool openedDoor = false;
+
     private void Start()
     {
         if (instance != null)
@@ -46,11 +57,17 @@ public class Numpad : MonoBehaviour
             BackSpace();
             // TODO: possibly call an invalid sound effect here
         }
+
+
     }
 
     public void ShowCanvas()
     {
-        canvas.SetActive(true);
+        if (openedDoor == false)
+        {
+            canvas.SetActive(true);
+
+        }
 
     }
 
@@ -58,7 +75,7 @@ public class Numpad : MonoBehaviour
     {
         canvas.SetActive(false);
         DialogueManager.GetInstance().disableDialogue = false;
-        DialogueManager.GetInstance().inDialogue = false;
+        //DialogueManager.GetInstance().inDialogue = false;
         GameManager.GetInstance().disableMovement = false; 
     }
 
@@ -152,9 +169,20 @@ public class Numpad : MonoBehaviour
         if (input == password)
         {
             Debug.Log("you win!");
+            door.SetActive(false);
+            DialogueManager.GetInstance().disableDialogue = false;
+
+            DialogueManager.GetInstance().StartDialogue(openedInkJSON);
             HideCanvas();
-        } else
+            openedDoor = true;
+
+
+        }
+        else
         {
+            DialogueManager.GetInstance().disableDialogue = false;
+
+            DialogueManager.GetInstance().StartDialogue(wrongPassInkJSON);
             Debug.Log("you suck");
             TimeManager.GetInstance().AddPenalty(penaltyTime);
             HideCanvas();
@@ -164,6 +192,6 @@ public class Numpad : MonoBehaviour
         UpdateText();
 
         GameManager.GetInstance().disableMovement = false;
-        DialogueManager.GetInstance().disableDialogue = false; 
     }
+
 }

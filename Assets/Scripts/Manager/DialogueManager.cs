@@ -108,7 +108,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(TextAsset inkJSON)
     {
-
+        Debug.Log("dialogue qed");
         if (disableDialogue == false)
         {
             //dialogueName.text = (string)currentStory.variablesState["cha"];
@@ -137,6 +137,8 @@ public class DialogueManager : MonoBehaviour
 
     public void NextDialogue()
     {
+        Debug.Log("next ");
+
         //dialogueName.text = (string)currentStory.variablesState["cha"];
 
         if (currentStory.canContinue)
@@ -152,6 +154,7 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator ExitDialogue()
     {
+        Debug.Log("exit ");
         yield return new WaitForSeconds(0.2f);
 
         dialogueVariables.StopListening(currentStory);

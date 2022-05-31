@@ -61,4 +61,9 @@ public class GameManager : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        Debug.Log(DialogueManager.GetInstance().inDialogue);
+    }
+
 }

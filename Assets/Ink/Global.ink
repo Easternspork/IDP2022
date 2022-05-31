@@ -31,3 +31,4 @@ VAR hint3 = 0
 VAR hint4 = 0
 VAR hint5 = 0
 
+VAR prisonPassCorrect = false
