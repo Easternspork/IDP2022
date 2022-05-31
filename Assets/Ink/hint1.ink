@@ -1,5 +1,5 @@
 INCLUDE Global.ink
-
+~ cha = "Hint"
 { hint1 < 4: -> askHint}
 { hint1 == 4: -> noHintsToReveal}
 

@@ -1,5 +1,5 @@
 INCLUDE Global.ink
-
+~ cha = "Notice"
 Asking for a hint will result in a one minute penalty. Would you like to continute ?
     * [Yes]
         Displaying Hint 1.

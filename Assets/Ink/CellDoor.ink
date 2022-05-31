@@ -1,5 +1,6 @@
 INCLUDE Global.ink
 
+~ cha = "Door"
 {hairpin:
     -> open
     - else:

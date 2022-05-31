@@ -1,4 +1,6 @@
 VAR act = 1
+VAR mc = ""
+VAR cha = ""
 
 VAR b1 = false
 VAR b2 = false

@@ -1,5 +1,6 @@
 INCLUDE Global.ink
 
+~ cha = "Door"
 {officeOpen:
     -> open
     - else:
