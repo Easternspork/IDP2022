@@ -53,6 +53,10 @@ What's crackin?
                     * * * [Freg. He took the shrimp for himself.]
                     ~ cha = "Peter"
                         So that's who was the theif. Oh, well it's time for him to get the shrimp beat out of him. Let me handle this.
+                        Wait.
+                        Where is Freg?
+                        * * * * [I think he's in the showers]
+                            Well, there's no running from me.
                         ~ beaten = true
                         ->END
 
