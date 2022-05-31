@@ -9,11 +9,15 @@ public class CellDoor : Interactable
     
     public override void OnDialogueEnd()
     {
+        Debug.Log(Inventory.GetInstance().GetItemList().Contains("Hairpin"));
+
         base.OnDialogueEnd();
         if (Inventory.GetInstance().GetItemList().Contains("Hairpin"))
         {
-            Destroy(gameObject);
+            Debug.Log("rueiahi0");
             GameObject.Find("Sound").GetComponent<AudioSource>().PlayOneShot(doorOpenSound);
+            Destroy(gameObject);
+
 
         }
     }

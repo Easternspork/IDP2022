@@ -48,7 +48,7 @@ public class Interactable : MonoBehaviour
     protected virtual void OnInteract()
     {
 
-        DialogueManager.GetInstance().StartDialogue(inkJSON);
+        DialogueManager.GetInstance().StartDialogue(this);
     }
 
     public virtual void OnDialogueStart()

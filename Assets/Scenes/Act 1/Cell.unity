@@ -966,7 +966,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notifier: {fileID: 308809768}
   inkJSON: {fileID: 4900000, guid: ede99eb339acc2846aa885acb5d4e57c, type: 3}
-  interactableName: You
   giveItem: Hairpin
   destoryAfter: 1
 --- !u!61 &277834025
@@ -2300,7 +2299,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notifier: {fileID: 857853233}
   inkJSON: {fileID: 4900000, guid: b713602b6e99e284c9e6eda87a49372e, type: 3}
-  interactableName: Peter
 --- !u!4 &689529396
 Transform:
   m_ObjectHideFlags: 0
@@ -2665,7 +2663,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notifier: {fileID: 991431654}
   inkJSON: {fileID: 4900000, guid: ac4534db5ec808b45b0919876d34971f, type: 3}
-  interactableName: Cafeteria Person
 --- !u!1 &829827758
 GameObject:
   m_ObjectHideFlags: 0
@@ -2985,7 +2982,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notifier: {fileID: 3180017550186834165}
   inkJSON: {fileID: 4900000, guid: 294b304278e1dea4bb9a499a7ae3c166, type: 3}
-  interactableName: 
 --- !u!1 &897960805
 GameObject:
   m_ObjectHideFlags: 0
@@ -87837,7 +87833,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notifier: {fileID: 1381788107}
   inkJSON: {fileID: 4900000, guid: 460cfc46c77565f4ebd67e501c9a6884, type: 3}
-  interactableName: Peter
 --- !u!4 &1044012282
 Transform:
   m_ObjectHideFlags: 0
@@ -88598,7 +88593,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notifier: {fileID: 1576163819}
   inkJSON: {fileID: 0}
-  interactableName: You
   sceneToLoad: Bunker
   doorPickSound: {fileID: 0}
 --- !u!1 &1204459639
@@ -89830,7 +89824,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notifier: {fileID: 873055688}
   inkJSON: {fileID: 4900000, guid: 766ecf42d994aad46b420295c51291a1, type: 3}
-  interactableName: Cassius
 --- !u!1 &1430399947
 GameObject:
   m_ObjectHideFlags: 0
@@ -90542,6 +90535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b943a94d71013e044ae60b4441de400f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inkJSON: {fileID: 4900000, guid: b0b881ac520346542928c155388f3865, type: 3}
 --- !u!1 &1544166453
 GameObject:
   m_ObjectHideFlags: 0
@@ -100220,7 +100214,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notifier: {fileID: 1163059762}
   inkJSON: {fileID: 4900000, guid: cf024abc540cda24e9906a0de007f111, type: 3}
-  interactableName: Ronald
 --- !u!4 &1579041872
 Transform:
   m_ObjectHideFlags: 0
@@ -101100,7 +101093,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notifier: {fileID: 630579367}
   inkJSON: {fileID: 4900000, guid: 60774a4930588094eb00e8504d1cd085, type: 3}
-  interactableName: Freg
 --- !u!4 &1883407663
 Transform:
   m_ObjectHideFlags: 0
@@ -101850,7 +101842,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notifier: {fileID: 2045151092}
   inkJSON: {fileID: 4900000, guid: 4b8cb2a470e736e43ae6c8c933341ec2, type: 3}
-  interactableName: You
   doorOpenSound: {fileID: 8300000, guid: 9d4121b7ab0d8184dacea4b54e48474e, type: 3}
 --- !u!1 &2043427898
 GameObject:

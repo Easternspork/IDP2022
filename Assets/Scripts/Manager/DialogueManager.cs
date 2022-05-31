@@ -74,6 +74,37 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueCanvas.SetActive(false);
     }
+    public void StartDialogue(Interactable interactableInstance)
+    {
+        this.interactableInstance = interactableInstance;
+
+        if (disableDialogue == false)
+        {
+            //dialogueName.text = (string)currentStory.variablesState["cha"];
+
+
+            currentStory = new Story(this.interactableInstance.inkJSON.text);
+            inDialogue = true;
+            ShowCanvas();
+
+            dialogueVariables.StartListening(currentStory);
+            SetInkVariables();
+
+            if (currentStory.canContinue)
+            {
+                dialogueContent.text = currentStory.Continue();
+            }
+            else
+            {
+                StartCoroutine(ExitDialogue());
+            }
+        }
+
+
+        this.interactableInstance.OnDialogueStart();
+        DisplayChoices();
+
+    }
 
     public void StartDialogue(TextAsset inkJSON)
     {
@@ -140,11 +171,11 @@ public class DialogueManager : MonoBehaviour
         // scuffed way to start the fight 
         // if ((bool)currentStory.variablesState["shrimpBeating"] && (bool)currentStory.variablesState["peterShrimpSus"])
 
-        if ((bool)currentStory.variablesState["postShrimp"])
-        {
-            Debug.Log("start fighting scene");
-            SceneManager.LoadScene("FightScene");
-        }
+        //if ((bool)currentStory.variablesState["postShrimp"])
+        //{
+        //    Debug.Log("start fighting scene");
+        //    SceneManager.LoadScene("FightScene");
+        //}
 
     }
 
