@@ -41,6 +41,15 @@ Hello, newbie.
         ~ cha = mc
         (Pretty specific for a fuzzy memory)
         ->END
+ * [Were you the last to leave?]
+    W-why do you ask?
+        * * [Because the last to leave...]
+            ...
+                * * * [was the theif.]
+                    What theif?
+                    I-I didn't do anything!
+                    ~ shrimpSolved = true 
+                    ->END
         
       
 === scared ===

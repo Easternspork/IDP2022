@@ -21,7 +21,7 @@ VAR clue9 = false
 
 VAR breakFast = true
 VAR shrimpQuest = false
-VAR shrimpSolved = false
+VAR postSHrimp = false
 VAR beaten = false
 VAR hasShrimp = false
 VAR officeOpen = false  
