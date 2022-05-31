@@ -26,6 +26,7 @@ public class SendToGoogleSheet : MonoBehaviour
         form.AddField("entry.2039556782", time);
         form.AddField("entry.1459984345", score);
         form.AddField("entry.26282914", feedback);
+
         byte[] rawData = form.data;
         WWW www = new WWW(BASE_URL, rawData);
         yield return www;
@@ -38,6 +39,7 @@ public class SendToGoogleSheet : MonoBehaviour
         b = string.Format("{0:N2}", TimeManager.GetInstance().timer);
         c = string.Format("{0:N2}", TimeManager.GetInstance().timer * 10 * Mathf.PI);
         d = Feedback.GetComponent<TMP_InputField>().text;
+
 
         StartCoroutine(Post(a, b, c, d));
     }

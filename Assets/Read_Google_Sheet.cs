@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Networking;
+using System;
 
 public class Read_Google_Sheet : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class Read_Google_Sheet : MonoBehaviour
 
     IEnumerator ObtainSheetData()
     {
-        UnityWebRequest www = UnityWebRequest.Get("https://spreadsheets.google.com/feeds/list/1ndSvOuTRSFzks_BAKlrjI6L5mwNpQzoSc-n7iB5u3zo/od6/public/values?alt=json");
+        UnityWebRequest www = UnityWebRequest.Get("https://sheets.googleapis.com/v4/spreadsheets/1ndSvOuTRSFzks_BAKlrjI6L5mwNpQzoSc-n7iB5u3zo/values/Form%20Responses%201?alt=json&key=AIzaSyDB19bT0P-l1JcdMUHxs4wDEJ7-8DMuHpc");
         yield return www.SendWebRequest();
         if(www.isNetworkError || www.isHttpError)
         {
@@ -36,11 +37,38 @@ public class Read_Google_Sheet : MonoBehaviour
             string json = www.downloadHandler.text;
             var o = JSON.Parse(json);
 
-            foreach (var item in o["feed"]["entry"])
+
+
+            var comparer = Comparer<int>.Create((x, y) => y.CompareTo(x));
+            SortedList<int, string[]> openWith = new SortedList<int, string[]>(comparer);
+
+            foreach (var item in o["values"])
             {
+
                 var itemo = JSON.Parse(item.ToString());
 
-                updateText += itemo[0]["gsx$ntimestamp"]["$t"] + ": " + itemo[0]["gsx$nusername"]["$t"] + ": " + itemo[0]["gsx$ntime"]["$t"] + "left | " + itemo[0]["gsx$nscore"]["$t"] + " (" + itemo[0]["gsx$nfeedback"]["$t"] + ")\n";
+                try
+                {
+
+                    openWith.Add(int.Parse(itemo[0][3]), itemo[0]);
+                }
+                catch(Exception ex)
+                {
+                    updateText += itemo[0][0] + " | " + itemo[0][1] + " | " + itemo[0][2] + " | " + itemo[0][3] + " | " + itemo[0][4] + "\n";
+                }
+
+                //updateText += itemo[0]["gsx$ntimestamp"]["$t"] + ": " + itemo[0]["gsx$nusername"]["$t"] + ": " + itemo[0]["gsx$ntime"]["$t"] + "left | " + itemo[0]["gsx$nscore"]["$t"] + " (" + itemo[0]["gsx$nfeedback"]["$t"] + ")\n";
+                //
+            }
+
+            //string[] header = openWith["Score"];
+            //updateText += header[0] + " | " + header[1] + " | " + header[2] + " | " + header[3] + " | " + header[4] + "\n";
+
+            //openWith.Remove("Score");
+
+            foreach (var item in openWith)
+            {
+                updateText += item.Value[0] + " | " + item.Value[1] + " | " + item.Value[2] + " | " + item.Value[3] + " | " + item.Value[4] + "\n";
             }
         
             outputArea.text = updateText;
