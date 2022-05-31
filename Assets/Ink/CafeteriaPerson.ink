@@ -24,10 +24,11 @@ No food left, now get mooving!
                 Sorry kiddo, theres not much I can do, I'm just a lowly food service cow.
                 They seem to be rounding up many innocent penguins like you lately, though beware, there are some real criminals here.
                 Here, I'll give you seconds if you show up early next mornin. It's the least I can do.
+                ~ b6 = true
                 
                 ->END
                 
-~ b6 = true
+
 ->END
 
 === alibi ===
