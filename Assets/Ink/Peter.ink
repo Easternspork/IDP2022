@@ -10,8 +10,12 @@ INCLUDE Global.ink
 
     {shrimpQuest: -> alibi}
     {shrimpQuest == false:
+        {beaten: 
+        -> shrimpGive
+        
+        - else :
         {shrimpSolved: -> BEATING_TIME}
-        {beaten: -> shrimpGive}
+        }
     }
        
 }

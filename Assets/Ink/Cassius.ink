@@ -1,22 +1,31 @@
 INCLUDE Global.ink
 
 ~ cha = "Cassius"
-{breakFast: -> BF}
-{breakFast == false:
-{shrimpQuest: -> alibi}
-    {shrimpQuest == false: 
-        {hasShrimp:
-            -> yesShrimp
-            - else:
-            -> noShrimp
-        }
+{hasShrimp:
+    -> yesShrimp
+    - else:
+    {breakFast: -> BF}
+    {breakFast == false:
+    {shrimpQuest: -> alibi}
     }
 }
+
 
 === BF === 
 valorous m'rning
     * [What?]
         Or as thee ingraft'rs wouldst sayeth, "Good morning".
+        * * [Im sorry?]
+        Thou shouldst not int'rf're with the business yond doest not incl….udeth thee.  If thou truly insist, thee'll has't to payeth a price.
+            * * [What price?]
+        'mongst us th're is a hoard'r of shrimp.  I'll consid'r helping if 't be true thee can findeth and secureth his bounty.
+        tryeth talking to thy fellow inmates to gath'r some data
+        The lasteth p'rson to leaveth the cafet'ria hadst some shrimp in their pocket
+        That gent seemeth to be'est the theif
+        H'res a noteth pap'r yond shall help thee
+        ~ shrimpQuest = true 
+        ~ clue9 = true
+        ->DONE
         ~ cha = mc
         (What an interesting character)
         ~ b3 = true
@@ -38,17 +47,4 @@ Wow, didn't expecteth f'r thee to actually receiveth me some shrimp. I am truly 
                 
                 
 ->DONE
-=== noShrimp === 
-Thou shouldst not int'rf're with the business yond doest not incl….udeth thee.  If thou truly insist, thee'll has't to payeth a price.
-    * [What price?]
-        'mongst us th're is a hoard'r of shrimp.  I'll consid'r helping if 't be true thee can findeth and secureth his bounty.
-        tryeth talking to thy fellow inmates to gath'r some data
-        The lasteth p'rson to leaveth the cafet'ria hadst some shrimp in their pocket
-        That gent seemeth to be'est the theif
-        H'res a noteth pap'r yond shall help thee
-        ~ shrimpQuest = true 
-        ~ clue9 = true
-        ->DONE
-    * [They serve alchohol here?]
-        Bah.  This is simply how i speaketh.  I am sob'r, thee troglodyte
-    ->DONE
+
