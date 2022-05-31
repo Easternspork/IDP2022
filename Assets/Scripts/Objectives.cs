@@ -82,7 +82,7 @@ public class Objectives : MonoBehaviour
             RectTransform objectiveRectTransform = Instantiate(objectivePrefab, objectiveContainer.transform.localPosition, objectiveContainer.transform.localRotation, objectiveContainer.transform).GetComponent<RectTransform>();
             objectiveRectTransform.gameObject.GetComponent<TextMeshProUGUI>().text = objective;
             objectiveRectTransform.gameObject.SetActive(true);
-            objectiveRectTransform.localPosition = new Vector2(0, y * 50);
+            objectiveRectTransform.localPosition = new Vector2(0, y * -50);
             y++;
         }
 

@@ -87,6 +87,7 @@ public class Interactable : MonoBehaviour
             GameObject.Find("Fade").GetComponent<Fade>().FadeScene("Fight Scene");
             GameManager.GetInstance().yardPos = GameObject.Find("Player").transform.position;
             Inventory.GetInstance().AddItem("Shrimp");
+            Destroy(this);
         }
 
         bool hairpin = (bool)DialogueManager.GetInstance().currentStory.variablesState["hairpin"];

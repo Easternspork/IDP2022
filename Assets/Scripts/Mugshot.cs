@@ -94,6 +94,7 @@ public class Mugshot : MonoBehaviour
             globalInk.variablesState["mc"] = inputName.text;
             DialogueManager.GetInstance().dialogueVariables.StopListening(globalInk);
             SceneManager.LoadScene("Cell");
+             //SceneManager.LoadScene("Igloo Scene");
             Objectives.GetInstance().ShowButton();
             TimeManager.GetInstance().StartTimer();
         }
