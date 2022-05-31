@@ -19,17 +19,17 @@ Revealing each hint will invoke a 1 minute penalty on the timer. Would you  like
         { hint3 == 2: -> two}
         { hint3 == 3: ->three}
         { hint3 == 4: ->four}
+        ->END
     * [No, display my current hints]
         { hint3 == 1: ->one}
         { hint3 == 2: ->two}
         { hint3 == 3: ->three}
         { hint3 == 4: ->four}
         { hint3 == 0: ->noHints }
+        ->END
     * [Cancel]
         ->END
         
-=== cancel ===
-->END
 
 === one ===
 Yen, tie, bell, and ski are the first words the emojis are referring to.

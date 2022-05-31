@@ -19,17 +19,17 @@ Revealing each hint will invoke a 1 minute penalty on the timer. Would you  like
         { hint2 == 2: -> two}
         { hint2 == 3: ->three}
         { hint2 == 4: ->four}
+        ->END
     * [No, display my current hints]
         { hint2 == 1: ->one}
         { hint2 == 2: ->two}
         { hint2 == 3: ->three}
         { hint2 == 4: ->four}
         { hint2 == 0: ->noHints }
+        ->END
     * [Cancel]
         ->END
         
-=== cancel ===
-->END
 
 === one ===
 Those cow guards seem to be talking about something interesting

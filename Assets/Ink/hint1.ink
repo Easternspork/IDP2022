@@ -19,17 +19,17 @@ Revealing each hint will invoke a 1 minute penalty on the timer. Would you  like
         { hint1 == 2: -> two}
         { hint1 == 3: ->three}
         { hint1 == 4: ->four}
+        ->END
     * [No, display my current hints]
         { hint1 == 1: ->one}
         { hint1 == 2: ->two}
         { hint1 == 3: ->three}
         { hint1 == 4: ->four}
         { hint1 == 0: ->noHints }
+        ->END
     * [Cancel]
         ->END
         
-=== cancel ===
-->END
 
 === one ===
 Cassius (that one with the funky hair) seems to have something to say.

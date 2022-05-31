@@ -19,17 +19,17 @@ Revealing each hint will invoke a 1 minute penalty on the timer. Would you  like
         { hint5 == 2: -> two}
         { hint5 == 3: ->three}
         { hint5 == 4: ->four}
+        ->END
     * [No, display my current hints]
         { hint5 == 1: ->one}
         { hint5 == 2: ->two}
         { hint5 == 3: ->three}
         { hint5 == 4: ->four}
         { hint5 == 0: ->noHints }
+        ->END
     * [Cancel]
         ->END
         
-=== cancel ===
-->END
 
 === one ===
 Find the fuse box to unlock the door.
