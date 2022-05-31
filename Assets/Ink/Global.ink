@@ -1,3 +1,5 @@
+VAR act = 1
+
 VAR b1 = false
 VAR b2 = false
 VAR b3 = false
