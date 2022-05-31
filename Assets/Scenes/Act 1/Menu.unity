@@ -2141,6 +2141,7 @@ MonoBehaviour:
     masterInkAsset: {fileID: 0}
     includePaths: []
     includes: []
+  variableUpdateInkJSON: {fileID: 4900000, guid: 766ecf42d994aad46b420295c51291a1, type: 3}
 --- !u!4 &913609594
 Transform:
   m_ObjectHideFlags: 0

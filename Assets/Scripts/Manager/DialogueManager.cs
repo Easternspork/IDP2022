@@ -58,6 +58,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         dialogueVariables = new DialogueVariables(globalInkFile.filePath);
+
     }
 
     public static DialogueManager GetInstance()
@@ -82,17 +83,17 @@ public class DialogueManager : MonoBehaviour
 
         if (disableDialogue == false)
         {
-
-
-
             currentStory = new Story(this.interactableInstance.inkJSON.text);
-            Debug.Log(currentStory.variablesState["mc"]);
 
-            dialogueName.text = (string)currentStory.variablesState["cha"];
+
+
+
+            dialogueVariables.StartListening(currentStory);
+
+            Debug.Log(dialogueName.text);
             inDialogue = true;
             ShowCanvas();
 
-            dialogueVariables.StartListening(currentStory);
             SetInkVariables();
 
             if (currentStory.canContinue)
@@ -119,12 +120,12 @@ public class DialogueManager : MonoBehaviour
             
 
             currentStory = new Story(inkJSON.text);
+            dialogueVariables.StartListening(currentStory);
 
             dialogueName.text = (string)currentStory.variablesState["cha"];
             inDialogue = true;
             ShowCanvas();
 
-            dialogueVariables.StartListening(currentStory);
             SetInkVariables();
 
             if (currentStory.canContinue)
@@ -146,10 +147,10 @@ public class DialogueManager : MonoBehaviour
     {
         Debug.Log("next ");
 
-        dialogueName.text = (string)currentStory.variablesState["cha"];
-
         if (currentStory.canContinue)
         {
+            Debug.Log((string)currentStory.variablesState["cha"]);
+            dialogueName.text = (string)currentStory.variablesState["cha"];
             dialogueContent.text = currentStory.Continue();
             DisplayChoices();
         }
@@ -192,6 +193,8 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (currentStory != null)
+        dialogueName.text = (string)currentStory.variablesState["cha"];
 
 
         if (!inDialogue)
