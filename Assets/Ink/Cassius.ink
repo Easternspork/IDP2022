@@ -17,6 +17,7 @@ INCLUDE Global.ink
 valorous m'rning
     * [What?]
         Or as thee ingraft'rs wouldst sayeth, "Good morning".
+        ~ cha = mc
         (What an interesting character)
         ~ b3 = true
         ->DONE
