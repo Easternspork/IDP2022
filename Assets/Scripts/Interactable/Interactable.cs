@@ -70,11 +70,11 @@ public class Interactable : MonoBehaviour
 
         if (breakfastOver == true && !GameManager.GetInstance().breakfastEndedOnce)
         {
+            Debug.Log("bdwuhida");
             GameManager.GetInstance().breakfastEndedOnce = true;
+            GameManager.GetInstance().cellPos = GameObject.Find("Player").transform.position;
 
             GameObject.Find("Fade").GetComponent<Fade>().FadeScene("Yard");
-            GameManager.GetInstance().cellPos = GameObject.Find("Player").transform.position;
-            GameManager.GetInstance().HandleSceneChange();
             DialogueManager.GetInstance().StartDialogue(DialogueManager.GetInstance().yardTransitionInkJSON);
             DialogueManager.GetInstance().currentStory.variablesState["breakFast"] = false;
         }

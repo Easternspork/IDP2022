@@ -17,7 +17,6 @@ public class SimpleDoor : Interactable
         GameObject.Find("Sound").GetComponent<AudioSource>().PlayOneShot(doorOpenSound);
 
         SceneManager.LoadScene(changeScene);
-        GameManager.GetInstance().HandleSceneChange();
 
     }
 

@@ -23,6 +23,11 @@ public class GameManager : MonoBehaviour
 
     public bool firstTimeNightTime = true;
 
+    private void Awake()
+    {
+        SceneManager.sceneLoaded += ChangeSceneStartingPos;
+    }
+
     private void Start()
     {
         if (instance != null)
@@ -43,18 +48,13 @@ public class GameManager : MonoBehaviour
     {
 
         // change later
-        SceneManager.LoadScene("Intro");
+        SceneManager.LoadScene("Cell");
 
     }
 
     public void QuitGame()
     {
         Application.Quit();
-    }
-
-    public void HandleSceneChange()
-    {
-        SceneManager.sceneLoaded += ChangeSceneStartingPos;
     }
 
     //scuffed 
