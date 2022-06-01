@@ -62,23 +62,23 @@ public class GameManager : MonoBehaviour
     {
         
 
-        if (scene.name == "Nighttime" && !firstTimeNightTime)
-        {
-            Debug.Log("scene pos changed");
-            GameObject.Find("Player").transform.position = new Vector3(10.6f, 28, 0);
-        }
+        //if (scene.name == "Nighttime" && !firstTimeNightTime)
+        //{
+        //    Debug.Log("scene pos changed");
+        //    GameObject.Find("Player").transform.position = new Vector3(10.6f, 28, 0);
+        //}
 
-        if (scene.name == "Nighttime" && firstTimeNightTime)
-        {
-            firstTimeNightTime = false;
-        }
+        //if (scene.name == "Nighttime" && firstTimeNightTime)
+        //{
+        //    firstTimeNightTime = false;
+        //}
 
-        if (scene.name == "Yard")
-        {
-            GameObject.Find("Player").transform.position = cellPos;
-        }
+        //if (scene.name == "Yard")
+        //{
+        //    GameObject.Find("Player").transform.position = cellPos;
+        //}
 
-        SceneManager.sceneLoaded -= ChangeSceneStartingPos;
+        //SceneManager.sceneLoaded -= ChangeSceneStartingPos;
 
 
 

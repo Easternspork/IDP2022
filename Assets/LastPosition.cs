@@ -6,7 +6,20 @@ public class LastPosition : MonoBehaviour
 {
     private void Start()
     {
-        if (GameManager.GetInstance().yardPos != null)
-        GameObject.Find("Player").transform.position = GameManager.GetInstance().yardPos;    
+        Debug.Log("thing qed");
+        Debug.Log(GameManager.GetInstance().yardPos);
+
+        if (GameManager.GetInstance().yardPos != Vector3.zero)
+        {
+            Debug.Log("yard pos");
+
+            GameObject.Find("Player").transform.position = GameManager.GetInstance().yardPos;
+        }
+        else
+        {
+            Debug.Log("cell pos");
+            GameObject.Find("Player").transform.position = GameManager.GetInstance().cellPos;
+
+        }
     }
 }
