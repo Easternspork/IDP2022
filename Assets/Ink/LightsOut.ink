@@ -1,0 +1,5 @@
+INCLUDE Global.ink
+
+~ cha = "Speaker"
+ALL OF YOU INTO YOUR CELLS!
+LIGHTS OUT!

@@ -74,18 +74,12 @@ Those cows are pumping methane from their contratpions into the air like it's no
         Heck if I know. Maybe they wanted to force us off of our lands, the ice caps, or keep us busy fighting civil wars over territory. Darn scumbag cows, usin their farts to warm the planet like that.
         If only there was a way to shut that methane machine down...
         ~ joeExp = true
-        -> nightTime
+        -> END
         ~ cha = mc
     * [What?]
     ~ cha = "Joe"
         Them farts are no joke. Its sad to think that this prison is favorable to fighting over our melting territory. The air's heatin up cause of that gas.
         If only there was a way to shut that methane machine down...
         ~ joeExp = true
-        -> nightTime
+        -> END
         
-=== nightTime == 
-~ cha = mc
-You end up talking to Joe until night.
-~ cha = "Speaker"
-INTO YOUR CELLS! LIGHTS OUT!
-->END
