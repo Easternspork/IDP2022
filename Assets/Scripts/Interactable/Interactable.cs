@@ -70,13 +70,7 @@ public class Interactable : MonoBehaviour
 
         if (breakfastOver == true && !GameManager.GetInstance().breakfastEndedOnce)
         {
-            Debug.Log("bdwuhida");
-            GameManager.GetInstance().breakfastEndedOnce = true;
-            GameManager.GetInstance().cellPos = GameObject.Find("Player").transform.position;
-
-            GameObject.Find("Fade").GetComponent<Fade>().FadeScene("Yard");
-            DialogueManager.GetInstance().StartDialogue(DialogueManager.GetInstance().yardTransitionInkJSON);
-            DialogueManager.GetInstance().currentStory.variablesState["breakFast"] = false;
+            StartCoroutine(MoveToYard());
         }
 
         bool beaten = (bool)DialogueManager.GetInstance().currentStory.variablesState["beaten"];
@@ -86,7 +80,6 @@ public class Interactable : MonoBehaviour
             GameManager.GetInstance().fightHappened = true;
             GameObject.Find("Fade").GetComponent<Fade>().FadeScene("Fight Scene");
             GameManager.GetInstance().yardPos = GameObject.Find("Player").transform.position;
-            Inventory.GetInstance().AddItem("Shrimp");
             Destroy(this);
         }
 
@@ -106,5 +99,25 @@ public class Interactable : MonoBehaviour
             TimeManager.GetInstance().puzzle1Time = TimeManager.GetInstance().timer;
 
         }
+
+        bool hasShrimp = (bool)DialogueManager.GetInstance().currentStory.variablesState["hasShrimp"];
+
+        if (hasShrimp && !Inventory.GetInstance().GetItemList().Contains("Shrimp"))
+        {
+            Inventory.GetInstance().AddItem("Shrimp");
+        }
+    }
+
+    IEnumerator MoveToYard()
+    {
+
+        GameManager.GetInstance().breakfastEndedOnce = true;
+        GameManager.GetInstance().cellPos = GameObject.Find("Player").transform.position;
+
+        GameObject.Find("Fade").GetComponent<Fade>().FadeScene("Yard");
+        yield return new WaitForSeconds(1);
+        DialogueManager.GetInstance().StartDialogue(DialogueManager.GetInstance().yardTransitionInkJSON);
+        DialogueManager.GetInstance().currentStory.variablesState["breakFast"] = false;
+        
     }
 }

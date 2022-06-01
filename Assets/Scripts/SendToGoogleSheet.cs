@@ -38,12 +38,12 @@ public class SendToGoogleSheet : MonoBehaviour
     {
 
         a = GameManager.GetInstance().playerName;
-        b = string.Format("{0:N2}", TimeManager.GetInstance().puzzle1Time) + ','
-            + string.Format("{0:N2}", TimeManager.GetInstance().puzzle2Time) + ','
-            + string.Format("{0:N2}", TimeManager.GetInstance().puzzle3Time) + ','
+        b = string.Format("{0:N2}", TimeManager.GetInstance().puzzle1Time) + ' '
+            + string.Format("{0:N2}", TimeManager.GetInstance().puzzle2Time) + ' '
+            + string.Format("{0:N2}", TimeManager.GetInstance().puzzle3Time) + ' '
             + string.Format("{0:N2}", TimeManager.GetInstance().puzzle4Time);
         c = string.Format("{0:N0}", TimeManager.GetInstance().timer * 32);
-        d = Feedback.GetComponent<TMP_InputField>().text;
+        d = FormInputManager.GetInstance().wouldYouBuy.ToString() + " " + FormInputManager.GetInstance().sliderValue.ToString() + " "; 
 
 
         StartCoroutine(Post(a, b, c, d));
