@@ -26,6 +26,7 @@ VAR beaten = false
 VAR hasShrimp = false
 VAR officeOpen = false  
 VAR hairpin = false
+VAR joeExp = false
 
 VAR hint1 = 0
 VAR hint2 = 0

@@ -10,10 +10,6 @@ INCLUDE Global.ink
     {beaten: -> shrimpGive}
     {shrimpSolved: -> BEATING_TIME}
     {shrimpQuest: -> alibi}
-        
-        
-        
-
     }
        
 
@@ -38,6 +34,8 @@ Yo, seems like we're gonna be stuck here for a while. Might as well get to know 
         ->END
 
 === shrimpGive ===
+Whewh, good thing we got back out here quickly. 
+If we stayed in the bathroom too long then the guards would have gotten suspicious.
 I gotta admit, that was fun.
 Here, take some of the shrimp he had.
     ~ hasShrimp = true
