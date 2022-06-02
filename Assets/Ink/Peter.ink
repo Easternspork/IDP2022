@@ -4,14 +4,11 @@ INCLUDE Global.ink
 ...
 ...
 
-
+{beaten: -> shrimpGive}
 {breakFast: -> BF}
 {breakFast == false:
-    {beaten: -> shrimpGive}
-    {guessCorrect: -> BEATING_TIME}
     {shrimpQuest: -> alibi}
-    }
-       
+       }
 
 === BF ===
 Yo, seems like we're gonna be stuck here for a while. Might as well get to know you then, what's your name?
@@ -33,9 +30,20 @@ Yo, seems like we're gonna be stuck here for a while. Might as well get to know 
         (...)
         ->END
  * [Any idea who the theif is?]
-    I have a theory. What do you think?
-    ~ guessWindow = true
-    ->END
+    I have a theory. Why do you want to know?
+    * * [I heard you exersize a lot. Do you?]
+    ~ cha = "Peter"
+        Oh,  well it's kind of a hobby of mine. Not much else to do in prison anyway. Why ask?
+            * * * [Do you mind beating up the culprit]
+            ~ cha = "Peter"
+                I see where we're goin with this.
+                    * * * * [Let's teach him a lesson.]
+                    ~ cha = "Peter"
+                        Oh, well it's time for him to get the shrimp beat out of him. Let me handle this.
+                        So, who do you think it is?
+                             ~ guessWindow = true
+                             ->END
+   
 
 === shrimpGive ===
 Whewh, good thing we got back out here quickly. 
@@ -46,24 +54,7 @@ Here, take some of the shrimp he had.
     ~ shrimpQuest = false
 -> END
 
-=== BEATING_TIME ===
-So looks like we agree.
-So, what do you want to do?
-    * [I heard you exersize a lot. Do you?]
-    ~ cha = "Peter"
-        Oh,  well it's kind of a hobby of mine. Not much else to do in prison anyway. Why ask?
-            * * [Do you mind beating someone for me?]
-            ~ cha = "Peter"
-                I see where we're goin with this.
-                    * * * [Let's teach Freg a lesson.]
-                    ~ cha = "Peter"
-                        Oh, well it's time for him to get the shrimp beat out of him. Let me handle this.
-                        Wait.
-                        He looks like he's gonna start running.
-                        * * * * [I think he's heading to the bathroom.]
-                            Well, there's no running from me.
-                        ~ beaten = true
-                        ->END
+
 
 === noShrimp ===
 'sup, kiddo?

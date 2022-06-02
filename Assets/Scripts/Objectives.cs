@@ -80,7 +80,12 @@ public class Objectives : MonoBehaviour
     public void SetObjective(int n)
     {
         objectiveNumber = n;
+        for (int i = 0; i < objectiveContainer.transform.childCount; i++)
+        {
+            objectiveContainer.transform.GetChild(i);
+        }
         RenderObjectiveList();
+        
     }
 
     public void ShowButton()

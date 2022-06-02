@@ -12,7 +12,7 @@ INCLUDE Global.ink
 Mor'n. Name's Joe.
     * [Hi, I'm {mc}]
     ~ cha = "Joe"
-    {cha}, ya better hurry up and get some food, might run out if you're too slow.
+    {mc}, ya better hurry up and get some food, might run out if you're too slow.
 ~ b1 = true
 ->END
 
