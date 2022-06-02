@@ -4,14 +4,11 @@ INCLUDE Global.ink
 ...
 ...
 
-
+{beaten: -> shrimpGive}
 {breakFast: -> BF}
 {breakFast == false:
-    {beaten: -> shrimpGive}
-    
     {shrimpQuest: -> alibi}
-    }
-       
+       }
 
 === BF ===
 Yo, seems like we're gonna be stuck here for a while. Might as well get to know you then, what's your name?
