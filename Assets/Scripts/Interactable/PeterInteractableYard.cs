@@ -19,4 +19,10 @@ public class PeterInteractableYard : Interactable
         }
     }
 
+    protected override void Update()
+    {
+        base.Update();
+        Debug.Log((bool)DialogueManager.GetInstance().currentStory.variablesState["guessWindow"] == true);
+    }
+
 }
