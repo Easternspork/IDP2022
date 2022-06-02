@@ -12,9 +12,9 @@ public class FormInputManager : MonoBehaviour
     public List<string> mostImprove;
 
     [SerializeField]
-    public Slider slider;
+    public GameObject sliderGameobject;
     [SerializeField]
-    public TMP_Dropdown dropdown;
+    public GameObject dropdownGameobject;
 
     static FormInputManager instance; 
 
@@ -41,11 +41,12 @@ public class FormInputManager : MonoBehaviour
     }
     public void Enjoyment()
     {
-        sliderValue = Math.Round(slider.value);
+        sliderValue = Math.Round(sliderGameobject.GetComponent<Slider>().value);
     }
 
     public void DropDown()
     {
-        Debug.Log(i);
+        //Debug.Log(i);
+        int bruh = dropdownGameobject.GetComponent<TMP_Dropdown>().value;
     }
 }
