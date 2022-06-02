@@ -20,8 +20,6 @@ public class SendToGoogleSheet : MonoBehaviour
     [SerializeField]
     private string BASE_URL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeol-4SlnZACGtPetc_LBuxyoql8hzfCg0sIjco69URB-dRvw/formResponse";
 
-    public GameObject dropdownGameobject;
-
 
     IEnumerator Post(string username, string time, string score, string feedback)
     {
@@ -38,22 +36,18 @@ public class SendToGoogleSheet : MonoBehaviour
 
     public void Send()
     {
-        List<string> dropDownOptions = new List<string>() { "Better Graphics", "Better Story", "Better Puzzle Design" };
         a = GameManager.GetInstance().playerName;
         b = string.Format("{0:N2}", TimeManager.GetInstance().puzzle1Time) + ' '
             + string.Format("{0:N2}", TimeManager.GetInstance().puzzle2Time) + ' '
             + string.Format("{0:N2}", TimeManager.GetInstance().puzzle3Time) + ' '
             + string.Format("{0:N2}", TimeManager.GetInstance().puzzle4Time);
-        c = string.Format("{0:N0}", TimeManager.GetInstance().timer * 32);
-        d = FormInputManager.GetInstance().wouldYouBuy.ToString() + " " 
-            + FormInputManager.GetInstance().sliderValue.ToString() + " " 
-            + Feedback.GetComponent<TMP_InputField>().text + " " 
-            + dropDownOptions[dropdownGameobject.GetComponent<TMP_Dropdown>().value]; 
+        c = string.Format("{0:N0}", TimeManager.GetInstance().timer);
+        d = "something";
 
 
         StartCoroutine(Post(a, b, c, d));
 
-        SceneManager.LoadScene("Yard");
+        SceneManager.LoadScene("Menu");
     }
 
     private void Start()
