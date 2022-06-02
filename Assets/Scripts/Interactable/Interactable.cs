@@ -14,7 +14,6 @@ public class Interactable : MonoBehaviour
 
     private bool inRange;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +28,7 @@ public class Interactable : MonoBehaviour
         {
             OnInteract();
         }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -73,16 +73,6 @@ public class Interactable : MonoBehaviour
             StartCoroutine(MoveToYard());
         }
 
-        bool beaten = (bool)DialogueManager.GetInstance().currentStory.variablesState["beaten"];
-
-        if (beaten == true && !GameManager.GetInstance().fightHappened)
-        {
-            GameManager.GetInstance().fightHappened = true;
-            GameObject.Find("Fade").GetComponent<Fade>().FadeScene("Fight Scene");
-            GameManager.GetInstance().yardPos = GameObject.Find("Player").transform.position;
-            Destroy(this);
-        }
-
         bool hairpin = (bool)DialogueManager.GetInstance().currentStory.variablesState["hairpin"];
         bool officeOpen = (bool)DialogueManager.GetInstance().currentStory.variablesState["officeOpen"];
 
@@ -90,12 +80,15 @@ public class Interactable : MonoBehaviour
         {
             GameManager.GetInstance().gaveKey = true;
             Inventory.GetInstance().AddItem("Key");
+            Inventory.GetInstance().RemoveItem("Shrimp");
         }
 
         if (hairpin && officeOpen && !GameManager.GetInstance().nightHappened)
         {
             GameManager.GetInstance().nightHappened = true;
-            GameObject.Find("Fade").GetComponent<Fade>().FadeScene("Nighttime");
+
+            GameObject.Find("Fade").GetComponent<Fade>().FadeScene("Truck");
+
             TimeManager.GetInstance().puzzle1Time = TimeManager.GetInstance().timer;
 
         }
@@ -117,6 +110,7 @@ public class Interactable : MonoBehaviour
         GameObject.Find("Fade").GetComponent<Fade>().FadeScene("Yard");
         yield return new WaitForSeconds(1);
         DialogueManager.GetInstance().StartDialogue(DialogueManager.GetInstance().yardTransitionInkJSON);
+        SoundManager.GetInstance().PlayCafeteria();
         DialogueManager.GetInstance().currentStory.variablesState["breakFast"] = false;
         
     }
