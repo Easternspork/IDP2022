@@ -47,23 +47,44 @@ public class Read_Google_Sheet : MonoBehaviour
             var comparer = Comparer<int>.Create((x, y) => y.CompareTo(x));
             SortedList<int, string[]> openWith = new SortedList<int, string[]>(comparer);
 
+            int count = -1;
             foreach (var item in o["values"])
             {
-
-                var itemo = JSON.Parse(item.ToString());
-
-                try
+                if(count <= 10)
                 {
+                    count ++;
+                    var itemo = JSON.Parse(item.ToString());
 
-                    openWith.Add(int.Parse(itemo[0][3]), itemo[0]);
+                    try
+                    {
+
+                        openWith.Add(int.Parse(itemo[0][3]), itemo[0]);
+                    }
+                    catch(Exception ex)
+                    {
+                        if(count == 0)
+                        {
+                            updateText += "Podium" + " | " + itemo[0][1] + " | " + itemo[0][2] + "\n";
+                        }
+                        else
+                        {
+                            updateText += count + " | " + itemo[0][1] + " | " + itemo[0][2] + "\n";
+                        }
+                        
+                    }
+                    if(count == 10)
+                    {
+                        updateText += count + " | " + itemo[0][1] + " | " + itemo[0][2] + "\n";
+                    }
+
+                    //updateText += itemo[0]["gsx$ntimestamp"]["$t"] + ": " + itemo[0]["gsx$nusername"]["$t"] + ": " + itemo[0]["gsx$ntime"]["$t"] + "left | " + itemo[0]["gsx$nscore"]["$t"] + " (" + itemo[0]["gsx$nfeedback"]["$t"] + ")\n";
+                    //
                 }
-                catch(Exception ex)
+                else
                 {
-                    updateText += itemo[0][1] + " | " + itemo[0][2] + "\n";
+                    break;
                 }
-
-                //updateText += itemo[0]["gsx$ntimestamp"]["$t"] + ": " + itemo[0]["gsx$nusername"]["$t"] + ": " + itemo[0]["gsx$ntime"]["$t"] + "left | " + itemo[0]["gsx$nscore"]["$t"] + " (" + itemo[0]["gsx$nfeedback"]["$t"] + ")\n";
-                //
+                
             }
 
             //string[] header = openWith["Score"];
@@ -73,7 +94,7 @@ public class Read_Google_Sheet : MonoBehaviour
 
             foreach (var item in openWith)
             {
-                updateText += item.Value[1] + " | " + item.Value[2] + "\n";
+                //updateText += item.Value[1] + " | " + item.Value[2] + "\n";
             }
         
             outputArea.text = updateText;
