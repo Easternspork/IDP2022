@@ -15,7 +15,7 @@ public class Numpad : MonoBehaviour
     private GameObject canvas;
 
     [SerializeField]
-    private int penaltyTime = 30;
+    private int penaltyTime = 120;
 
     private static Numpad instance;
 

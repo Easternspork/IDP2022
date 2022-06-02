@@ -14,7 +14,6 @@ public class Interactable : MonoBehaviour
 
     private bool inRange;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +28,7 @@ public class Interactable : MonoBehaviour
         {
             OnInteract();
         }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -71,16 +71,6 @@ public class Interactable : MonoBehaviour
         if (breakfastOver == true && !GameManager.GetInstance().breakfastEndedOnce)
         {
             StartCoroutine(MoveToYard());
-        }
-
-        bool beaten = (bool)DialogueManager.GetInstance().currentStory.variablesState["beaten"];
-
-        if (beaten == true && !GameManager.GetInstance().fightHappened)
-        {
-            GameManager.GetInstance().fightHappened = true;
-            GameObject.Find("Fade").GetComponent<Fade>().FadeScene("Fight Scene");
-            GameManager.GetInstance().yardPos = GameObject.Find("Player").transform.position;
-            Destroy(this);
         }
 
         bool hairpin = (bool)DialogueManager.GetInstance().currentStory.variablesState["hairpin"];
