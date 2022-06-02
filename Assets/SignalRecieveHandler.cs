@@ -7,7 +7,8 @@ public class SignalRecieveHandler : MonoBehaviour
 {
     public void StartMugshot()
     {
-        SceneManager.LoadScene("Mug Shot");
+        // actually the truck scnee
+        SceneManager.LoadScene("TransitionYardToCell");
 
     }
 }

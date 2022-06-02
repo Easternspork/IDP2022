@@ -23,6 +23,6 @@ public class TransToNight : MonoBehaviour
     }
     public void GoToPrison()
     {
-        SceneManager.LoadScene("Cell");
+        SceneManager.LoadScene("Mug Shot");
     }
 }

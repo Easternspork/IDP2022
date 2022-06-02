@@ -95,7 +95,7 @@ public class Interactable : MonoBehaviour
         if (hairpin && officeOpen && !GameManager.GetInstance().nightHappened)
         {
             GameManager.GetInstance().nightHappened = true;
-            GameObject.Find("Fade").GetComponent<Fade>().FadeScene("Nighttime");
+            GameObject.Find("Fade").GetComponent<Fade>().FadeScene("Truck");
             TimeManager.GetInstance().puzzle1Time = TimeManager.GetInstance().timer;
 
         }
