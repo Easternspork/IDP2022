@@ -2,6 +2,9 @@ VAR act = 1
 VAR mc = ""
 VAR cha = ""
 
+VAR guessCorrect = false
+VAR guessWindow = false
+
 VAR b1 = false
 VAR b2 = false
 VAR b3 = false
@@ -27,6 +30,7 @@ VAR hasShrimp = false
 VAR officeOpen = false  
 VAR hairpin = false
 VAR joeExp = false
+
 
 VAR hint1 = 0
 VAR hint2 = 0

@@ -8,7 +8,7 @@ INCLUDE Global.ink
 {breakFast: -> BF}
 {breakFast == false:
     {beaten: -> shrimpGive}
-    {shrimpSolved: -> BEATING_TIME}
+    {guessCorrect: -> BEATING_TIME}
     {shrimpQuest: -> alibi}
     }
        
@@ -32,6 +32,10 @@ Yo, seems like we're gonna be stuck here for a while. Might as well get to know 
         ~ cha = mc
         (...)
         ->END
+ * [Any idea who the theif is?]
+    I have a theory. What do you think?
+    ~ guessWindow = true
+    ->END
 
 === shrimpGive ===
 Whewh, good thing we got back out here quickly. 
@@ -43,19 +47,20 @@ Here, take some of the shrimp he had.
 -> END
 
 === BEATING_TIME ===
-What's crackin?
-    * [Heard you exersize a lot.]
+So looks like we agree.
+So, what do you want to do?
+    * [I heard you exersize a lot. Do you?]
     ~ cha = "Peter"
-        Oh,  well it's kind of a hobby of mine. Not much else to do in prison anyway.
+        Oh,  well it's kind of a hobby of mine. Not much else to do in prison anyway. Why ask?
             * * [Do you mind beating someone for me?]
             ~ cha = "Peter"
-                Who?
-                    * * * [Freg. He took the shrimp for himself.]
+                I see where we're goin with this.
+                    * * * [Let's teach Freg a lesson.]
                     ~ cha = "Peter"
-                        So that's who was the theif. Oh, well it's time for him to get the shrimp beat out of him. Let me handle this.
+                        Oh, well it's time for him to get the shrimp beat out of him. Let me handle this.
                         Wait.
-                        Where is Freg?
-                        * * * * [I think he's in the showers]
+                        He looks like he's gonna start running.
+                        * * * * [I think he's heading to the bathroom.]
                             Well, there's no running from me.
                         ~ beaten = true
                         ->END
