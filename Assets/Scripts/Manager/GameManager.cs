@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour
     public Vector3 cellPos;
 
     public bool breakfastEndedOnce = false;
-    public bool fightHappened;
 
     public Vector3 yardPos;
     public bool nightHappened;
@@ -48,7 +47,7 @@ public class GameManager : MonoBehaviour
     {
 
         // change later
-        SceneManager.LoadScene("Intro");
+        SceneManager.LoadScene("Cell");
 
     }
 

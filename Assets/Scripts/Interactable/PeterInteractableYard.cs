@@ -8,9 +8,14 @@ public class PeterInteractableYard : Interactable
     public override void OnDialogueEnd()
     {
         base.OnDialogueEnd();
+        Debug.Log((bool)DialogueManager.GetInstance().currentStory.variablesState["guessWindow"] == true);
+
         if ((bool)DialogueManager.GetInstance().currentStory.variablesState["guessWindow"] == true)
         {
+            Debug.Log("hudiswad");
             input.SetActive(true);
+            DialogueManager.GetInstance().disableDialogue = true;
+            GameManager.GetInstance().disableMovement = true;
         }
         else if ((bool)DialogueManager.GetInstance().currentStory.variablesState["guessWindow"] == false)
         {
@@ -22,7 +27,6 @@ public class PeterInteractableYard : Interactable
     protected override void Update()
     {
         base.Update();
-        Debug.Log((bool)DialogueManager.GetInstance().currentStory.variablesState["guessWindow"] == true);
     }
 
 }

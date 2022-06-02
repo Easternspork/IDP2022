@@ -5,9 +5,8 @@ using UnityEngine.UI;
 
 public class Checkbox : MonoBehaviour
 {
-    [SerializeField]
-    private Sprite ticked;
-    private Sprite unticked;
+    public GameObject checkboxCanvas;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,15 +19,13 @@ public class Checkbox : MonoBehaviour
         
     }
 
-    public void OnClick()
+    public void XButton()
     {
-        if (gameObject.GetComponent<Image>().sprite == ticked)
-        {
-            gameObject.GetComponent<Image>().overrideSprite = unticked;
+        checkboxCanvas.SetActive(!checkboxCanvas.activeSelf);
+    }
 
-        } else
-        {
-            gameObject.GetComponent<Image>().overrideSprite = ticked;
-        }
+    public void ToggleView()
+    {
+        checkboxCanvas.SetActive(true);
     }
 }

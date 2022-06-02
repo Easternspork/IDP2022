@@ -65,7 +65,7 @@ public class Inventory : MonoBehaviour
 
     public void ShowInventory()
     {
-        if (!DialogueManager.GetInstance().inDialogue)
+        if (!DialogueManager.GetInstance().inDialogue || DialogueManager.GetInstance().disableDialogue)
         {
             canvas.SetActive(true);
             showingInventory = true;

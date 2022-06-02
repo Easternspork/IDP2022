@@ -10,6 +10,8 @@ public class PeterInputCheck : MonoBehaviour
     public GameObject wrongPass;
     public TMP_InputField inputFieldTMP;
     public GameObject correct;
+    public GameObject xButton;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +34,9 @@ public class PeterInputCheck : MonoBehaviour
 
             GameObject.Find("Fade").GetComponent<Fade>().FadeScene("Fight Scene");
             GameManager.GetInstance().yardPos = GameObject.Find("Player").transform.position;
+
+            DialogueManager.GetInstance().disableDialogue = true;
+            GameManager.GetInstance().disableMovement = true;
         }
         else
         {
@@ -42,9 +47,19 @@ public class PeterInputCheck : MonoBehaviour
         }
     }
 
+    public void XButton()
+    {
+        inputFieldTMP.text = "";
+        wrongPass.SetActive(false);
+        form.SetActive(false);
+        DialogueManager.GetInstance().disableDialogue = false;
+        GameManager.GetInstance().disableMovement = false;
+    }
+
     IEnumerator ShowThatYouGotCorrect()
     {
         correct.SetActive(true);
+        xButton.SetActive(false);
         yield return new WaitForSeconds(3);
     }
 }
