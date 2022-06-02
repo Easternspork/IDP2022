@@ -4873,7 +4873,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1985948261}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HintManager, Assembly-CSharp
         m_MethodName: OnHintButtonPressed
         m_Mode: 1
@@ -107046,7 +107046,6 @@ GameObject:
   - component: {fileID: 1985948259}
   - component: {fileID: 1985948258}
   - component: {fileID: 1985948257}
-  - component: {fileID: 1985948261}
   m_Layer: 5
   m_Name: Hint
   m_TagString: Untagged
@@ -107136,25 +107135,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1985948261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1985948256}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 607f94f93d607ba48bd4cbfa7ac90f95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hintInks:
-  - {fileID: 4900000, guid: 6af8ef19dd65ba9468f42c7d1c9d21cb, type: 3}
-  - {fileID: 4900000, guid: 65bda63a23e372c4fafdc2ad9256ace1, type: 3}
-  - {fileID: 4900000, guid: ac44cc7743e98dd4e8cda2b115eb8559, type: 3}
-  - {fileID: 4900000, guid: d5e716be54291704eaaa0fc72c740212, type: 3}
-  - {fileID: 4900000, guid: 4bef4b2b6b575124280ee2f47f0eb767, type: 3}
-  currentPuzzle: 0
 --- !u!1 &1998186906
 GameObject:
   m_ObjectHideFlags: 0

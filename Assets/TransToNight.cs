@@ -20,6 +20,7 @@ public class TransToNight : MonoBehaviour
     public void GoToNight()
     {
         SceneManager.LoadScene("Nighttime");
+        HintManager.GetInstance().setPuzzleHint(1);
     }
     public void GoToPrison()
     {

@@ -4544,6 +4544,8 @@ GameObject:
   - component: {fileID: 1842952756}
   - component: {fileID: 1842952758}
   - component: {fileID: 1842952757}
+  - component: {fileID: 1842952759}
+  - component: {fileID: 1842952760}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -4607,6 +4609,36 @@ MonoBehaviour:
   puzzle2Time: 0
   puzzle3Time: 0
   puzzle4Time: 0
+--- !u!114 &1842952759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842952754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94273d14dd27b04fab33b2f36530693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cafeteria: {fileID: 0}
+  gotocell: {fileID: 0}
+--- !u!114 &1842952760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842952754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 607f94f93d607ba48bd4cbfa7ac90f95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hintInks:
+  - {fileID: 4900000, guid: 6af8ef19dd65ba9468f42c7d1c9d21cb, type: 3}
+  - {fileID: 4900000, guid: 65bda63a23e372c4fafdc2ad9256ace1, type: 3}
+  currentPuzzle: 0
 --- !u!1 &1877662319
 GameObject:
   m_ObjectHideFlags: 0

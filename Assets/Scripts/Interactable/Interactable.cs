@@ -117,6 +117,7 @@ public class Interactable : MonoBehaviour
         GameObject.Find("Fade").GetComponent<Fade>().FadeScene("Yard");
         yield return new WaitForSeconds(1);
         DialogueManager.GetInstance().StartDialogue(DialogueManager.GetInstance().yardTransitionInkJSON);
+        
         DialogueManager.GetInstance().currentStory.variablesState["breakFast"] = false;
         
     }

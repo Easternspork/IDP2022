@@ -53,4 +53,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Act 1/Fight Scene.unity
     guid: f503f6d4564e41c41a7e86c4ac3829e1
+  - enabled: 1
+    path: Assets/Scenes/Act 1/TransitionYardToCell.unity
+    guid: d3c0eb9f87ff21d408178ebe72c74282
+  - enabled: 1
+    path: Assets/Scenes/Act 1/Truck.unity
+    guid: 92eeaaeaf278ec147818a4dcfd0a826f
   m_configObjects: {}
