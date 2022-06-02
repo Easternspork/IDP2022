@@ -32,22 +32,11 @@ public class Objectives : MonoBehaviour
 
         // set objectiveList here >>
         // example for objective
-        objectiveList.Add(new string[] { "Objective: Find shrimp for Cassius", "Objective: Find out who’s the shrimp hoarder", "Objective: Talk to other prisoners."});
-        objectiveList.Add(new string[] { "Objective: Get the shrimp from Freg"});
-        objectiveList.Add(new string[] { "Objective: Talk to Peter"});
-        objectiveList.Add(new string[] { "Objective: Talk to Cassius"});
-        objectiveList.Add(new string[] { "Objective: Talk to Joe"});
-        objectiveList.Add(new string[] { "Objective: Break out of your cell and into the office"});
-        objectiveList.Add(new string[] { "Objective: Decipher picture puzzle in order to get prison gate passcode"});
-        objectiveList.Add(new string[] { "Objective: Get back to your cell incognito." });
-        objectiveList.Add(new string[] { "Objective: Inform Cassius" });
-        objectiveList.Add(new string[] { "Objective: Look for anything suspicious" });
-        objectiveList.Add(new string[] { "Objective: Enter the Hole" });
-        objectiveList.Add(new string[] { "Objective: Use letter to figure out the machine’s password" });
-        objectiveList.Add(new string[] { "Objective: Enter the Maze" });
-        objectiveList.Add(new string[] { "Objective: Make your way through the labyrinths." });
-        objectiveList.Add(new string[] { "Objective: Input password into methane machine." });
-        objectiveList.Add(new string[] { "Last Objective: Go Home" });
+        objectiveList.Add(new string[] { "Find shrimp for Cassius", "Find out who's the shrimp hoarder", "Talk to other prisoners" });
+        objectiveList.Add(new string[] { "Investigate who took the shrimp", "Look around for objects"});
+        objectiveList.Add(new string[] { "Talk to cassius to hand the shrimp over."});
+        objectiveList.Add(new string[] { "Break out of cell using hairpin", "Find the prison gate", "Decipher puzzles to get the prison gate passcode"});
+        objectiveList.Add(new string[] { "Find your way out through the maze"});
 
         if (instance != null)
         {

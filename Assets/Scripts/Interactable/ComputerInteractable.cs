@@ -7,6 +7,8 @@ using TMPro;
 
 public class ComputerInteractable : Interactable
 {
+
+    
     [SerializeField]
     private AudioClip passwordErrorSound;
     [SerializeField]
@@ -30,7 +32,6 @@ public class ComputerInteractable : Interactable
     protected override void Update()
     {
         base.Update();
-        
     }
     protected override void OnInteract()
     {

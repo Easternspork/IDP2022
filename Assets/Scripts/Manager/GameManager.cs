@@ -34,7 +34,6 @@ public class GameManager : MonoBehaviour
             Debug.LogWarning("Two instances of GameManager");
         }
         instance = this;
-        Objectives.GetInstance().SetObjective(0);
     }
 
     public static GameManager GetInstance()

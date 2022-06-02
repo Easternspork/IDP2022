@@ -88,6 +88,7 @@ public class Interactable : MonoBehaviour
             GameManager.GetInstance().nightHappened = true;
 
             GameObject.Find("Fade").GetComponent<Fade>().FadeScene("Truck");
+            
 
             TimeManager.GetInstance().puzzle1Time = TimeManager.GetInstance().timer;
 
@@ -108,6 +109,8 @@ public class Interactable : MonoBehaviour
         GameManager.GetInstance().cellPos = GameObject.Find("Player").transform.position;
 
         GameObject.Find("Fade").GetComponent<Fade>().FadeScene("Yard");
+        
+        Objectives.GetInstance().SetObjective(1);
         yield return new WaitForSeconds(1);
         DialogueManager.GetInstance().StartDialogue(DialogueManager.GetInstance().yardTransitionInkJSON);
         SoundManager.GetInstance().PlayCafeteria();

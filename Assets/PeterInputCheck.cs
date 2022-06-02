@@ -33,6 +33,9 @@ public class PeterInputCheck : MonoBehaviour
             form.SetActive(false);
 
             GameObject.Find("Fade").GetComponent<Fade>().FadeScene("Fight Scene");
+            
+            
+            Objectives.GetInstance().SetObjective(2);
             GameManager.GetInstance().yardPos = GameObject.Find("Player").transform.position;
 
             DialogueManager.GetInstance().disableDialogue = true;
