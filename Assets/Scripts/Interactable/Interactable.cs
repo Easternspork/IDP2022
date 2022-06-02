@@ -90,12 +90,15 @@ public class Interactable : MonoBehaviour
         {
             GameManager.GetInstance().gaveKey = true;
             Inventory.GetInstance().AddItem("Key");
+            Inventory.GetInstance().RemoveItem("Shrimp");
         }
 
         if (hairpin && officeOpen && !GameManager.GetInstance().nightHappened)
         {
             GameManager.GetInstance().nightHappened = true;
+
             GameObject.Find("Fade").GetComponent<Fade>().FadeScene("Truck");
+
             TimeManager.GetInstance().puzzle1Time = TimeManager.GetInstance().timer;
 
         }
@@ -117,7 +120,7 @@ public class Interactable : MonoBehaviour
         GameObject.Find("Fade").GetComponent<Fade>().FadeScene("Yard");
         yield return new WaitForSeconds(1);
         DialogueManager.GetInstance().StartDialogue(DialogueManager.GetInstance().yardTransitionInkJSON);
-        
+        SoundManager.GetInstance().PlayCafeteria();
         DialogueManager.GetInstance().currentStory.variablesState["breakFast"] = false;
         
     }

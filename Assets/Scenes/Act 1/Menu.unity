@@ -4621,8 +4621,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94273d14dd27b04fab33b2f36530693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cafeteria: {fileID: 0}
-  gotocell: {fileID: 0}
+  cafeteria: {fileID: 8300000, guid: b313f32f5d6477f4dac6ebdd5b448ab2, type: 3}
+  gotocell: {fileID: 8300000, guid: 2d319bf9fd6193345a00a71afc90c2e7, type: 3}
 --- !u!114 &1842952760
 MonoBehaviour:
   m_ObjectHideFlags: 0
