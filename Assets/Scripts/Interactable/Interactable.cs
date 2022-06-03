@@ -50,6 +50,7 @@ public class Interactable : MonoBehaviour
     {
 
         DialogueManager.GetInstance().StartDialogue(this);
+
     }
 
     public virtual void OnDialogueStart()

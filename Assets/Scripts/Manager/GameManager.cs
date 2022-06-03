@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
     {
 
         // change later
-        SceneManager.LoadScene("Intro");
+        SceneManager.LoadScene("Cell");
 
     }
 

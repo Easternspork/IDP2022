@@ -10,7 +10,8 @@ public class PeterInteractableYard : Interactable
         base.OnDialogueEnd();
         Debug.Log((bool)DialogueManager.GetInstance().currentStory.variablesState["guessWindow"] == true);
 
-        if ((bool)DialogueManager.GetInstance().currentStory.variablesState["guessWindow"] == true)
+            
+        if ((bool)DialogueManager.GetInstance().currentStory.variablesState["guessWindow"] == true && (bool)DialogueManager.GetInstance().currentStory.variablesState["beaten"] == false)
         {
             Debug.Log("hudiswad");
             input.SetActive(true);

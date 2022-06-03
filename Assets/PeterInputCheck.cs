@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Ink.Runtime;
+
 public class PeterInputCheck : MonoBehaviour
 {
     [SerializeField]
@@ -33,8 +35,13 @@ public class PeterInputCheck : MonoBehaviour
             form.SetActive(false);
 
             GameObject.Find("Fade").GetComponent<Fade>().FadeScene("Fight Scene");
+            DialogueManager.GetInstance().dialogueVariables.StartListening(DialogueManager.GetInstance().currentStory);
             DialogueManager.GetInstance().currentStory.variablesState["beaten"] = true;
-            
+            DialogueManager.GetInstance().dialogueVariables.StopListening(DialogueManager.GetInstance().currentStory);
+
+            Debug.Log((bool)DialogueManager.GetInstance().currentStory.variablesState["beaten"]);
+
+
             Objectives.GetInstance().SetObjective(2);
             GameManager.GetInstance().yardPos = GameObject.Find("Player").transform.position;
 
