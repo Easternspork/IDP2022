@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class TimeManager : MonoBehaviour
 {
@@ -42,6 +43,11 @@ public class TimeManager : MonoBehaviour
         {
             timer -= Time.deltaTime;
             DisplayTime();
+        }
+
+        if (timer < 0)
+        {
+            SceneManager.LoadScene("Lose Scene");
         }
     }
 
