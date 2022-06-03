@@ -88,7 +88,7 @@ public class Interactable : MonoBehaviour
         {
             GameManager.GetInstance().nightHappened = true;
 
-            GameObject.Find("Fade").GetComponent<Fade>().FadeScene("Truck");
+            GameObject.Find("Fade").GetComponent<Fade>().FadeScene("Nighttime");
             
 
             TimeManager.GetInstance().puzzle1Time = TimeManager.GetInstance().timer;
